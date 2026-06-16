@@ -6,7 +6,7 @@
 /* >>> SET THIS after you deploy the backend on Railway <<<
    Example: "https://duvoyageur-backend-production.up.railway.app"
    No trailing slash. */
-const API_BASE = "https://REPLACE-WITH-YOUR-RAILWAY-URL";
+const API_BASE = "https://duvoyageurbackend-production.up.railway.app";
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
