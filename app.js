@@ -120,3 +120,44 @@ form.addEventListener("submit", async (e) => {
     showError("On n'a pas pu envoyer ton dossier. Vérifie ta connexion et réessaie, ou écris-nous sur Messenger.");
   }
 });
+
+/* ---- Testing helper ----------------------------------------------------
+   Add ?test=1 to the URL to auto-fill the form with sample data, so you can
+   submit quickly. Real visitors (no ?test=1) never see any of this. */
+function prefillForTesting() {
+  const params = new URLSearchParams(location.search);
+  if (params.get("test") !== "1") return;
+
+  const set = (name, value) => {
+    const el = form.elements[name];
+    if (el) el.value = value;
+  };
+
+  // Two future dates so the example always looks current.
+  const dep = new Date(); dep.setDate(dep.getDate() + 45);
+  const ret = new Date(dep); ret.setDate(ret.getDate() + 7);
+  const iso = (d) => d.toISOString().slice(0, 10);
+
+  set("origin", "Montréal|YUL");
+  set("where", "Riu Palace Las Américas");
+  set("dep", iso(dep));
+  set("ret", iso(ret));
+  set("adults", "2");
+  set("children", "1");
+  set("ages", "8");
+  set("price", "2400");
+  set("basis", "per_person");
+  set("operator", "Transat");
+  set("source", "capture Messenger");
+  set("name", "Jean Test");
+  set("email", "test@duvoyageur.ca");
+  set("notes", "Chambre swim-up si possible — DONNÉE DE TEST");
+
+  const banner = document.createElement("p");
+  banner.textContent = "Mode test : formulaire pré-rempli. Tu peux envoyer.";
+  banner.style.cssText =
+    "max-width:760px;margin:0 auto 1rem;padding:.6rem .9rem;border-radius:10px;" +
+    "background:rgba(255,106,61,.18);color:#FFD9CC;font-size:.9rem;text-align:center;";
+  form.parentNode.insertBefore(banner, form);
+}
+prefillForTesting();
