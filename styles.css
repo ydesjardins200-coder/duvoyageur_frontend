@@ -111,10 +111,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* ---- hero ---- */
 .hero{
   position:relative;isolation:isolate;overflow:hidden;
-  min-height:100vh;min-height:100svh;
+  min-height:clamp(560px,76svh,860px);
   display:grid;align-content:center;
   justify-items:center;text-align:center;
-  padding:clamp(3.5rem,8vh,5.5rem) 1.25rem clamp(4.5rem,11vh,7.5rem);
+  padding:clamp(4.5rem,9vh,6.5rem) 1.25rem clamp(3rem,8vh,5.5rem);
 }
 .hero__bg{position:absolute;inset:0;z-index:-1;background:var(--abyss);overflow:hidden}
 .hero__blur{display:none}
@@ -130,8 +130,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:radial-gradient(38% 24% at 50% 8%, rgba(155,246,236,.28), transparent 72%);
   filter:blur(14px);animation:glowpulse 9s ease-in-out infinite;
 }
-.hero__horizon{position:absolute;left:0;right:0;bottom:0;height:42%;
-  background:linear-gradient(180deg, transparent, var(--abyss) 92%);
+.hero__horizon{position:absolute;left:0;right:0;bottom:0;height:50%;
+  background:linear-gradient(180deg, transparent, var(--abyss) 86%);
 }
 .hero__inner{position:relative;max-width:780px}
 .hero .eyebrow{text-shadow:0 1px 10px rgba(2,12,20,.75)}
