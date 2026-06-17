@@ -112,9 +112,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hero{
   position:relative;isolation:isolate;overflow:hidden;
   min-height:100vh;min-height:100svh;
-  display:grid;grid-template-rows:1fr auto;
-  justify-items:center;align-items:center;text-align:center;
-  padding:clamp(4.5rem,10vh,7rem) 1.25rem clamp(2.5rem,5vh,4rem);
+  display:grid;align-content:center;
+  justify-items:center;text-align:center;
+  padding:clamp(3.5rem,8vh,5.5rem) 1.25rem clamp(4.5rem,11vh,7.5rem);
 }
 .hero__bg{position:absolute;inset:0;z-index:-1;background:var(--abyss);overflow:hidden}
 .hero__blur{display:none}
@@ -133,7 +133,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hero__horizon{position:absolute;left:0;right:0;bottom:0;height:42%;
   background:linear-gradient(180deg, transparent, var(--abyss) 92%);
 }
-.hero__inner{position:relative;max-width:780px;align-self:center}
+.hero__inner{position:relative;max-width:780px}
 .hero .eyebrow{text-shadow:0 1px 10px rgba(2,12,20,.75)}
 .hero__title{font-size:clamp(2.6rem,8vw,5rem);font-weight:800;color:var(--foam);
   text-shadow:0 2px 28px rgba(2,12,20,.5)}
@@ -145,8 +145,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 
 /* signature: floating glass deal panel */
 .deal{
-  position:relative;z-index:2;align-self:end;
-  margin:clamp(1.5rem,4vh,3rem) auto -3.6rem;
+  position:relative;z-index:2;
+  margin:clamp(1.4rem,4vh,2.4rem) auto 0;
   width:min(820px, calc(100% - 2.5rem));
   display:flex;align-items:stretch;gap:.2rem;flex-wrap:wrap;
   padding:.55rem;
