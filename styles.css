@@ -334,7 +334,14 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   padding:1.1rem 1.4rem;border:1px solid var(--line);border-radius:16px;background:rgba(25,211,230,.05)}
 
 /* PROCESS timeline */
-.process{max-width:780px;margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1rem,4vw,2rem)}
+.process{position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(3.5rem,9vh,6rem) clamp(1rem,4vw,2rem)}
+.process__bg{position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg, var(--abyss) 0%, rgba(3,16,24,.80) 16%, rgba(4,21,31,.78) 50%, rgba(3,16,24,.84) 84%, var(--abyss) 100%),
+    url("assets/process.jpg") center/cover no-repeat;
+}
+.process__inner{max-width:780px;margin:0 auto}
 .process__intro{text-align:center;margin-bottom:2.8rem}
 .timeline{list-style:none;margin:0;padding:0}
 .timeline__item{position:relative;display:grid;grid-template-columns:48px 1fr;gap:1.1rem;padding-bottom:1.9rem}
