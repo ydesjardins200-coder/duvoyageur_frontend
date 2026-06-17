@@ -622,7 +622,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .dest__sub{color:var(--mist);max-width:780px;margin:0;font-size:1.05rem;line-height:1.5}
 
 /* ---- Famille : conseils + chaînes ---- */
-.chains{max-width:1040px;margin:0 auto;padding:clamp(1.5rem,4vh,2.5rem) clamp(1rem,4vw,2rem);
+.chains{max-width:1240px;margin:0 auto;padding:clamp(1.5rem,4vh,2.5rem) clamp(1rem,4vw,2rem);
   display:flex;flex-direction:column;gap:clamp(1.4rem,3.5vh,2.2rem)}
 .tips{background:var(--glass);border:1px solid var(--line);border-radius:20px;
   padding:clamp(1.3rem,3vw,1.9rem);backdrop-filter:blur(10px)}
@@ -653,3 +653,5 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:rgba(6,24,33,.55);border:1px solid var(--line);color:var(--foam);
   font-size:.84rem;font-weight:500}
 .chain__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem;margin-top:1.3rem}
+.chain .hotel__gallery{margin-top:1.5rem}
+.chains__credit{text-align:center;color:var(--surf);font-size:.8rem;opacity:.7;margin:.4rem 0 0}
