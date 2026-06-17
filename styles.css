@@ -167,41 +167,39 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .deal{
   position:relative;z-index:2;
   margin:clamp(1.4rem,4vh,2.4rem) auto 0;
-  width:min(860px, calc(100% - 2.5rem));
-  padding:.95rem .7rem .7rem;
+  width:min(820px, calc(100% - 2.5rem));
+  padding:.6rem;display:flex;flex-direction:column;gap:.45rem;
   background:var(--glass);border:1px solid var(--line);border-radius:24px;
   backdrop-filter:blur(18px) saturate(125%);
   box-shadow:0 36px 70px -34px rgba(0,0,0,.8),0 0 44px -14px var(--glow),
              0 1px 0 rgba(155,246,236,.12) inset;
   animation:liftin .8s cubic-bezier(.2,.7,.2,1) both .15s;
 }
-.deal__badge{
-  display:flex;align-items:center;justify-content:center;gap:.4rem;
-  margin:0 auto .7rem;padding:.32rem .85rem;border-radius:999px;width:max-content;max-width:100%;
-  background:rgba(255,210,63,.12);border:1px solid rgba(255,210,63,.32);
-  color:var(--gold);font-family:"Space Grotesk",monospace;
-  font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;
-}
-.deal__badge svg{width:14px;height:14px;flex:none}
-.deal__row{display:flex;align-items:stretch;gap:.3rem;flex-wrap:wrap}
-.deal__seg{flex:1 1 160px;padding:.9rem 1rem;border-radius:16px;
+.deal__compare{display:flex;align-items:stretch;gap:.35rem;flex-wrap:wrap}
+.deal__seg{flex:1 1 200px;padding:.95rem 1.1rem;border-radius:16px;
   display:flex;flex-direction:column;gap:.3rem;background:rgba(6,24,33,.32)}
 .deal__seg--hero{background:rgba(25,211,230,.1);box-shadow:0 0 0 1px rgba(25,211,230,.22) inset}
-.deal__seg--save{background:linear-gradient(150deg, rgba(255,210,63,.15), rgba(244,180,0,.05));
-  box-shadow:0 0 0 1px rgba(255,210,63,.3) inset}
 .deal__label{font-size:.7rem;letter-spacing:.05em;color:var(--mist);text-transform:uppercase;
   font-family:"Space Grotesk",monospace}
-.deal__found{font-family:"Bricolage Grotesque",sans-serif;font-size:1.4rem;font-weight:700;line-height:1;
+.deal__found{font-family:"Bricolage Grotesque",sans-serif;font-size:1.45rem;font-weight:700;line-height:1;
   color:var(--mist);text-decoration:line-through;text-decoration-color:rgba(148,184,198,.55)}
-.deal__price{font-family:"Bricolage Grotesque",sans-serif;font-size:2.05rem;font-weight:800;line-height:1;
+.deal__price{font-family:"Bricolage Grotesque",sans-serif;font-size:2.1rem;font-weight:800;line-height:1;
   color:var(--surf);text-shadow:0 0 22px rgba(25,211,230,.45)}
-.deal__save{font-family:"Bricolage Grotesque",sans-serif;font-size:1.75rem;font-weight:800;line-height:1;
-  color:var(--gold);text-shadow:0 0 22px rgba(255,210,63,.32)}
 .deal__arrow{align-self:center;flex:none;width:30px;height:30px;border-radius:50%;
   display:grid;place-items:center;background:rgba(6,24,33,.55);border:1px solid rgba(155,246,236,.18)}
 .deal__arrow::before{content:"";width:9px;height:9px;margin-left:-2px;
   border-top:2px solid var(--pacific);border-right:2px solid var(--pacific);
   transform:rotate(45deg);filter:drop-shadow(0 0 5px var(--glow))}
+.deal__result{display:flex;align-items:center;justify-content:center;gap:.55rem;flex-wrap:wrap;
+  padding:.7rem 1rem;border-radius:16px;
+  background:linear-gradient(120deg, rgba(255,210,63,.16), rgba(244,180,0,.05));
+  box-shadow:0 0 0 1px rgba(255,210,63,.3) inset}
+.deal__check{width:19px;height:19px;color:var(--gold);flex:none}
+.deal__result-text{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;font-weight:700;color:var(--foam)}
+.deal__result-text strong{color:var(--gold);font-weight:800;font-size:1.4rem;margin-left:.15rem}
+.deal__result-note{font-family:"Space Grotesk",monospace;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);opacity:.85;
+  padding-left:.65rem;border-left:1px solid rgba(255,210,63,.3)}
 
 /* ---- trust pills (in hero, under the deal panel) ---- */
 .trustpills{
@@ -327,7 +325,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   .nav .brand__text{display:none}
   .nav__right{gap:.6rem}
   .nav .btn--sm{padding:.5rem .85rem;font-size:.86rem}
-  .deal__row{flex-direction:column}
+  .deal__compare{flex-direction:column}
   .deal__seg{flex:1 1 auto;align-items:center;text-align:center}
   .deal__arrow{transform:rotate(90deg)}
   .grid{grid-template-columns:1fr 1fr}
