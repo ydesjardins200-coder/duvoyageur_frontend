@@ -420,7 +420,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     url("assets/sunset.jpg") center 32%/cover no-repeat;
 }
 .faq{max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1rem,4vw,2rem)}
-.faq .section__title{margin-bottom:2rem}
+.faq .section__title{margin-bottom:.7rem}
+.faq__lede{color:var(--mist);max-width:640px;margin:0 auto 2.2rem;text-align:center}
 .faq__list{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;align-items:start}
 .qa{background:var(--glass);border:1px solid var(--line);border-radius:14px;overflow:hidden;backdrop-filter:blur(8px)}
 .qa summary{cursor:pointer;padding:1.1rem 1.3rem;font-weight:600;color:var(--foam);list-style:none;
