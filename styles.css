@@ -516,6 +516,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   text-shadow:0 2px 24px rgba(2,12,20,.55)}
 .tophead__lede{color:var(--foam);max-width:660px;margin:1rem auto 0;font-size:1.05rem;
   text-shadow:0 1px 14px rgba(2,12,20,.6)}
+.toplegend{margin:.9rem auto 0;font-family:"Space Grotesk",monospace;font-size:.82rem;
+  color:var(--mist);letter-spacing:.01em;text-shadow:0 1px 10px rgba(2,12,20,.6)}
+.toplegend b{color:var(--gold,#e9c46a)}
 .topcats{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.7rem}
 .topcat{display:inline-flex;align-items:center;padding:.5rem 1.05rem;border-radius:999px;
   background:rgba(6,24,33,.5);border:1px solid var(--line);color:var(--surf);
@@ -527,6 +530,15 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 
 .hotels{max-width:1340px;margin:0 auto;padding:clamp(1.5rem,4vh,2.5rem) clamp(1rem,4vw,2rem);
   display:flex;flex-direction:column;gap:clamp(1.5rem,4vh,2.5rem)}
+.dest{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.5rem,3.2vw,2.1rem);
+  color:var(--foam);letter-spacing:-.01em;margin:.6rem 0 -.4rem;padding-bottom:.7rem;
+  display:flex;align-items:center;gap:.9rem}
+.dest:not(:first-child){margin-top:clamp(1.2rem,3vh,2.2rem)}
+.dest::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.hotel__tier{display:inline-flex;align-items:center;font-family:"Space Grotesk",monospace;font-weight:700;
+  font-size:.82rem;letter-spacing:.04em;color:var(--gold,#e9c46a);
+  background:rgba(233,196,106,.12);border:1px solid rgba(233,196,106,.32);
+  border-radius:999px;padding:.05rem .5rem;margin-right:.1rem}
 .hotel{background:var(--glass);border:1px solid var(--line);border-radius:22px;
   padding:clamp(1rem,2.5vw,1.4rem);backdrop-filter:blur(14px) saturate(120%);
   box-shadow:0 30px 60px -36px rgba(0,0,0,.7)}
