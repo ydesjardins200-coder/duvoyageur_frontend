@@ -311,3 +311,33 @@ if (form) {
     els.forEach((el) => io.observe(el));
   } catch (_) { /* ignore */ }
 })();
+
+/* Mobile nav: hamburger drawer toggle */
+(function () {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+  var burger = nav.querySelector('.nav__burger');
+  var drawer = nav.querySelector('.nav__drawer');
+  if (!burger || !drawer) return;
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(!nav.classList.contains('is-open'));
+  });
+  drawer.addEventListener('click', function (e) {
+    if (e.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('is-open') && !nav.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 1180) setOpen(false);
+  });
+})();
