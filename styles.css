@@ -108,22 +108,19 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* ---- hero ---- */
 .hero{
   position:relative;isolation:isolate;overflow:hidden;
-  min-height:clamp(620px,90vh,900px);
+  min-height:100vh;min-height:100svh;
   display:grid;align-content:center;justify-items:center;text-align:center;
   padding:clamp(4rem,11vh,8rem) 1.25rem clamp(7rem,12vh,9rem);
 }
 .hero__bg{position:absolute;inset:0;z-index:-1;background:var(--abyss);overflow:hidden}
-.hero__blur{position:absolute;inset:-6%;
-  background:url("assets/hero.jpg") center/cover no-repeat;
-  filter:blur(30px) brightness(.5) saturate(1.15);transform:scale(1.12);
-}
+.hero__blur{display:none}
 .hero__photo{position:absolute;inset:0;
-  background:url("assets/hero.jpg") center/contain no-repeat;
+  background:url("assets/hero.jpg") center 44%/cover no-repeat;
 }
 .hero__veil{position:absolute;inset:0;
   background:
-    radial-gradient(78% 52% at 50% 40%, rgba(2,12,20,.50), transparent 72%),
-    linear-gradient(180deg, rgba(3,18,27,.72) 0%, rgba(3,20,29,.20) 24%, rgba(3,20,29,.26) 58%, rgba(2,13,21,.93) 92%, var(--abyss) 100%);
+    radial-gradient(82% 56% at 50% 42%, rgba(2,12,20,.52), transparent 72%),
+    linear-gradient(180deg, rgba(3,18,27,.62) 0%, rgba(3,20,29,.18) 22%, rgba(3,20,29,.30) 56%, rgba(2,13,21,.92) 88%, var(--abyss) 100%);
 }
 .hero__glow{position:absolute;inset:0;
   background:radial-gradient(38% 24% at 50% 8%, rgba(155,246,236,.28), transparent 72%);
