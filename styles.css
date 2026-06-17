@@ -177,16 +177,27 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   font-family:"Space Grotesk",monospace}
 .deal__save{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;color:var(--gold)}
 
-/* ---- trust strip ---- */
-.trust{
-  max-width:var(--maxw);margin:0 auto;
-  padding:5.2rem clamp(1rem,4vw,2rem) 1rem;
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-  gap:.7rem 1.1rem;text-align:center;
+/* ---- trust pills (in hero, under the deal panel) ---- */
+.trustpills{
+  list-style:none;position:relative;z-index:2;
+  margin:clamp(1.3rem,3.2vh,2.1rem) auto 0;padding:0;
+  width:min(840px, calc(100% - 2.5rem));display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;
 }
-.trust span{font-family:"Space Grotesk",monospace;font-size:.82rem;letter-spacing:.04em;color:var(--mist)}
-.trust i{width:5px;height:5px;border-radius:50%;background:var(--pacific);
-  box-shadow:0 0 8px var(--glow);display:inline-block}
+.pill{
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.48rem .82rem;border-radius:999px;
+  background:rgba(6,24,33,.5);border:1px solid rgba(155,246,236,.18);
+  backdrop-filter:blur(12px) saturate(120%);
+  font-family:"Space Grotesk",monospace;font-size:.8rem;letter-spacing:.01em;
+  color:var(--surf);white-space:nowrap;
+  box-shadow:0 10px 26px -16px rgba(0,0,0,.7),0 1px 0 rgba(155,246,236,.08) inset;
+  text-shadow:0 1px 8px rgba(2,12,20,.6);
+  transition:transform .18s,border-color .18s,box-shadow .18s;
+}
+.pill:hover{transform:translateY(-2px);border-color:rgba(155,246,236,.42);
+  box-shadow:0 16px 30px -16px rgba(0,0,0,.8),0 0 22px -10px var(--glow)}
+.pill svg{width:16px;height:16px;flex:none;color:var(--lagoon)}
+.pill strong{color:var(--foam);font-weight:700}
 
 /* ---- steps ---- */
 .steps{max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1rem,4vw,2rem)}
@@ -293,7 +304,6 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   .deal{flex-direction:column;text-align:center}
   .deal__seg,.deal__seal{flex:1 1 auto}
   .deal__arrow{transform:rotate(90deg);margin:.1rem auto}
-  .trust{padding-top:6rem}
   .grid{grid-template-columns:1fr 1fr}
   .field--third{grid-column:span 1}
 }
