@@ -123,8 +123,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 }
 .hero__veil{position:absolute;inset:0;
   background:
-    radial-gradient(82% 56% at 50% 42%, rgba(2,12,20,.52), transparent 72%),
-    linear-gradient(180deg, rgba(3,18,27,.62) 0%, rgba(3,20,29,.18) 22%, rgba(3,20,29,.30) 56%, rgba(2,13,21,.92) 88%, var(--abyss) 100%);
+    radial-gradient(82% 56% at 50% 42%, rgba(2,12,20,.40), transparent 74%),
+    linear-gradient(180deg, rgba(3,18,27,.44) 0%, rgba(3,20,29,.08) 24%, rgba(3,20,29,.18) 56%, rgba(2,13,21,.86) 88%, var(--abyss) 100%);
 }
 .hero__glow{position:absolute;inset:0;
   background:radial-gradient(38% 24% at 50% 8%, rgba(155,246,236,.28), transparent 72%);
