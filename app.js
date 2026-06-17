@@ -161,3 +161,23 @@ function prefillForTesting() {
   form.parentNode.insertBefore(banner, form);
 }
 prefillForTesting();
+
+/* ---- Scroll reveal (progressive, never blocks the form) ----------------- */
+(function () {
+  try {
+    const els = document.querySelectorAll(".reveal");
+    if (!els.length || !("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("in"));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add("in"), i * 90);
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.15 });
+    els.forEach((el) => io.observe(el));
+  } catch (_) { /* reveal is decorative; ignore any failure */ }
+})();

@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
+<script>document.documentElement.className="js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Du Voyageur — Le même voyage, un meilleur prix</title>
-<meta name="description" content="Trouve ton forfait vacances toi-même, envoie-le-nous, et reçois un rabais directement sur le prix. Agence permis 700495.">
+<meta name="description" content="Trouve ton forfait tout-inclus toi-même, envoie-le-nous, et reçois un rabais directement sur le prix. Agence québécoise, permis 700495.">
+<meta name="theme-color" content="#03121b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -30,44 +32,58 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__copy">
-      <p class="eyebrow">Agence de voyages · Québec</p>
-      <h1 class="hero__title">Le même voyage.<br>Un meilleur prix.</h1>
+    <div class="hero__bg" aria-hidden="true">
+      <span class="hero__glow"></span>
+      <span class="hero__rays"></span>
+      <span class="hero__caustic"></span>
+      <span class="hero__horizon"></span>
+    </div>
+
+    <div class="hero__inner">
+      <p class="eyebrow">Agence de voyages · Québec · Permis 700495</p>
+      <h1 class="hero__title">Le même voyage.<br><span class="grad">Un meilleur prix.</span></h1>
       <p class="hero__lede">
-        Tu trouves ton tout-inclus toi-même. Tu nous l'envoies.
-        On te remet un rabais directement sur le prix. C'est tout.
+        Tu trouves ton tout-inclus toi-même. Tu nous l'envoies. On te remet
+        un rabais directement sur le prix — pas de chasse aux aubaines, pas de stress.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--accent" href="#formulaire">Demander mon rabais</a>
-        <a class="btn btn--ghost" href="#comment">Comment ça marche</a>
+        <a class="btn btn--accent btn--lg" href="#formulaire">Demander mon rabais</a>
+        <a class="btn btn--ghost btn--lg" href="#comment">Comment ça marche</a>
       </div>
     </div>
 
-    <!-- SIGNATURE: before -> after rebate card -->
-    <figure class="ticket" aria-label="Exemple de rabais">
-      <figcaption class="ticket__head">
-        <span class="ticket__dest">Cancún · 7 nuits · tout-inclus</span>
-        <span class="ticket__chip">Rabais</span>
-      </figcaption>
-      <div class="ticket__row">
-        <span class="ticket__label">Le prix que tu as trouvé</span>
-        <span class="ticket__found" data-found>2&nbsp;400&nbsp;$</span>
+    <!-- SIGNATURE: floating glass rebate panel (found price -> your price) -->
+    <figure class="deal" aria-label="Exemple de rabais">
+      <div class="deal__seg">
+        <span class="deal__label">Le prix que tu as trouvé</span>
+        <span class="deal__found" data-found>2&nbsp;400&nbsp;$</span>
       </div>
-      <div class="ticket__row ticket__row--big">
-        <span class="ticket__label">Ton prix Du Voyageur</span>
-        <span class="ticket__price" data-price>2&nbsp;205&nbsp;$</span>
+      <span class="deal__arrow" aria-hidden="true"></span>
+      <div class="deal__seg deal__seg--hero">
+        <span class="deal__label">Ton prix Du Voyageur</span>
+        <span class="deal__price" data-price>2&nbsp;205&nbsp;$</span>
       </div>
-      <div class="ticket__save"><span data-save>Tu gardes 195&nbsp;$</span></div>
-      <div class="ticket__perf" aria-hidden="true"></div>
-      <p class="ticket__fine">Exemple. Le rabais varie selon le forfait et le transporteur.</p>
+      <div class="deal__seal">
+        <span class="deal__seal-top">Meilleurs prix garantis</span>
+        <span class="deal__save" data-save>Tu gardes 195&nbsp;$</span>
+      </div>
     </figure>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust" aria-label="En bref">
+    <span>Permis&nbsp;700495</span><i aria-hidden="true"></i>
+    <span>Réseau Softvoyage · Tripbook</span><i aria-hidden="true"></i>
+    <span>5&nbsp;000&nbsp;+ voyageurs</span><i aria-hidden="true"></i>
+    <span>Tu réserves quand tu veux</span>
   </section>
 
   <!-- HOW IT WORKS -->
   <section id="comment" class="steps">
+    <p class="eyebrow eyebrow--center">Comment ça marche</p>
     <h2 class="section__title">Trois étapes, zéro pression</h2>
     <ol class="steps__list">
-      <li class="step">
+      <li class="step reveal">
         <span class="step__num">01</span>
         <h3 class="step__title">Trouve ton forfait</h3>
         <p class="step__text">
@@ -75,7 +91,7 @@
           Inspire-toi de nos tops hôtels et regarde des vidéos récentes avant de choisir.
         </p>
       </li>
-      <li class="step">
+      <li class="step reveal">
         <span class="step__num">02</span>
         <h3 class="step__title">Envoie-le-nous</h3>
         <p class="step__text">
@@ -83,7 +99,7 @@
           une capture d'écran sur Messenger. Ça prend deux minutes.
         </p>
       </li>
-      <li class="step">
+      <li class="step reveal">
         <span class="step__num">03</span>
         <h3 class="step__title">Reçois ton rabais</h3>
         <p class="step__text">
@@ -97,8 +113,8 @@
   <!-- FORM -->
   <section id="formulaire" class="form-section">
     <div class="form-section__intro">
-      <p class="eyebrow eyebrow--light">Étape 02</p>
-      <h2 class="section__title section__title--light">Envoie ton forfait</h2>
+      <p class="eyebrow eyebrow--center">Étape 02</p>
+      <h2 class="section__title">Envoie ton forfait</h2>
       <p class="form-section__note">
         Plus tu nous donnes de détails, plus vite on te revient avec ton rabais.
         Tu préfères Messenger ? <a href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Envoie ta capture ici</a>.
