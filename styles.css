@@ -97,7 +97,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   width:80px;height:80px;border-radius:50%;flex:none;display:block;
   filter:drop-shadow(0 0 12px rgba(25,211,230,.45));
 }
+.brand__text{display:flex;flex-direction:column;line-height:1.15}
 .brand__name{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;letter-spacing:-.01em}
+.brand__permit{font-family:"Space Grotesk",monospace;font-weight:500;font-size:.68rem;
+  letter-spacing:.08em;color:var(--mist);margin-top:.12rem}
 .nav__right{display:flex;align-items:center;gap:1rem}
 .nav__link{color:var(--foam);font-weight:600;font-size:.95rem;white-space:nowrap}
 .nav__link:hover{color:var(--surf);text-decoration:none}
@@ -281,10 +284,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   .steps__list{grid-template-columns:1fr}
 }
 @media (max-width:759px){
-  .nav__right .permit{display:none}
   .nav__link--how{display:none}
   .nav__link--login{display:none}
-  .nav .brand__name{display:none}
+  .nav .brand__text{display:none}
   .nav__right{gap:.6rem}
   .nav .btn--sm{padding:.5rem .85rem;font-size:.86rem}
   .deal{flex-direction:column;text-align:center}
