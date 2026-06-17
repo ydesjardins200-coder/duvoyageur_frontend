@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<script>document.documentElement.className="js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demander mon rabais — Du Voyageur</title>
+<meta name="description" content="Envoie-nous ton forfait tout-inclus et reçois ton rabais. Agence québécoise, permis 700495.">
+<meta name="theme-color" content="#03121b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Du Voyageur, accueil">
+    <img class="brand__logo" src="assets/logo.png" alt="" width="40" height="40">
+    <span class="brand__name">Du&nbsp;Voyageur</span>
+  </a>
+  <div class="nav__right">
+    <a class="nav__link" href="index.html#processus">Comment ça marche</a>
+    <a class="nav__link" href="https://tripbook.softvoyage.com/connexion/cded7819426e0ca107655c469fed74d4" target="_blank" rel="noopener">Connexion</a>
+    <span class="permit">Permis&nbsp;700495</span>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-head">
+    <p class="eyebrow eyebrow--center">Demande ton rabais</p>
+    <h1 class="page-head__title">Envoie ton forfait</h1>
+    <p class="page-head__lede">
+      Donne-nous les infos de ton tout-inclus. Plus c'est précis, plus vite on te
+      revient avec ton prix Du Voyageur. Tu préfères Messenger ?
+      <a href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Envoie ta capture ici</a>.
+    </p>
+    <ul class="haveit" aria-label="Ce qu'il faut avoir sous la main">
+      <li>Hôtel ou destination</li>
+      <li>Dates</li>
+      <li>Voyageurs</li>
+      <li>Prix affiché</li>
+      <li>Voyagiste</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <form id="trip-form" class="form" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="origin">Aéroport de départ *</label>
+          <select id="origin" name="origin" required>
+            <option value="">Choisir…</option>
+            <option value="Montréal|YUL">Montréal (YUL)</option>
+            <option value="Québec|YQB">Québec (YQB)</option>
+            <option value="Ottawa|YOW">Ottawa (YOW)</option>
+            <option value="Toronto|YYZ">Toronto (YYZ)</option>
+            <option value="Autre|">Autre</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="where">Hôtel ou destination *</label>
+          <input id="where" name="where" type="text" placeholder="Ex. Riu Palace Las Américas" required>
+        </div>
+
+        <div class="field">
+          <label for="dep">Date de départ *</label>
+          <input id="dep" name="dep" type="date" required>
+        </div>
+
+        <div class="field">
+          <label for="ret">Date de retour</label>
+          <input id="ret" name="ret" type="date">
+        </div>
+
+        <div class="field field--third">
+          <label for="adults">Adultes *</label>
+          <input id="adults" name="adults" type="number" min="1" value="2" required>
+        </div>
+        <div class="field field--third">
+          <label for="children">Enfants</label>
+          <input id="children" name="children" type="number" min="0" value="0">
+        </div>
+        <div class="field field--third">
+          <label for="ages">Âge des enfants</label>
+          <input id="ages" name="ages" type="text" placeholder="Ex. 4 et 9">
+        </div>
+
+        <div class="field field--price">
+          <label for="price">Prix trouvé</label>
+          <input id="price" name="price" type="number" min="0" step="1" placeholder="2400">
+        </div>
+        <div class="field field--basis">
+          <label for="basis">Ce prix est…</label>
+          <select id="basis" name="basis">
+            <option value="per_person">par personne</option>
+            <option value="total">le total</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="operator">Transporteur (si connu)</label>
+          <select id="operator" name="operator">
+            <option value="">Je ne sais pas</option>
+            <option>Transat</option>
+            <option>Sunwing</option>
+            <option>Vacances Air Canada</option>
+            <option>WestJet Vacations</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="source">Lien du forfait (optionnel)</label>
+          <input id="source" name="source" type="text" placeholder="Colle le lien, ou écris « capture Messenger »">
+        </div>
+
+        <div class="field">
+          <label for="name">Ton nom</label>
+          <input id="name" name="name" type="text" placeholder="Optionnel">
+        </div>
+        <div class="field">
+          <label for="email">Ton courriel *</label>
+          <input id="email" name="email" type="email" placeholder="pour t'envoyer ton rabais" required>
+        </div>
+
+        <div class="field field--full">
+          <label for="notes">Précisions</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Chambre swim-up, vol direct, tout détail utile…"></textarea>
+        </div>
+      </div>
+
+      <div class="form__foot">
+        <button type="submit" class="btn btn--accent btn--lg" data-submit>Envoyer mon forfait</button>
+        <p class="form__err" data-error hidden></p>
+        <p class="form__reassure">Aucun paiement ici. On revient avec ton offre, tu décides après.</p>
+      </div>
+    </form>
+
+    <div class="done" data-done hidden>
+      <div class="done__mark" aria-hidden="true">✓</div>
+      <h2 class="done__title">Dossier reçu</h2>
+      <p class="done__text">On regarde ton forfait et on te revient avec ton rabais, par le moyen que tu préfères. Garde un œil sur tes messages.</p>
+      <p class="done__ref" data-ref></p>
+      <a class="btn btn--ghost" href="index.html" style="margin-top:1.4rem">Retour à l'accueil</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__brand">
+    <img class="brand__logo" src="assets/logo.png" alt="" width="34" height="34">
+    <span class="brand__name">Du Voyageur</span>
+  </div>
+  <p class="footer__meta">Numéro de permis d'agence : 700495</p>
+  <a class="footer__fb" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Facebook</a>
+  <p class="footer__copy">© <span data-year></span> Duvoyageur.ca — Tous droits réservés.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

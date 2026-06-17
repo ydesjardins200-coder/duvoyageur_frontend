@@ -22,9 +22,10 @@
     <span class="brand__name">Du&nbsp;Voyageur</span>
   </a>
   <div class="nav__right">
+    <a class="nav__link" href="#processus">Comment ça marche</a>
     <a class="nav__link" href="https://tripbook.softvoyage.com/connexion/cded7819426e0ca107655c469fed74d4" target="_blank" rel="noopener">Connexion</a>
     <span class="permit">Permis&nbsp;700495</span>
-    <a class="btn btn--accent btn--sm" href="#formulaire">Demander mon rabais</a>
+    <a class="btn btn--accent btn--sm" href="demande.html">Demander mon rabais</a>
   </div>
 </header>
 
@@ -45,15 +46,14 @@
       <h1 class="hero__title">Le même voyage.<br><span class="grad">Un meilleur prix.</span></h1>
       <p class="hero__lede">
         Tu trouves ton tout-inclus toi-même. Tu nous l'envoies. On te remet
-        un rabais directement sur le prix — pas de chasse aux aubaines, pas de stress.
+        un rabais directement sur le prix — même vol, même hôtel, même voyagiste.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--accent btn--lg" href="#formulaire">Demander mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="#comment">Comment ça marche</a>
+        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
+        <a class="btn btn--ghost btn--lg" href="#processus">Comment ça marche</a>
       </div>
     </div>
 
-    <!-- SIGNATURE: floating glass rebate panel (found price -> your price) -->
     <figure class="deal" aria-label="Exemple de rabais">
       <div class="deal__seg">
         <span class="deal__label">Le prix que tu as trouvé</span>
@@ -79,146 +79,172 @@
     <span>Tu réserves quand tu veux</span>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="comment" class="steps">
-    <p class="eyebrow eyebrow--center">Comment ça marche</p>
-    <h2 class="section__title">Trois étapes, zéro pression</h2>
-    <ol class="steps__list">
-      <li class="step reveal">
-        <span class="step__num">01</span>
-        <h3 class="step__title">Trouve ton forfait</h3>
-        <p class="step__text">
-          Magasine ton tout-inclus sur ton moteur de recherche préféré.
-          Inspire-toi de nos tops hôtels et regarde des vidéos récentes avant de choisir.
-        </p>
-      </li>
-      <li class="step reveal">
-        <span class="step__num">02</span>
-        <h3 class="step__title">Envoie-le-nous</h3>
-        <p class="step__text">
-          Remplis le formulaire avec les infos de ton forfait — ou envoie-nous
-          une capture d'écran sur Messenger. Ça prend deux minutes.
-        </p>
-      </li>
-      <li class="step reveal">
-        <span class="step__num">03</span>
-        <h3 class="step__title">Reçois ton rabais</h3>
-        <p class="step__text">
-          On te revient par courriel avec ton lien de réservation et ton rabais
-          appliqué directement sur le prix. Tu réserves quand tu veux.
-        </p>
-      </li>
-    </ol>
-  </section>
-
-  <!-- FORM -->
-  <section id="formulaire" class="form-section">
-    <div class="form-section__intro">
-      <p class="eyebrow eyebrow--center">Étape 02</p>
-      <h2 class="section__title">Envoie ton forfait</h2>
-      <p class="form-section__note">
-        Plus tu nous donnes de détails, plus vite on te revient avec ton rabais.
-        Tu préfères Messenger ? <a href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Envoie ta capture ici</a>.
+  <!-- WHY / BUSINESS MODEL -->
+  <section id="pourquoi" class="why">
+    <div class="why__intro">
+      <p class="eyebrow eyebrow--center">Notre modèle</p>
+      <h2 class="section__title">Pourquoi on peut te faire un rabais</h2>
+      <p class="why__lede">
+        Quand tu réserves un forfait tout-inclus, le voyagiste — Transat, Vacances
+        Sunwing, Vacances Air Canada — verse une commission à l'agence qui s'occupe
+        de ta réservation. La plupart des agences gardent cette commission au complet.
+        <strong>Nous, on t'en remet la plus grande partie, directement en rabais.</strong>
       </p>
     </div>
 
-    <form id="trip-form" class="form" novalidate>
-      <div class="grid">
-        <div class="field">
-          <label for="origin">Aéroport de départ *</label>
-          <select id="origin" name="origin" required>
-            <option value="">Choisir…</option>
-            <option value="Montréal|YUL">Montréal (YUL)</option>
-            <option value="Québec|YQB">Québec (YQB)</option>
-            <option value="Ottawa|YOW">Ottawa (YOW)</option>
-            <option value="Toronto|YYZ">Toronto (YYZ)</option>
-            <option value="Autre|">Autre</option>
-          </select>
-        </div>
+    <ol class="flow" aria-label="Comment le rabais est possible">
+      <li class="flow__step reveal">
+        <span class="flow__ico" aria-hidden="true">＄</span>
+        <h3>Le voyagiste paie une commission</h3>
+        <p>Sur chaque forfait réservé, le voyagiste verse une commission à l'agence.</p>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__ico" aria-hidden="true">↔</span>
+        <h3>On la partage avec toi</h3>
+        <p>Au lieu de tout garder, on te remet la majeure partie de cette commission.</p>
+      </li>
+      <li class="flow__step reveal">
+        <span class="flow__ico" aria-hidden="true">🌴</span>
+        <h3>Tu pars moins cher</h3>
+        <p>Même forfait, même hôtel, même vol — juste un meilleur prix pour toi.</p>
+      </li>
+    </ol>
 
-        <div class="field">
-          <label for="where">Hôtel ou destination *</label>
-          <input id="where" name="where" type="text" placeholder="Ex. Riu Palace Las Américas" required>
-        </div>
+    <p class="why__note">
+      Rien de magique, rien de louche : on est une agence titulaire du permis du Québec
+      n°&nbsp;700495 et on réserve via le réseau officiel Softvoyage. Ta réservation est une
+      vraie réservation, faite auprès du voyagiste.
+    </p>
+  </section>
 
-        <div class="field">
-          <label for="dep">Date de départ *</label>
-          <input id="dep" name="dep" type="date" required>
+  <!-- FULL PROCESS -->
+  <section id="processus" class="process">
+    <div class="process__intro">
+      <p class="eyebrow eyebrow--center">Le processus, de A à Z</p>
+      <h2 class="section__title">Cinq étapes, zéro pression</h2>
+    </div>
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <span class="timeline__num">01</span>
+        <div class="timeline__body">
+          <h3>Trouve ton forfait</h3>
+          <p>Magasine ton tout-inclus sur les sites des voyagistes québécois (voir le guide plus bas). Note l'hôtel, les dates, les voyageurs, le prix affiché et le voyagiste.</p>
         </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__num">02</span>
+        <div class="timeline__body">
+          <h3>Envoie-le-nous</h3>
+          <p>Remplis la demande en ligne, ou envoie-nous une capture d'écran sur Messenger. Ça prend deux minutes.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__num">03</span>
+        <div class="timeline__body">
+          <h3>On cote au prix net</h3>
+          <p>On retrouve exactement le même forfait dans le réseau Softvoyage, au prix net agent, et on calcule ton rabais.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__num">04</span>
+        <div class="timeline__body">
+          <h3>Tu reçois ton offre</h3>
+          <p>On te revient rapidement avec ton prix Du Voyageur — rabais appliqué — par Messenger, courriel ou SMS, comme tu préfères.</p>
+        </div>
+      </li>
+      <li class="timeline__item reveal">
+        <span class="timeline__num">05</span>
+        <div class="timeline__body">
+          <h3>Tu réserves, l'esprit tranquille</h3>
+          <p>Tu confirmes, tu paies à l'agence, et tu reçois ta réservation officielle. Le même voyage, juste moins cher.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="process__cta">
+      <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
+    </div>
+  </section>
 
-        <div class="field">
-          <label for="ret">Date de retour</label>
-          <input id="ret" name="ret" type="date">
-        </div>
+  <!-- GUIDE: where to find a deal -->
+  <section id="guide" class="guide">
+    <div class="guide__intro">
+      <p class="eyebrow eyebrow--center">Magasine comme un pro</p>
+      <h2 class="section__title">Où trouver ton forfait</h2>
+      <p class="guide__lede">
+        Le secret, c'est de magasiner toi-même. Voici les sites majeurs au Québec pour
+        dénicher ton tout-inclus. Quand tu en trouves un qui te plaît, garde les infos
+        et envoie-les-nous.
+      </p>
+    </div>
 
-        <div class="field field--third">
-          <label for="adults">Adultes *</label>
-          <input id="adults" name="adults" type="number" min="1" value="2" required>
-        </div>
-        <div class="field field--third">
-          <label for="children">Enfants</label>
-          <input id="children" name="children" type="number" min="0" value="0">
-        </div>
-        <div class="field field--third">
-          <label for="ages">Âge des enfants</label>
-          <input id="ages" name="ages" type="text" placeholder="Ex. 4 et 9">
-        </div>
+    <div class="guide__grid">
+      <a class="site reveal" href="https://www.transat.com" target="_blank" rel="noopener">
+        <span class="site__name">Transat</span>
+        <span class="site__url">transat.com</span>
+        <span class="site__desc">Voyagiste québécois, vols Air Transat. Forfaits Sud et Europe.</span>
+      </a>
+      <a class="site reveal" href="https://www.sunwing.ca" target="_blank" rel="noopener">
+        <span class="site__name">Vacances Sunwing</span>
+        <span class="site__url">sunwing.ca</span>
+        <span class="site__desc">Grand choix d'hôtels tout-inclus aux Caraïbes, au Mexique et à Cuba.</span>
+      </a>
+      <a class="site reveal" href="https://vacancesaircanada.com" target="_blank" rel="noopener">
+        <span class="site__name">Vacances Air Canada</span>
+        <span class="site__url">vacancesaircanada.com</span>
+        <span class="site__desc">Forfaits avec vols Air Canada, partout dans le Sud.</span>
+      </a>
+      <a class="site reveal" href="https://www.westjet.com/fr-ca/vacances" target="_blank" rel="noopener">
+        <span class="site__name">Vacances WestJet</span>
+        <span class="site__url">westjet.com</span>
+        <span class="site__desc">Forfaits tout-inclus, vols WestJet, vers les destinations soleil.</span>
+      </a>
+    </div>
 
-        <div class="field field--price">
-          <label for="price">Prix trouvé</label>
-          <input id="price" name="price" type="number" min="0" step="1" placeholder="2400">
-        </div>
-        <div class="field field--basis">
-          <label for="basis">Ce prix est…</label>
-          <select id="basis" name="basis">
-            <option value="per_person">par personne</option>
-            <option value="total">le total</option>
-          </select>
-        </div>
+    <div class="checklist">
+      <h3 class="checklist__title">Ce qu'il faut noter</h3>
+      <ul class="checklist__list">
+        <li>Hôtel exact</li>
+        <li>Dates (départ et retour)</li>
+        <li>Aéroport de départ</li>
+        <li>Voyageurs (adultes, enfants + âges)</li>
+        <li>Prix affiché (par personne ou total)</li>
+        <li>Voyagiste</li>
+      </ul>
+      <p class="checklist__tip">Astuce : compare quelques sites pour le même hôtel — les prix bougent souvent d'une journée à l'autre.</p>
+    </div>
+  </section>
 
-        <div class="field">
-          <label for="operator">Transporteur (si connu)</label>
-          <select id="operator" name="operator">
-            <option value="">Je ne sais pas</option>
-            <option>Transat</option>
-            <option>Sunwing</option>
-            <option>Vacances Air Canada</option>
-            <option>WestJet Vacations</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="source">Lien du forfait (optionnel)</label>
-          <input id="source" name="source" type="text" placeholder="Colle le lien, ou écris « capture Messenger »">
-        </div>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <p class="eyebrow eyebrow--center">Les vraies questions</p>
+    <h2 class="section__title">Avant de partir</h2>
+    <div class="faq__list">
+      <details class="qa reveal">
+        <summary>Est-ce que je paie plus cher ?</summary>
+        <p>Non, c'est l'inverse. Tu paies moins cher que le prix affiché, parce qu'on te remet une partie de notre commission en rabais.</p>
+      </details>
+      <details class="qa reveal">
+        <summary>Est-ce que c'est sécuritaire ?</summary>
+        <p>Oui. On est une agence titulaire du permis du Québec n°&nbsp;700495 et on réserve via le réseau officiel Softvoyage. Ta réservation est une vraie réservation auprès du voyagiste.</p>
+      </details>
+      <details class="qa reveal">
+        <summary>Combien de rabais je peux avoir ?</summary>
+        <p>Ça dépend du forfait et du voyagiste, mais le rabais s'applique directement sur ton prix. On te donne le montant exact dans ton offre, avant que tu décides quoi que ce soit.</p>
+      </details>
+      <details class="qa reveal">
+        <summary>Comment je paie ?</summary>
+        <p>Tu paies à l'agence au moment de confirmer ta réservation, comme pour n'importe quelle agence de voyages. Aucun paiement à faire pour nous envoyer ton forfait.</p>
+      </details>
+    </div>
+  </section>
 
-        <div class="field">
-          <label for="name">Ton nom</label>
-          <input id="name" name="name" type="text" placeholder="Optionnel">
-        </div>
-        <div class="field">
-          <label for="email">Ton courriel *</label>
-          <input id="email" name="email" type="email" placeholder="pour t'envoyer ton rabais" required>
-        </div>
-
-        <div class="field field--full">
-          <label for="notes">Précisions</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Chambre swim-up, vol direct, tout détail utile…"></textarea>
-        </div>
-      </div>
-
-      <div class="form__foot">
-        <button type="submit" class="btn btn--accent btn--lg" data-submit>Envoyer mon forfait</button>
-        <p class="form__err" data-error hidden></p>
-      </div>
-    </form>
-
-    <!-- success replaces the form on submit -->
-    <div class="done" data-done hidden>
-      <div class="done__mark" aria-hidden="true">✓</div>
-      <h2 class="done__title">Dossier reçu</h2>
-      <p class="done__text">On regarde ton forfait et on te revient par courriel avec ton rabais. Garde un œil sur ta boîte de réception.</p>
-      <p class="done__ref" data-ref></p>
+  <!-- FINAL CTA -->
+  <section class="cta-band">
+    <h2 class="cta-band__title">Prêt à payer moins cher pour le même voyage ?</h2>
+    <p class="cta-band__text">Envoie-nous ton forfait, on s'occupe du reste.</p>
+    <div class="cta-band__actions">
+      <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
+      <a class="btn btn--ghost btn--lg" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Écris-nous sur Messenger</a>
     </div>
   </section>
 </main>
