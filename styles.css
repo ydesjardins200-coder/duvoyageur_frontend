@@ -282,6 +282,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 }
 @media (max-width:759px){
   .nav__right .permit{display:none}
+  .nav__link--how{display:none}
+  .nav__link--login{display:none}
   .nav .brand__name{display:none}
   .nav__right{gap:.6rem}
   .nav .btn--sm{padding:.5rem .85rem;font-size:.86rem}
