@@ -111,7 +111,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* ---- hero ---- */
 .hero{
   position:relative;isolation:isolate;overflow:hidden;
-  min-height:clamp(560px,76svh,860px);
+  min-height:clamp(820px,90svh,900px);
   display:grid;align-content:center;
   justify-items:center;text-align:center;
   padding:clamp(4.5rem,9vh,6.5rem) 1.25rem clamp(3rem,8vh,5.5rem);
