@@ -48,6 +48,24 @@
 
   <section class="form-section">
     <form id="trip-form" class="form" novalidate>
+      <div class="shot">
+        <input id="screenshot" type="file" accept="image/*" class="shot__input" data-file>
+        <label for="screenshot" class="shot__zone" data-zone>
+          <span class="shot__ico" aria-hidden="true">📸</span>
+          <span class="shot__title">Envoie une capture de ton forfait</span>
+          <span class="shot__hint">Le plus rapide : on lit l'hôtel, les dates, le prix et le voyagiste pour toi. Glisse une image ici ou clique pour choisir.</span>
+        </label>
+        <div class="shot__preview" data-preview hidden>
+          <img class="shot__thumb" data-thumb alt="Aperçu de ta capture">
+          <div class="shot__meta">
+            <span class="shot__name" data-shotname>capture</span>
+            <button type="button" class="shot__remove" data-remove>Retirer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="or"><span>ou remplis les détails à la main</span></div>
+
       <div class="grid">
         <div class="field">
           <label for="origin">Aéroport de départ *</label>

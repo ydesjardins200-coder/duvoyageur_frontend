@@ -20,6 +20,67 @@ if (form) {
   const btn = form.querySelector("[data-submit]");
   const doneEl = document.querySelector("[data-done]");
 
+  /* ----- Screenshot upload (mirrors the Messenger deal-image flow) ----- */
+  const fileInput = form.querySelector("[data-file]");
+  const zone = form.querySelector("[data-zone]");
+  const preview = form.querySelector("[data-preview]");
+  const thumb = form.querySelector("[data-thumb]");
+  const shotName = form.querySelector("[data-shotname]");
+  const removeBtn = form.querySelector("[data-remove]");
+  const SOFT_REQUIRED = ["origin", "where", "dep", "adults"]; // a screenshot can fill these
+  let selectedFile = null;
+
+  const setScreenshotMode = (on) => {
+    SOFT_REQUIRED.forEach((n) => {
+      const el = form.elements[n];
+      if (el) on ? el.removeAttribute("required") : el.setAttribute("required", "");
+    });
+  };
+
+  const handleFile = (file) => {
+    if (!file || !file.type.startsWith("image/")) return;
+    selectedFile = file;
+    thumb.src = URL.createObjectURL(file);
+    shotName.textContent = file.name || "capture";
+    preview.hidden = false;
+    zone.hidden = true;
+    setScreenshotMode(true);
+  };
+  const clearFile = () => {
+    selectedFile = null;
+    fileInput.value = "";
+    preview.hidden = true;
+    zone.hidden = false;
+    setScreenshotMode(false);
+  };
+
+  if (fileInput) {
+    fileInput.addEventListener("change", (e) => handleFile(e.target.files[0]));
+    removeBtn.addEventListener("click", clearFile);
+    ["dragover", "dragenter"].forEach((ev) =>
+      zone.addEventListener(ev, (e) => { e.preventDefault(); zone.classList.add("is-over"); }));
+    ["dragleave", "drop"].forEach((ev) =>
+      zone.addEventListener(ev, (e) => { e.preventDefault(); zone.classList.remove("is-over"); }));
+    zone.addEventListener("drop", (e) => {
+      const f = e.dataTransfer.files && e.dataTransfer.files[0];
+      if (f) { fileInput.files = e.dataTransfer.files; handleFile(f); }
+    });
+  }
+
+  /* Shrink big phone screenshots before upload (keeps under model limits). */
+  async function downscale(file, maxDim = 1600, quality = 0.82) {
+    try {
+      const bmp = await createImageBitmap(file);
+      const scale = Math.min(1, maxDim / Math.max(bmp.width, bmp.height));
+      const w = Math.round(bmp.width * scale), h = Math.round(bmp.height * scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = w; canvas.height = h;
+      canvas.getContext("2d").drawImage(bmp, 0, 0, w, h);
+      const blob = await new Promise((r) => canvas.toBlob(r, "image/jpeg", quality));
+      return blob || file;
+    } catch (_) { return file; }
+  }
+
   const splitOrigin = (value) => {
     const [city, iata] = (value || "").split("|");
     return { origin_city: city || null, origin_airport_iata: iata || null };
@@ -81,13 +142,35 @@ if (form) {
 
     btn.disabled = true;
     const original = btn.textContent;
-    btn.textContent = "Envoi en cours…";
+    btn.textContent = selectedFile ? "Lecture de ta capture…" : "Envoi en cours…";
     try {
-      const res = await fetch(`${API_BASE}/intake`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(buildPayload()),
-      });
+      let res;
+      if (selectedFile) {
+        const blob = await downscale(selectedFile);
+        const v = (n) => {
+          const el = form.elements[n];
+          return el && el.value.trim() ? el.value.trim() : null;
+        };
+        const fd = new FormData();
+        fd.append("file", blob, "capture.jpg");
+        const [oc, oi] = (v("origin") || "").split("|");
+        const add = (k, val) => { if (val) fd.append(k, val); };
+        add("email", v("email")); add("name", v("name"));
+        add("origin_city", oc || null); add("origin_airport_iata", oi || null);
+        add("where", v("where")); add("dep", v("dep")); add("ret", v("ret"));
+        add("operator", v("operator")); add("notes", v("notes"));
+        // Only override counts if the customer changed them from the defaults,
+        // otherwise let the screenshot decide.
+        const a = v("adults"); if (a && a !== "2") fd.append("adults", a);
+        const ch = v("children"); if (ch && ch !== "0") fd.append("children", ch);
+        res = await fetch(`${API_BASE}/intake/screenshot`, { method: "POST", body: fd });
+      } else {
+        res = await fetch(`${API_BASE}/intake`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(buildPayload()),
+        });
+      }
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       form.hidden = true;
