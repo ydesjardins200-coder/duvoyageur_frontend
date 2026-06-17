@@ -378,6 +378,12 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .checklist__tip{margin:1.2rem 0 0;color:var(--mist);font-size:.9rem}
 
 /* FAQ */
+.sunset{position:relative;isolation:isolate;overflow:hidden}
+.sunset__bg{position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg, var(--abyss) 0%, rgba(3,15,23,.82) 12%, rgba(5,17,25,.74) 46%, rgba(3,14,22,.82) 86%, var(--abyss) 100%),
+    url("assets/sunset.jpg") center 32%/cover no-repeat;
+}
 .faq{max-width:760px;margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1rem,4vw,2rem)}
 .faq .section__title{margin-bottom:2rem}
 .faq__list{display:flex;flex-direction:column;gap:.8rem}
