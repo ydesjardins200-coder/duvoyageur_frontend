@@ -133,7 +133,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hero__horizon{position:absolute;left:0;right:0;bottom:0;height:42%;
   background:linear-gradient(180deg, transparent, var(--abyss) 92%);
 }
-.hero__inner{position:relative;max-width:780px;align-self:end}
+.hero__inner{position:relative;max-width:780px;align-self:center}
 .hero .eyebrow{text-shadow:0 1px 10px rgba(2,12,20,.75)}
 .hero__title{font-size:clamp(2.6rem,8vw,5rem);font-weight:800;color:var(--foam);
   text-shadow:0 2px 28px rgba(2,12,20,.5)}
