@@ -528,6 +528,36 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   .msgr__label{display:none}
 }
 
+/* Messenger greeting bubble (injected by app.js) */
+.msgr-bubble{position:fixed;z-index:59;
+  right:clamp(1rem,3vw,1.6rem);
+  bottom:calc(clamp(1rem,3vw,1.6rem) + 64px);
+  max-width:min(280px,calc(100vw - 2rem));
+  background:var(--glass);border:1px solid var(--line);border-radius:16px;
+  padding:.85rem 2.1rem .9rem .95rem;
+  box-shadow:0 16px 40px -14px rgba(0,0,0,.75),0 0 30px -10px var(--glow);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  opacity:0;transform:translateY(10px) scale(.96);transform-origin:bottom right;
+  transition:opacity .28s ease,transform .28s cubic-bezier(.2,.8,.25,1)}
+.msgr-bubble.is-in{opacity:1;transform:none}
+.msgr-bubble::after{content:"";position:absolute;right:22px;bottom:-7px;
+  width:14px;height:14px;background:rgba(12,45,62,.62);
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  transform:rotate(45deg)}
+.msgr-bubble__link{display:block;text-decoration:none;color:var(--foam)}
+.msgr-bubble__link:hover{text-decoration:none}
+.msgr-bubble__title{display:block;font-weight:700;font-size:.95rem;line-height:1.25;color:var(--foam)}
+.msgr-bubble__text{display:block;margin-top:.2rem;font-size:.84rem;line-height:1.35;color:var(--mist)}
+.msgr-bubble__close{position:absolute;top:.35rem;right:.45rem;
+  width:1.5rem;height:1.5rem;display:grid;place-items:center;
+  border:0;background:transparent;color:var(--mist);
+  font-size:1.2rem;line-height:1;cursor:pointer;border-radius:50%;
+  transition:color .15s,background .15s}
+.msgr-bubble__close:hover{color:var(--foam);background:rgba(255,255,255,.08)}
+@media (max-width:560px){
+  .msgr-bubble{bottom:calc(clamp(1rem,3vw,1.6rem) + 58px)}
+}
+
 /* ===================== Top hôtels page ===================== */
 .tophead{position:relative;isolation:isolate;overflow:hidden;text-align:center;
   padding:clamp(6rem,14vh,9rem) clamp(1rem,4vw,2rem) clamp(3rem,7vh,5rem)}

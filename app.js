@@ -341,3 +341,36 @@ if (form) {
     if (window.innerWidth > 1180) setOpen(false);
   });
 })();
+
+/* -------- Messenger greeting bubble (sitewide) --------
+   Pops a small dismissible greeting next to the floating .msgr button,
+   once per session, ~4s after load. Stays 100% m.me (no extra cost). */
+(() => {
+  const btn = document.querySelector('.msgr');
+  if (!btn) return;
+  try { if (sessionStorage.getItem('dv_msgr_bubble') === 'done') return; } catch (_) {}
+
+  const href = btn.getAttribute('href') || 'https://m.me/duvoyageur.ca';
+
+  const bubble = document.createElement('div');
+  bubble.className = 'msgr-bubble';
+  bubble.innerHTML =
+    '<button class="msgr-bubble__close" type="button" aria-label="Fermer">&times;</button>' +
+    '<a class="msgr-bubble__link" href="' + href + '" target="_blank" rel="noopener">' +
+      '<span class="msgr-bubble__title">Une question sur ton forfait&nbsp;?</span>' +
+      '<span class="msgr-bubble__text">Écris-nous, on répond en quelques minutes&nbsp;👋</span>' +
+    '</a>';
+
+  const close = () => {
+    bubble.classList.remove('is-in');
+    setTimeout(() => bubble.remove(), 280);
+  };
+  bubble.querySelector('.msgr-bubble__close').addEventListener('click', close);
+
+  setTimeout(() => {
+    document.body.appendChild(bubble);
+    try { sessionStorage.setItem('dv_msgr_bubble', 'done'); } catch (_) {}
+    requestAnimationFrame(() => bubble.classList.add('is-in'));
+    setTimeout(() => { if (bubble.isConnected) close(); }, 14000); // gentle auto-hide
+  }, 4000);
+})();
