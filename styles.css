@@ -432,3 +432,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .or{display:flex;align-items:center;gap:1rem;margin:1.3rem 0;color:var(--mist);
   font-family:"Space Grotesk",monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase}
 .or::before,.or::after{content:"";height:1px;flex:1;background:var(--line)}
+
+.shot__status{margin:.7rem .2rem 0;font-size:.88rem;color:var(--mist)}
+.shot__status.is-loading{color:var(--surf)}
+.shot__status.is-ok{color:var(--lagoon)}
+.shot__status.is-warn{color:var(--gold)}
+.shot__status[hidden]{display:none}

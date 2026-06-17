@@ -27,6 +27,7 @@ if (form) {
   const thumb = form.querySelector("[data-thumb]");
   const shotName = form.querySelector("[data-shotname]");
   const removeBtn = form.querySelector("[data-remove]");
+  const shotStatus = form.querySelector("[data-shotstatus]");
   const SOFT_REQUIRED = ["origin", "where", "dep", "adults"]; // a screenshot can fill these
   let selectedFile = null;
 
@@ -37,7 +38,68 @@ if (form) {
     });
   };
 
-  const handleFile = (file) => {
+  const setStatus = (msg, kind) => {
+    if (!shotStatus) return;
+    shotStatus.hidden = false;
+    shotStatus.textContent = msg;
+    shotStatus.className = "shot__status" + (kind ? " is-" + kind : "");
+  };
+
+  const isoDate = (s) =>
+    (typeof s === "string" && /^\d{4}-\d{2}-\d{2}$/.test(s)) ? s : "";
+
+  function setVal(name, val) {
+    const el = form.elements[name];
+    if (el && val != null && String(val) !== "") el.value = val;
+  }
+
+  /* Map the parsed deal onto the visible form so the customer can review it. */
+  function prefillFromTrip(t) {
+    if (!t) return;
+    const originSel = form.elements["origin"];
+    if (originSel) {
+      const iata = (t.origin_airport_iata || "").toUpperCase();
+      const city = (t.origin_city || "").toLowerCase();
+      let done = false;
+      for (const opt of originSel.options) {
+        const oi = (opt.value.split("|")[1] || "");
+        if (oi && iata && oi === iata) { originSel.value = opt.value; done = true; break; }
+      }
+      if (!done && city) for (const opt of originSel.options) {
+        const oc = (opt.value.split("|")[0] || "").toLowerCase();
+        if (oc && oc === city) { originSel.value = opt.value; break; }
+      }
+    }
+    setVal("where", t.hotel_name_raw || t.destination);
+    setVal("dep", isoDate(t.departure_date));
+    setVal("ret", isoDate(t.return_date));
+    if (t.num_adults != null) setVal("adults", t.num_adults);
+    if (t.num_children != null) setVal("children", t.num_children);
+
+    const opSel = form.elements["operator"];
+    if (opSel && t.operator) {
+      const o = t.operator.toLowerCase();
+      const map = [["transat", "Transat"], ["sunwing", "Sunwing"],
+                   ["air canada", "Vacances Air Canada"], ["westjet", "WestJet Vacations"]];
+      let val = "Autre";
+      for (const [k, v] of map) if (o.includes(k)) { val = v; break; }
+      for (const opt of opSel.options) if (opt.value === val) { opSel.value = val; break; }
+    }
+    if (t.price_seen && t.price_seen.amount != null) {
+      setVal("price", t.price_seen.amount);
+      if (t.price_seen.basis === "per_person" || t.price_seen.basis === "total")
+        setVal("basis", t.price_seen.basis);
+    }
+    const extra = [];
+    if (t.agent_notes) extra.push(t.agent_notes);
+    if (t.dates_raw && !isoDate(t.departure_date)) extra.push("Dates : " + t.dates_raw);
+    if (extra.length) {
+      const cur = (form.elements["notes"].value || "").trim();
+      form.elements["notes"].value = cur ? cur + " · " + extra.join(" · ") : extra.join(" · ");
+    }
+  }
+
+  const handleFile = async (file) => {
     if (!file || !file.type.startsWith("image/")) return;
     selectedFile = file;
     thumb.src = URL.createObjectURL(file);
@@ -45,12 +107,31 @@ if (form) {
     preview.hidden = false;
     zone.hidden = true;
     setScreenshotMode(true);
+
+    setStatus("Lecture de ta capture…", "loading");
+    try {
+      const blob = await downscale(file);
+      const fd = new FormData();
+      fd.append("file", blob, "capture.jpg");
+      const res = await fetch(`${API_BASE}/parse/screenshot`, { method: "POST", body: fd });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const data = await res.json();
+      if (data.ok && data.trip) {
+        prefillFromTrip(data.trip);
+        setStatus("On a rempli ce qu'on a pu lire — vérifie et complète au besoin.", "ok");
+      } else {
+        setStatus("On n'a pas pu tout lire — remplis les champs à la main.", "warn");
+      }
+    } catch (_) {
+      setStatus("Lecture impossible pour l'instant — remplis les champs à la main (ta capture sera quand même envoyée).", "warn");
+    }
   };
   const clearFile = () => {
     selectedFile = null;
     fileInput.value = "";
     preview.hidden = true;
     zone.hidden = false;
+    if (shotStatus) shotStatus.hidden = true;
     setScreenshotMode(false);
   };
 
@@ -153,16 +234,19 @@ if (form) {
         };
         const fd = new FormData();
         fd.append("file", blob, "capture.jpg");
+        fd.append("parse", "false"); // fields were reviewed on screen — don't re-parse
         const [oc, oi] = (v("origin") || "").split("|");
         const add = (k, val) => { if (val) fd.append(k, val); };
         add("email", v("email")); add("name", v("name"));
         add("origin_city", oc || null); add("origin_airport_iata", oi || null);
         add("where", v("where")); add("dep", v("dep")); add("ret", v("ret"));
-        add("operator", v("operator")); add("notes", v("notes"));
-        // Only override counts if the customer changed them from the defaults,
-        // otherwise let the screenshot decide.
-        const a = v("adults"); if (a && a !== "2") fd.append("adults", a);
-        const ch = v("children"); if (ch && ch !== "0") fd.append("children", ch);
+        add("adults", v("adults")); add("children", v("children"));
+        add("operator", v("operator"));
+        add("price", v("price")); add("basis", v("basis"));
+        const ages = v("ages");
+        let notesVal = v("notes") || "";
+        if (ages) notesVal = (notesVal ? notesVal + " · " : "") + "Âge des enfants : " + ages;
+        add("notes", notesVal || null);
         res = await fetch(`${API_BASE}/intake/screenshot`, { method: "POST", body: fd });
       } else {
         res = await fetch(`${API_BASE}/intake`, {
