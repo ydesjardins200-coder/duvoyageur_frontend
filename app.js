@@ -28,6 +28,11 @@ if (form) {
   const shotName = form.querySelector("[data-shotname]");
   const removeBtn = form.querySelector("[data-remove]");
   const shotStatus = form.querySelector("[data-shotstatus]");
+  const shotProg = form.querySelector("[data-prog]");
+  const shotBar = form.querySelector("[data-bar]");
+  const showProg = () => { if (shotProg) { shotProg.hidden = false; if (shotBar) shotBar.style.width = "0%"; } };
+  const setProg = (pct) => { if (shotBar) shotBar.style.width = pct + "%"; };
+  const hideProg = () => { if (shotProg) setTimeout(() => { shotProg.hidden = true; }, 700); };
   const SOFT_REQUIRED = ["origin", "where", "dep", "adults"]; // a screenshot can fill these
   let selectedFile = null;
 
@@ -109,13 +114,27 @@ if (form) {
     setScreenshotMode(true);
 
     setStatus("Lecture de ta capture…", "loading");
+    showProg();
     try {
       const blob = await downscale(file);
       const fd = new FormData();
       fd.append("file", blob, "capture.jpg");
-      const res = await fetch(`${API_BASE}/parse/screenshot`, { method: "POST", body: fd });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const data = await res.json();
+      // XHR (not fetch) so we can show real upload progress while our system reads it.
+      const data = await new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", `${API_BASE}/parse/screenshot`);
+        xhr.upload.onprogress = (e) => {
+          if (e.lengthComputable) setProg(Math.round((e.loaded / e.total) * 60));
+        };
+        xhr.onload = () => {
+          setProg(100);
+          if (xhr.status >= 200 && xhr.status < 300) {
+            try { resolve(JSON.parse(xhr.responseText)); } catch (err) { reject(err); }
+          } else { reject(new Error("HTTP " + xhr.status)); }
+        };
+        xhr.onerror = () => reject(new Error("network"));
+        xhr.send(fd);
+      });
       if (data.ok && data.trip) {
         prefillFromTrip(data.trip);
         setStatus("On a rempli ce qu'on a pu lire — vérifie et complète au besoin.", "ok");
@@ -124,6 +143,8 @@ if (form) {
       }
     } catch (_) {
       setStatus("Lecture impossible pour l'instant — remplis les champs à la main (ta capture sera quand même envoyée).", "warn");
+    } finally {
+      hideProg();
     }
   };
   const clearFile = () => {

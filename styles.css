@@ -511,6 +511,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .shot__status.is-ok{color:var(--lagoon)}
 .shot__status.is-warn{color:var(--gold)}
 .shot__status[hidden]{display:none}
+.shot__prog{height:8px;border-radius:999px;background:rgba(8,33,47,.7);overflow:hidden;margin:.7rem .2rem 0}
+.shot__prog[hidden]{display:none}
+.shot__bar{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--pacific),var(--lagoon));transition:width .2s ease}
 
 /* ----- Floating Messenger button (m.me) ----- */
 .msgr{position:fixed;right:clamp(1rem,3vw,1.6rem);bottom:clamp(1rem,3vw,1.6rem);z-index:60;
