@@ -227,6 +227,7 @@ if (form) {
       source: v("source") || "formulaire web",
       customer_name: v("name"),
       customer_email: v("email"),
+      customer_phone: v("phone"),
       agent_notes: notesParts.join(" · ") || null,
       raw_message: v("where") ? `Formulaire web — ${v("where")}` : "Formulaire web",
       parse_confidence: 1.0,
@@ -258,7 +259,7 @@ if (form) {
         fd.append("parse", "false"); // fields were reviewed on screen — don't re-parse
         const [oc, oi] = (v("origin") || "").split("|");
         const add = (k, val) => { if (val) fd.append(k, val); };
-        add("email", v("email")); add("name", v("name"));
+        add("email", v("email")); add("name", v("name")); add("phone", v("phone"));
         add("origin_city", oc || null); add("origin_airport_iata", oi || null);
         add("where", v("where")); add("dep", v("dep")); add("ret", v("ret"));
         add("adults", v("adults")); add("children", v("children"));
@@ -288,9 +289,11 @@ if (form) {
       if (su) {
         const email = (form.elements["email"] && form.elements["email"].value.trim()) || "";
         const name = (form.elements["name"] && form.elements["name"].value.trim()) || "";
+        const phone = (form.elements["phone"] && form.elements["phone"].value.trim()) || "";
         const q = [];
         if (email) q.push("email=" + encodeURIComponent(email));
         if (name) q.push("name=" + encodeURIComponent(name));
+        if (phone) q.push("phone=" + encodeURIComponent(phone));
         su.href = "https://duvoyageurbackend-production.up.railway.app/portail/inscription"
           + (q.length ? "?" + q.join("&") : "");
       }
