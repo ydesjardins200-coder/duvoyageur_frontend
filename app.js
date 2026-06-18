@@ -374,3 +374,29 @@ if (form) {
     setTimeout(() => { if (bubble.isConnected) close(); }, 14000); // gentle auto-hide
   }, 4000);
 })();
+
+/* ------------------------------------------------------------------ *
+ * Espace client : « Connexion » devient « Mon compte » si le visiteur
+ * est déjà connecté au portail. Le portail est sur un autre domaine,
+ * alors on demande son état via un petit script JSONP (whoami.js) qui
+ * lit le cookie-indice SameSite=None. Par défaut (déconnecté ou échec),
+ * on garde « Connexion » + « Inscription ».
+ * ------------------------------------------------------------------ */
+(function () {
+  var PORTAL = 'https://duvoyageurbackend-production.up.railway.app';
+  window.__dvAuth = function (loggedIn) {
+    if (!loggedIn) return;
+    document.querySelectorAll('[data-auth="login"]').forEach(function (a) {
+      a.textContent = 'Mon compte';
+      a.setAttribute('href', PORTAL + '/portail');
+    });
+    document.querySelectorAll('[data-auth="signup"]').forEach(function (a) {
+      a.style.display = 'none';
+    });
+  };
+  var s = document.createElement('script');
+  s.src = PORTAL + '/portail/whoami.js?cb=__dvAuth';
+  s.async = true;
+  s.onerror = function () { /* reste sur Connexion + Inscription */ };
+  document.head.appendChild(s);
+})();
