@@ -262,6 +262,17 @@ if (form) {
       if (data && data.case_id) {
         doneEl.querySelector("[data-ref]").textContent = `Numéro de dossier : #${data.case_id}`;
       }
+      // Hand off to the client portal signup, pre-filled with what they typed.
+      const su = doneEl.querySelector("[data-signup]");
+      if (su) {
+        const email = (form.elements["email"] && form.elements["email"].value.trim()) || "";
+        const name = (form.elements["name"] && form.elements["name"].value.trim()) || "";
+        const q = [];
+        if (email) q.push("email=" + encodeURIComponent(email));
+        if (name) q.push("name=" + encodeURIComponent(name));
+        su.href = "https://duvoyageurbackend-production.up.railway.app/portail/inscription"
+          + (q.length ? "?" + q.join("&") : "");
+      }
       doneEl.scrollIntoView({ behavior: "smooth", block: "center" });
     } catch (err) {
       btn.disabled = false;
