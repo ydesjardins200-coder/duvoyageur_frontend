@@ -321,6 +321,59 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 
+/* ---- desktop nav polish (>1180px only; mobile untouched) ---- */
+@media (min-width:1181px){
+  /* 5 — scroll-aware: floats over hero, anchors once you scroll */
+  .nav{
+    border-bottom-color:rgba(155,246,236,.06);background:rgba(4,18,26,.42);
+    transition:padding .26s ease,background .26s ease,
+               border-color .26s ease,box-shadow .26s ease;
+  }
+  /* 3 — shrink on scroll */
+  .brand__logo{width:62px;height:62px;transition:width .26s ease,height .26s ease}
+  .nav--shrink{
+    padding-top:.28rem;padding-bottom:.28rem;
+    background:rgba(4,18,26,.86);border-bottom-color:var(--line);
+    box-shadow:0 12px 34px -18px rgba(2,10,16,.85);
+  }
+  .nav--shrink .brand__logo{width:46px;height:46px}
+
+  /* 1 — hierarchy: utility links recede, selections stay prominent */
+  .nav__right .nav__link--sec:not([data-auth]){color:var(--mist);font-weight:500}
+  .nav__right .nav__link--sec:not([data-auth]):hover{color:var(--foam)}
+
+  /* 2 — animated underline on hover + active page */
+  .nav__left .nav__link,
+  .nav__right .nav__link--sec:not([data-auth]){position:relative}
+  .nav__left .nav__link::after,
+  .nav__right .nav__link--sec:not([data-auth])::after{
+    content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;
+    background:linear-gradient(90deg,var(--pacific),var(--lagoon));
+    transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
+  }
+  .nav__left .nav__link:hover::after,
+  .nav__right .nav__link--sec:not([data-auth]):hover::after,
+  .nav__left .nav__link--on::after,
+  .nav__right .nav__link--on:not([data-auth])::after{transform:scaleX(1)}
+  .nav__link--on,.nav__link--on:hover{color:var(--foam)}  /* underline marks active */
+
+  /* 4 — auth cluster: hairline divider + Connexion as a ghost pill */
+  .nav__right [data-auth="login"]{
+    position:relative;margin-left:.95rem;padding:.46rem 1rem;
+    border:1px solid var(--line);border-radius:999px;color:var(--foam);font-weight:600;
+    transition:border-color .2s ease,background .2s ease,color .2s ease;
+  }
+  .nav__right [data-auth="login"]:hover{
+    border-color:var(--pacific);background:rgba(25,211,230,.08);color:var(--surf);
+  }
+  .nav__right [data-auth="login"]::before{
+    content:"";position:absolute;left:-.5rem;top:50%;transform:translateY(-50%);
+    width:1px;height:20px;background:var(--line);
+  }
+  .nav__right [data-auth="signup"]{margin-left:.55rem;color:var(--foam)}
+  .nav__right [data-auth="signup"]:hover{color:var(--surf)}
+}
+
 /* ---- responsive ---- */
 @media (max-width:1180px){
   .nav{grid-template-columns:auto 1fr auto;padding:.45rem clamp(.8rem,4vw,1.4rem)}

@@ -377,6 +377,33 @@ if (form) {
   });
 })();
 
+/* Desktop nav: shrink-on-scroll + highlight the current page */
+(function () {
+  var nav = document.querySelector('.nav');
+  if (!nav) return;
+
+  // Shrink-on-scroll (CSS only reacts >1180px, so this is a no-op on mobile).
+  var ticking = false;
+  function apply() {
+    nav.classList.toggle('nav--shrink', window.scrollY > 8);
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+  }, { passive: true });
+  apply();
+
+  // Mark the link pointing at the current page (works for the top pages; skips
+  // same-page #anchors and external links). Also lights the matching drawer link.
+  var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  nav.querySelectorAll('a.nav__link[href]').forEach(function (a) {
+    var href = a.getAttribute('href') || '';
+    if (!href || href.charAt(0) === '#' || /^https?:/i.test(href)) return;
+    var file = href.split('/').pop().split('#')[0].toLowerCase();
+    if (file && file === here) a.classList.add('nav__link--on');
+  });
+})();
+
 /* -------- Messenger greeting bubble (sitewide) --------
    Pops a small dismissible greeting next to the floating .msgr button,
    once per session, ~4s after load. Stays 100% m.me (no extra cost). */
