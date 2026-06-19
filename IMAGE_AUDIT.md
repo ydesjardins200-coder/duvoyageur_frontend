@@ -30,3 +30,18 @@ Légende : ✅ héros distinct/réel · ⚠️ héros ambiance (à prioriser) ·
 - Cayo Guillermo → vraie Playa Pilar (dunes)
 
 **Galeries (toutes les hubs) :** remplacer progressivement les photos d'ambiance par de vraies photos d'hôtels (Tripbook) — la convention « Photos d'ambiance » reste affichée tant que ce n'est pas fait.
+
+### Lot 2 — nouveaux pays (8 hubs)
+
+| Hub | Héros | État héros | Galeries |
+|---|---|---|---|
+| voyage-saint-martin | pexels-11331479 (plage + avion) | ✅ distinct (Maho/avions) | ambiance |
+| voyage-antigua | pexels-16968907 (English Harbour) | ✅ distinct | ambiance |
+| voyage-grenade | pexels-32866444 (cove turquoise) | ✅ distinct | ambiance (dont plage aux drapeaux Grenade) |
+| voyage-playa-blanca-panama | pexels-594077 (resort coucher) | ⚠️ semi-ambiance (resort générique) | ambiance |
+| voyage-carthagene-colombie | pexels-29907876 (rue coloniale) | ✅ distinct (iconique) | ambiance (vieille ville) |
+| voyage-belize | pexels-27792060 (eau turquoise) | ⚠️ ambiance (turquoise générique) | ambiance (dont rue de caye) |
+| voyage-roatan-honduras | pexels-2120356 (West Bay) | ✅ distinct | ambiance |
+| voyage-turks-caicos | pexels-18450786 (yacht turquoise) | ✅ semi-distinct (Grace Bay) | ambiance |
+
+**Priorité lundi (héros ⚠️) :** Playa Blanca (vraie plage Playa Blanca/Decameron), Belize (vraie caye Ambergris/Caulker ou Blue Hole distinctif).
