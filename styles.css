@@ -325,17 +325,26 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 @media (min-width:1311px){
   /* 5 — scroll-aware: floats over hero, anchors once you scroll */
   .nav{
-    /* even gaps around the centered logo (flex space-between), and a capped,
-       centered content band so it never stretches edge-to-edge on wide screens.
-       Mobile keeps display:grid via the max-width:1300px block below. */
-    display:flex;align-items:center;justify-content:space-between;
-    gap:clamp(.85rem,1.6vw,2.25rem);
+    /* logo lives in the centre `auto` track of an equal 1fr|auto|1fr grid, so it
+       is mathematically centred on the page regardless of the two groups' widths.
+       Each group hugs the logo (justify-self end/start) with equal inner gaps;
+       the width-difference slack sits at the outer edges. Capped + centred band
+       so it never stretches edge-to-edge. Mobile keeps its own grid below. */
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+    column-gap:clamp(1.4rem,2.6vw,2.75rem);
     padding-block:.5rem;
     padding-inline:max(2rem, calc((100% - 1480px) / 2));
     border-bottom-color:rgba(155,246,236,.06);background:rgba(4,18,26,.42);
     transition:padding .26s ease,background .26s ease,
                border-color .26s ease,box-shadow .26s ease;
   }
+  .nav__left{justify-self:end}
+  .nav__right{justify-self:start}
+  /* crest-only in the centre track so the round mark itself is dead-centre
+     (the wordmark beside it would push the crest off-centre). Name/permit
+     still live in the footer. */
+  .brand{gap:0}
+  .nav .brand__text{display:none}
   /* 3 — shrink on scroll */
   .brand__logo{width:62px;height:62px;transition:width .26s ease,height .26s ease}
   .nav--shrink{
@@ -349,23 +358,24 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   .nav__left{gap:1.35rem}
   .nav__right{gap:.9rem}
 
-  /* 1 — hierarchy: utility links recede, selections stay prominent */
-  .nav__right .nav__link--sec:not([data-auth]){color:var(--mist);font-weight:500}
-  .nav__right .nav__link--sec:not([data-auth]):hover{color:var(--foam)}
+  /* 1 — hierarchy: info links (Comment ça marche / FAQ) recede in either zone;
+         destinations + auth stay prominent */
+  .nav .nav__link--sec:not([data-auth]){color:var(--mist);font-weight:500}
+  .nav .nav__link--sec:not([data-auth]):hover{color:var(--foam)}
 
   /* 2 — animated underline on hover + active page */
   .nav__left .nav__link,
-  .nav__right .nav__link--sec:not([data-auth]){position:relative}
+  .nav .nav__link--sec:not([data-auth]){position:relative}
   .nav__left .nav__link::after,
-  .nav__right .nav__link--sec:not([data-auth])::after{
+  .nav .nav__link--sec:not([data-auth])::after{
     content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;
     background:linear-gradient(90deg,var(--pacific),var(--lagoon));
     transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
   }
   .nav__left .nav__link:hover::after,
-  .nav__right .nav__link--sec:not([data-auth]):hover::after,
+  .nav .nav__link--sec:not([data-auth]):hover::after,
   .nav__left .nav__link--on::after,
-  .nav__right .nav__link--on:not([data-auth])::after{transform:scaleX(1)}
+  .nav .nav__link--on:not([data-auth])::after{transform:scaleX(1)}
   .nav__link--on,.nav__link--on:hover{color:var(--foam)}  /* underline marks active */
 
   /* 4 — auth cluster: hairline divider + Connexion as a ghost pill */
