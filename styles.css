@@ -914,3 +914,14 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hotel__specs{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem .55rem;margin:.8rem 0 0;padding:0}
 .hotel__specs li{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--foam);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:.32rem .72rem;white-space:nowrap}
 .hotel__specs li span{font-size:.92rem;line-height:1}
+
+/* Note TripAdvisor sur les cartes d'hôtel (étoiles + lien + astérisque) */
+.hotel__rating{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem .7rem;margin:.7rem 0 0}
+.stars{--rate:0;display:inline-block;font-size:1.05rem;line-height:1;font-family:Arial,"Apple Color Emoji",sans-serif}
+.stars::before{content:"★★★★★";letter-spacing:2px;background:linear-gradient(90deg,#ffc233 calc(var(--rate)/5*100%),rgba(255,255,255,.22) calc(var(--rate)/5*100%));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hotel__score{font-weight:700;color:var(--foam);font-size:.9rem}
+.hotel__score small{color:var(--mist);font-weight:400}
+.hotel__score sup{color:var(--gold);font-weight:700}
+.hotel__ta{font-size:.82rem;font-weight:600;color:var(--pacific);text-decoration:none;display:inline-flex;align-items:center;gap:.25rem}
+.hotel__ta:hover{text-decoration:underline}
+.hotel__tanote{margin:.5rem 0 0;font-size:.78rem;color:var(--mist);max-width:48ch;line-height:1.45}
