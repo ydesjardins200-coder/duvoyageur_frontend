@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<script>document.documentElement.className="js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guides pratiques pour voyageurs | Du Voyageur</title>
+<meta name="description" content="Nos guides et outils gratuits pour préparer ton voyage tout-inclus dans le Sud : checklist de bagages imprimable, meilleure période pour partir, et plus.">
+<meta property="og:title" content="Guides pratiques pour voyageurs">
+<meta property="og:description" content="Outils gratuits pour préparer ton tout-inclus : checklist de bagages, meilleure période, et plus.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#03121b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/pexels-5876967.webp">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{ --maxw:1100px; }
+  .ghead{position:relative;isolation:isolate;padding:clamp(3.4rem,11vh,6.6rem) clamp(1rem,4vw,2rem) clamp(2.6rem,7vh,4rem);text-align:center;overflow:hidden}
+  .ghead__bg{position:absolute;inset:0;z-index:-1;background:
+    radial-gradient(70% 60% at 50% 0%, rgba(25,211,230,.14), transparent 70%),
+    linear-gradient(180deg, rgba(3,18,27,.55) 0%, rgba(3,17,25,.44) 38%, rgba(3,16,24,.90) 88%, var(--abyss) 100%),
+    url("assets/pexels-5876967.webp") center 52%/cover no-repeat;}
+  .ghead__inner{max-width:820px;margin:0 auto}
+  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
+  .ghead p{color:var(--foam);opacity:.95;font-size:clamp(1rem,2.2vw,1.16rem);max-width:640px;margin:1rem auto 0;line-height:1.5}
+  .ghead .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
+  .gwrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,6vh,3.4rem) clamp(1rem,4vw,2rem)}
+  .gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.3rem}
+  .gcard{display:flex;flex-direction:column;background:linear-gradient(160deg,rgba(20,62,82,.36),rgba(8,33,47,.48));
+    border:1px solid var(--line);border-radius:20px;padding:1.5rem 1.5rem 1.4rem;text-decoration:none;transition:.2s}
+  .gcard:hover{border-color:var(--pacific);transform:translateY(-3px);box-shadow:0 16px 36px rgba(2,10,16,.4)}
+  .gcard__em{font-size:2rem;line-height:1}
+  .gcard h2{font:700 1.22rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:.8rem 0 .4rem}
+  .gcard p{color:var(--mist);font-size:.96rem;line-height:1.45;margin:0;flex:1}
+  .gcard__go{margin-top:1rem;color:var(--surf);font-weight:600;font-size:.95rem}
+  .gcard--soon{opacity:.62;cursor:default}
+  .gcard--soon:hover{transform:none;border-color:var(--line);box-shadow:none}
+  .gcard__tag{align-self:flex-start;font:700 .64rem/1 "Space Grotesk",monospace;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(255,210,63,.3);border-radius:7px;padding:.3rem .5rem;margin-top:1rem}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__util">
+    <span class="nav__permit">Permis du Québec&nbsp;700495 · Agence de voyages</span>
+    <div class="nav__utillinks">
+      <a class="nav__ulink" href="index.html#processus">Comment ça marche</a>
+      <a class="nav__ulink" href="index.html#faq">FAQ</a>
+      <span class="nav__usep"></span>
+      <a class="nav__ulink" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">Connexion</a>
+      <a class="nav__ulink" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Inscription</a>
+    </div>
+  </div>
+  <div class="nav__main">
+    <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Du Voyageur, accueil">
+      <img class="brand__logo" src="assets/logo.png" alt="" width="80" height="80">
+      <span class="brand__text">
+        <span class="brand__name">Du&nbsp;Voyageur</span>
+        <span class="brand__permit">Permis&nbsp;700495</span>
+      </span>
+    </a>
+    <nav class="nav__dest" aria-label="Nos sélections">
+      <a class="nav__link" href="destinations.html">Destinations</a>
+      <a class="nav__link" href="top-hotels-de-luxe.html">Luxe</a>
+      <a class="nav__link" href="top-hotels-qualite-prix.html">Qualité-prix</a>
+      <a class="nav__link" href="top-hotels-famille.html">Famille</a>
+      <a class="nav__link" href="les-iles.html">Découvrir les îles</a>
+      <a class="nav__link" href="guides.html">Guides</a>
+    </nav>
+    <span class="nav__sep"></span>
+    <a class="btn btn--accent btn--sm" href="demande.html">Demander mon rabais</a>
+  </div>
+  <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
+    <a class="nav__link" href="destinations.html">Destinations</a>
+    <a class="nav__link" href="top-hotels-de-luxe.html">Luxe</a>
+    <a class="nav__link" href="top-hotels-qualite-prix.html">Qualité-prix</a>
+    <a class="nav__link" href="top-hotels-famille.html">Famille</a>
+    <a class="nav__link" href="les-iles.html">Découvrir les îles</a>
+      <a class="nav__link" href="guides.html">Guides</a>
+    <a class="nav__link" href="index.html#processus">Comment ça marche</a>
+    <a class="nav__link" href="index.html#faq">FAQ</a>
+    <a class="nav__link" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">Connexion</a>
+    <a class="nav__link" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Inscription</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="ghead">
+    <div class="ghead__bg" aria-hidden="true"></div>
+    <div class="ghead__inner">
+      <p class="eyebrow eyebrow--center">Du Voyageur · Gratuit</p>
+      <h1>Guides pratiques pour voyageurs</h1>
+      <p>Des outils simples et utiles pour préparer ton tout-inclus dans le Sud — sans stress, sans rien oublier.</p>
+    </div>
+  </section>
+
+  <div class="gwrap">
+    <div class="gcards">
+      <a class="gcard" href="guide-quoi-apporter.html">
+        <span class="gcard__em" aria-hidden="true">🧳</span>
+        <h2>Quoi apporter dans le Sud</h2>
+        <p>La checklist complète et imprimable : documents, pharmacie, plage, vêtements. Coche tes items — ils se sauvegardent sur ton appareil.</p>
+        <span class="gcard__go">Ouvrir la checklist →</span>
+      </a>
+      <a class="gcard" href="guide-meilleure-periode.html">
+        <span class="gcard__em" aria-hidden="true">📅</span>
+        <h2>Meilleure période pour partir</h2>
+        <p>Mois par mois et par destination : météo, ouragans, sargasses, baleines et prix. Choisis ton objectif, vois les bons mois s'allumer.</p>
+        <span class="gcard__go">Trouver mon moment →</span>
+      </a>
+      <div class="gcard gcard--soon">
+        <span class="gcard__em" aria-hidden="true">🛂</span>
+        <h2>Documents et passeport</h2>
+        <p>Passeport, E-Ticket, formulaires d'entrée par destination — tout ce qu'il faut pour passer la douane sans surprise.</p>
+        <span class="gcard__tag">Bientôt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sunset">
+    <div class="sunset__bg" aria-hidden="true"></div>
+    <section class="cta-band">
+      <p class="eyebrow eyebrow--center">Prêt à partir ?</p>
+      <h2 class="cta-band__title">Reçois ton prix avec rabais</h2>
+      <p class="cta-band__text">Trouve ton forfait, envoie-le-nous, et on te remet une partie de notre commission directement sur ton prix.</p>
+      <div class="cta-band__actions">
+        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
+        <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écris-nous sur Messenger</a>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__brand">
+    <img class="brand__logo" src="assets/logo.png" alt="" width="34" height="34">
+    <span class="brand__name">Du Voyageur</span>
+  </div>
+  <p class="footer__meta">Numéro de permis d'agence : 700495</p>
+  <a class="footer__fb" href="top-hotels-de-luxe.html">Top hôtels</a>
+  <a class="footer__fb" href="voyage-punta-cana.html">Punta Cana</a>
+  <a class="footer__fb" href="voyage-cancun-riviera-maya.html">Cancún / Riviera Maya</a>
+  <a class="footer__fb" href="voyage-puerto-plata-samana.html">Puerto Plata / Samaná</a>
+  <a class="footer__fb" href="guides.html">Guides</a>
+  <a class="footer__fb" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Facebook</a>
+  <a class="footer__fb" href="confidentialite.html">Politique de confidentialité</a>
+  <a class="footer__fb" href="conditions.html">Conditions générales</a>
+  <p class="footer__copy">© <span data-year></span> Duvoyageur.ca — Tous droits réservés.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
