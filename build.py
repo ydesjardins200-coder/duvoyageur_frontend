@@ -47,6 +47,8 @@ def categorie(nom):
         return "destinations.html"
     if nom in ("par-type.html", "les-iles.html") or nom.startswith("top-hotels-"):
         return "par-type.html"
+    if nom == "par-pays.html" or nom.startswith("pays-"):
+        return "par-pays.html"
     if nom == "guides.html" or nom.startswith("guide-"):
         return "guides.html"
     return None
