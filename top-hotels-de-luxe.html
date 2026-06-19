@@ -38,9 +38,46 @@
       </span>
     </a>
     <nav class="nav__dest" aria-label="Nos sélections">
-      <a class="nav__link" href="destinations.html">Destinations</a>
-      <a class="nav__link nav__link--on" href="par-type.html" aria-current="page">Type</a>
-      <a class="nav__link" href="guides.html">Guides</a>
+      <div class="nav__item">
+        <a class="nav__link" href="destinations.html">Destinations</a>
+        <div class="megamenu megamenu--dest" role="menu">
+          <div class="mega__search"><svg class="mega__loupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" class="mega__input" placeholder="Rechercher une destination…" aria-label="Rechercher une destination" autocomplete="off"></div>
+          <div class="mega__list" id="megaDestList">
+          <a class="mega__row" href="voyage-punta-cana.html" data-search="punta cana republique dominicaine rep dom"><span class="mega__name">Punta Cana</span><span class="mega__sub">Rép. dominicaine</span></a>
+          <a class="mega__row" href="voyage-cancun-riviera-maya.html" data-search="cancun riviera maya mexique mexico playa del carmen tulum cenotes"><span class="mega__name">Cancún / Riviera Maya</span><span class="mega__sub">Mexique</span></a>
+          <a class="mega__row" href="voyage-puerto-plata-samana.html" data-search="puerto plata samana republique dominicaine baleines nord"><span class="mega__name">Puerto Plata / Samaná</span><span class="mega__sub">Rép. dominicaine</span></a>
+          <a class="mega__row" href="voyage-negril-jamaique.html" data-search="negril jamaique jamaica seven mile beach ouest"><span class="mega__name">Negril</span><span class="mega__sub">Jamaïque</span></a>
+          <a class="mega__row" href="voyage-ocho-rios-jamaique.html" data-search="ocho rios jamaique jamaica dunns river nord"><span class="mega__name">Ocho Rios</span><span class="mega__sub">Jamaïque</span></a>
+          <a class="mega__row" href="voyage-nassau-bahamas.html" data-search="nassau bahamas paradise island atlantis cable beach"><span class="mega__name">Nassau</span><span class="mega__sub">Bahamas</span></a>
+          </div>
+          <p class="mega__empty" hidden>Aucune destination trouvée.</p>
+          <a class="mega__all" href="destinations.html">Voir toutes les destinations →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link nav__link--on" href="par-type.html" aria-current="page">Type</a>
+        <div class="megamenu megamenu--type" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="top-hotels-de-luxe.html"><span class="mega__name">Luxe</span><span class="mega__sub">Le grand luxe 5★</span></a>
+          <a class="mega__row" href="top-hotels-qualite-prix.html"><span class="mega__name">Qualité-prix</span><span class="mega__sub">Le meilleur rapport qualité-prix</span></a>
+          <a class="mega__row" href="top-hotels-famille.html"><span class="mega__name">Famille</span><span class="mega__sub">Parfaits pour les familles</span></a>
+          <a class="mega__row" href="top-hotels-adults-only.html"><span class="mega__name">Adult only</span><span class="mega__sub">Réservés aux adultes</span></a>
+          <a class="mega__row" href="les-iles.html"><span class="mega__name">Découvrir les îles</span><span class="mega__sub">Les plus belles îles des Caraïbes</span></a>
+          </div>
+          <a class="mega__all" href="par-type.html">Voir tous les types →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="guides.html">Guides</a>
+        <div class="megamenu megamenu--guides" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="guide-quoi-apporter.html"><span class="mega__name">🧳 Quoi apporter</span><span class="mega__sub">La checklist imprimable</span></a>
+          <a class="mega__row" href="guide-meilleure-periode.html"><span class="mega__name">📅 Meilleure période</span><span class="mega__sub">Quand partir, mois par mois</span></a>
+          <a class="mega__row" href="guide-documents-passeport.html"><span class="mega__name">🛂 Documents et passeport</span><span class="mega__sub">Passeport, E-Ticket, C5…</span></a>
+          </div>
+          <a class="mega__all" href="guides.html">Voir tous les guides →</a>
+        </div>
+      </div>
     </nav>
     <span class="nav__sep"></span>
     <a class="btn btn--accent btn--sm" href="demande.html">Demander mon rabais</a>
@@ -67,6 +104,7 @@
         <a class="topcat topcat--on" href="top-hotels-de-luxe.html">Luxe</a>
         <a class="topcat" href="top-hotels-qualite-prix.html">Qualité-prix</a>
         <a class="topcat" href="top-hotels-famille.html">Famille</a>
+        <a class="topcat" href="top-hotels-adults-only.html">Adult only</a>
         <a class="topcat" href="les-iles.html">Découvrir les îles</a>
       </nav>
     </div>

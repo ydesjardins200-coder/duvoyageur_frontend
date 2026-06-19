@@ -462,3 +462,24 @@ if (form) {
   s.onerror = function () { /* reste sur Connexion + Inscription */ };
   document.head.appendChild(s);
 })();
+
+/* Méga-menu Destinations : recherche/filtre */
+(function(){
+  var input=document.querySelector('.megamenu--dest .mega__input');
+  var list=document.getElementById('megaDestList');
+  if(!input||!list) return;
+  var rows=[].slice.call(list.querySelectorAll('.mega__row'));
+  var empty=document.querySelector('.megamenu--dest .mega__empty');
+  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  input.addEventListener('input',function(){
+    var q=norm(input.value.trim()), any=false;
+    rows.forEach(function(r){
+      var hay=norm((r.getAttribute('data-search')||'')+' '+r.textContent);
+      var show=!q||hay.indexOf(q)>-1;
+      r.style.display=show?'':'none'; if(show)any=true;
+    });
+    if(empty) empty.hidden=any;
+  });
+  // Échap vide le champ
+  input.addEventListener('keydown',function(e){ if(e.key==='Escape'){input.value='';input.dispatchEvent(new Event('input'));} });
+})();
