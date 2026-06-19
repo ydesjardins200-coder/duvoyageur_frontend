@@ -909,3 +909,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .factcard__k{font:700 .66rem/1 "Space Grotesk",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pacific);margin:0 0 .4rem}
 .factcard__v{color:var(--foam);font-weight:600;font-size:.98rem;margin:0;line-height:1.35}
 .factcard__v small{display:block;color:var(--mist);font-weight:400;font-size:.84rem;margin-top:.25rem;line-height:1.4}
+
+/* Rangée de specs sur les cartes d'hôtel (.hotel__specs) */
+.hotel__specs{list-style:none;display:flex;flex-wrap:wrap;gap:.45rem .55rem;margin:.8rem 0 0;padding:0}
+.hotel__specs li{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--foam);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:.32rem .72rem;white-space:nowrap}
+.hotel__specs li span{font-size:.92rem;line-height:1}
