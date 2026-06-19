@@ -884,3 +884,16 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     font-size:.85rem;border-top:1px solid var(--line);text-decoration:none}
   .mega__all:hover{color:var(--pacific);text-decoration:none}
 }
+
+/* Cartes destination (.destcard) — partagées sur toutes les pages (étaient inline dans destinations.html) */
+.destgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;margin-top:1.8rem}
+.destcard{display:flex;flex-direction:column;background:var(--glass);border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;box-shadow:0 24px 50px -30px rgba(0,0,0,.7);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.destcard:hover{transform:translateY(-4px);border-color:rgba(155,246,236,.35);box-shadow:0 34px 62px -28px rgba(0,0,0,.82)}
+.destcard__img{display:block;aspect-ratio:16/10;overflow:hidden}
+.destcard__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.destcard:hover .destcard__img img{transform:scale(1.05)}
+.destcard__body{display:flex;flex-direction:column;gap:.4rem;padding:1.2rem 1.3rem 1.4rem}
+.destcard__country{font:700 .68rem/1 "Space Grotesk",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific)}
+.destcard__name{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.45rem;color:var(--foam);line-height:1.1}
+.destcard__desc{color:var(--mist);font-size:.95rem;flex:1}
+.destcard__cta{color:var(--surf);font-weight:600;margin-top:.3rem}
