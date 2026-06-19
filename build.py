@@ -45,7 +45,7 @@ def categorie(nom):
     """Retourne le href de l'item de menu à activer pour cette page (ou None)."""
     if nom == "destinations.html" or nom.startswith("voyage-"):
         return "destinations.html"
-    if nom in ("par-type.html", "les-iles.html") or nom.startswith("top-hotels-"):
+    if nom in ("par-type.html", "les-iles.html") or nom.startswith("top-hotels-") or nom.startswith("type-"):
         return "par-type.html"
     if nom == "par-pays.html" or nom.startswith("pays-"):
         return "par-pays.html"
