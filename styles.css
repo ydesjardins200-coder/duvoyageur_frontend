@@ -86,8 +86,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* ---- nav ---- */
 .nav{
   position:sticky;top:0;z-index:30;
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;
-  padding:.5rem clamp(1rem,4vw,2rem);
+  display:flex;flex-direction:column;
   background:rgba(4,18,26,.6);backdrop-filter:blur(14px) saturate(120%);
   border-bottom:1px solid var(--line);
 }
@@ -321,86 +320,70 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 
-/* ---- desktop nav polish (>1300px only; mobile untouched) ---- */
-@media (min-width:1311px){
-  /* 5 — scroll-aware: floats over hero, anchors once you scroll */
-  .nav{
-    /* logo lives in the centre `auto` track of an equal 1fr|auto|1fr grid, so it
-       is mathematically centred on the page regardless of the two groups' widths.
-       Each group hugs the logo (justify-self end/start) with equal inner gaps;
-       the width-difference slack sits at the outer edges. Capped + centred band
-       so it never stretches edge-to-edge. Mobile keeps its own grid below. */
-    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
-    column-gap:clamp(1.4rem,2.6vw,2.75rem);
-    padding-block:.5rem;
-    padding-inline:max(2rem, calc((100% - 1480px) / 2));
-    border-bottom-color:rgba(155,246,236,.06);background:rgba(4,18,26,.42);
-    transition:padding .26s ease,background .26s ease,
-               border-color .26s ease,box-shadow .26s ease;
+/* ---- desktop nav: two-tier (utility strip + main bar), >1023px ---- */
+@media (min-width:1024px){
+  .nav__burger{display:none}
+  .nav__drawer{display:none}
+
+  /* --- top utility strip --- */
+  .nav__util{
+    display:flex;align-items:center;height:34px;overflow:hidden;
+    padding:0 clamp(1.4rem,4vw,2.8rem);
+    border-bottom:1px solid var(--line);
+    color:var(--mist);font-size:.74rem;
+    transition:height .26s ease,opacity .2s ease,border-color .26s ease;
   }
-  .nav__left{justify-self:end}
-  .nav__right{justify-self:start}
-  /* crest-only in the centre track so the round mark itself is dead-centre
-     (the wordmark beside it would push the crest off-centre). Name/permit
-     still live in the footer. */
-  .brand{gap:0}
-  .nav .brand__text{display:none}
-  /* 3 — shrink on scroll */
-  .brand__logo{width:62px;height:62px;transition:width .26s ease,height .26s ease}
-  .nav--shrink{
-    padding-top:.28rem;padding-bottom:.28rem;
-    background:rgba(4,18,26,.86);border-bottom-color:var(--line);
-    box-shadow:0 12px 34px -18px rgba(2,10,16,.85);
+  .nav__permit{font-family:"Space Grotesk",monospace;letter-spacing:.02em;white-space:nowrap}
+  .nav__utillinks{margin-left:auto;display:flex;align-items:center;gap:1.15rem}
+  .nav__ulink{position:relative;color:var(--mist);font-weight:500;font-size:.76rem;white-space:nowrap;
+    transition:color .18s ease}
+  .nav__ulink:hover{color:var(--foam);text-decoration:none}
+  .nav__ulink[data-auth]{color:var(--foam)}
+  .nav__usep{width:1px;height:14px;background:var(--line)}
+
+  /* --- main bar --- */
+  .nav__main{
+    display:flex;align-items:center;gap:clamp(1rem,2.4vw,2rem);
+    padding:.5rem clamp(1.4rem,4vw,2.8rem);
+    transition:padding .26s ease;
   }
-  .nav--shrink .brand__logo{width:46px;height:46px}
+  .nav__main .brand__permit{display:none}              /* permit lives in the strip */
+  .nav__main .brand__name{font-size:1.2rem}
+  .brand__logo{width:54px;height:54px;transition:width .26s ease,height .26s ease}
 
-  /* tighter internal rhythm so the dense bar fits comfortably from 1301px up */
-  .nav__left{gap:1.35rem}
-  .nav__right{gap:.9rem}
-
-  /* 1 — hierarchy: info links (Comment ça marche / FAQ) recede in either zone;
-         destinations + auth stay prominent */
-  .nav .nav__link--sec:not([data-auth]){color:var(--mist);font-weight:500}
-  .nav .nav__link--sec:not([data-auth]):hover{color:var(--foam)}
-
-  /* 2 — animated underline on hover + active page */
-  .nav__left .nav__link,
-  .nav .nav__link--sec:not([data-auth]){position:relative}
-  .nav__left .nav__link::after,
-  .nav .nav__link--sec:not([data-auth])::after{
-    content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;
+  .nav__dest{display:flex;align-items:center;gap:clamp(1.2rem,2vw,1.9rem);margin-left:auto}
+  .nav__dest .nav__link{position:relative;font-weight:600;color:var(--foam)}
+  .nav__dest .nav__link::after{
+    content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;
     background:linear-gradient(90deg,var(--pacific),var(--lagoon));
     transform:scaleX(0);transform-origin:left;transition:transform .25s ease;
   }
-  .nav__left .nav__link:hover::after,
-  .nav .nav__link--sec:not([data-auth]):hover::after,
-  .nav__left .nav__link--on::after,
-  .nav .nav__link--on:not([data-auth])::after{transform:scaleX(1)}
-  .nav__link--on,.nav__link--on:hover{color:var(--foam)}  /* underline marks active */
+  .nav__dest .nav__link:hover::after,
+  .nav__dest .nav__link--on::after{transform:scaleX(1)}
 
-  /* 4 — auth cluster: hairline divider + Connexion as a ghost pill */
-  .nav__right [data-auth="login"]{
-    position:relative;margin-left:.7rem;padding:.4rem .85rem;
-    border:1px solid var(--line);border-radius:999px;color:var(--foam);font-weight:600;
-    transition:border-color .2s ease,background .2s ease,color .2s ease;
+  .nav__sep{width:1px;height:26px;background:var(--line)}
+
+  /* --- scroll: collapse the utility strip, shrink the logo, anchor the bar --- */
+  .nav{transition:background .26s ease,border-color .26s ease,box-shadow .26s ease}
+  .nav--shrink{
+    background:rgba(4,18,26,.9);
+    box-shadow:0 12px 34px -18px rgba(2,10,16,.85);
   }
-  .nav__right [data-auth="login"]:hover{
-    border-color:var(--pacific);background:rgba(25,211,230,.08);color:var(--surf);
-  }
-  .nav__right [data-auth="login"]::before{
-    content:"";position:absolute;left:-.42rem;top:50%;transform:translateY(-50%);
-    width:1px;height:20px;background:var(--line);
-  }
-  .nav__right [data-auth="signup"]{margin-left:.15rem;color:var(--foam)}
-  .nav__right [data-auth="signup"]:hover{color:var(--surf)}
+  .nav--shrink .nav__util{height:0;opacity:0;border-bottom-color:transparent}
+  .nav--shrink .nav__main{padding-top:.3rem;padding-bottom:.3rem}
+  .nav--shrink .brand__logo{width:44px;height:44px}
 }
 
-/* ---- responsive ---- */
-@media (max-width:1310px){
-  .nav{grid-template-columns:auto 1fr auto;padding:.45rem clamp(.8rem,4vw,1.4rem)}
-  .nav__left{display:none}
-  .nav__link--sec{display:none}
+/* ---- responsive: collapse two-tier into single bar + drawer ---- */
+@media (max-width:1023px){
+  .nav__util{display:none}
+  .nav__dest{display:none}
+  .nav__sep{display:none}
+  .nav__main{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.5rem;
+    padding:.45rem clamp(.8rem,4vw,1.4rem)}
   .nav .brand__text{display:none}
+  .brand{justify-self:center}
+  .nav__main .btn--accent{justify-self:end}
   .nav__burger{display:inline-flex;align-items:center;justify-content:center;flex-direction:column;
     gap:4px;width:44px;height:44px;padding:0;cursor:pointer;justify-self:start;
     background:rgba(6,24,33,.5);border:1px solid var(--line);border-radius:12px}

@@ -17,25 +17,32 @@
 <body>
 
 <header class="nav">
-  <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="nav__left" aria-label="Nos sélections">
-    <a class="nav__link" href="top-hotels-de-luxe.html">Luxe</a>
-    <a class="nav__link" href="top-hotels-qualite-prix.html">Qualité-prix</a>
-    <a class="nav__link" href="top-hotels-famille.html">Famille</a>
-    <a class="nav__link" href="les-iles.html">Découvrir les îles</a>
-    <a class="nav__link nav__link--sec" href="#processus">Comment ça marche</a>
-  </nav>
-  <a class="brand" href="#top" aria-label="Du Voyageur, accueil">
-    <img class="brand__logo" src="assets/logo.png" alt="" width="80" height="80">
-    <span class="brand__text">
-      <span class="brand__name">Du&nbsp;Voyageur</span>
-      <span class="brand__permit">Permis&nbsp;700495</span>
-    </span>
-  </a>
-  <div class="nav__right">
-    <a class="nav__link nav__link--sec" href="#faq">FAQ</a>
-    <a class="nav__link nav__link--sec" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">Connexion</a>
-    <a class="nav__link nav__link--sec" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Inscription</a>
+  <div class="nav__util">
+    <span class="nav__permit">Permis du Québec&nbsp;700495 · Agence de voyages</span>
+    <div class="nav__utillinks">
+      <a class="nav__ulink" href="#processus">Comment ça marche</a>
+      <a class="nav__ulink" href="#faq">FAQ</a>
+      <span class="nav__usep"></span>
+      <a class="nav__ulink" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">Connexion</a>
+      <a class="nav__ulink" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Inscription</a>
+    </div>
+  </div>
+  <div class="nav__main">
+    <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="#top" aria-label="Du Voyageur, accueil">
+      <img class="brand__logo" src="assets/logo.png" alt="" width="80" height="80">
+      <span class="brand__text">
+        <span class="brand__name">Du&nbsp;Voyageur</span>
+        <span class="brand__permit">Permis&nbsp;700495</span>
+      </span>
+    </a>
+    <nav class="nav__dest" aria-label="Nos sélections">
+      <a class="nav__link" href="top-hotels-de-luxe.html">Luxe</a>
+      <a class="nav__link" href="top-hotels-qualite-prix.html">Qualité-prix</a>
+      <a class="nav__link" href="top-hotels-famille.html">Famille</a>
+      <a class="nav__link" href="les-iles.html">Découvrir les îles</a>
+    </nav>
+    <span class="nav__sep"></span>
     <a class="btn btn--accent btn--sm" href="demande.html">Demander mon rabais</a>
   </div>
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
