@@ -162,7 +162,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hero__bg{position:absolute;inset:0;z-index:-1;background:var(--abyss);overflow:hidden}
 .hero__blur{display:none}
 .hero__photo{position:absolute;inset:0;
-  background:url("assets/hero.jpg") center 44%/cover no-repeat;
+  background:url("assets/hero.webp") center 44%/cover no-repeat;
 }
 .hero__veil{position:absolute;inset:0;
   background:
@@ -665,7 +665,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:
     radial-gradient(70% 60% at 50% 0%, rgba(25,211,230,.10), transparent 70%),
     linear-gradient(180deg, rgba(3,18,27,.58) 0%, rgba(3,17,25,.40) 38%, rgba(3,16,24,.80) 85%, var(--abyss) 100%),
-    url("assets/hotels-hero.jpg") center 42%/cover no-repeat}
+    url("assets/hotels-hero.webp") center 42%/cover no-repeat}
 .tophead__title{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
   font-size:clamp(2.4rem,6vw,4rem);line-height:1.02;color:var(--foam);margin:.2rem 0 0;letter-spacing:-.02em;
   text-shadow:0 2px 24px rgba(2,12,20,.55)}
