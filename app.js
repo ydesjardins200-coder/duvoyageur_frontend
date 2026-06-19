@@ -373,7 +373,7 @@ if (form) {
     if (e.key === 'Escape') setOpen(false);
   });
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 1180) setOpen(false);
+    if (window.innerWidth > 1310) setOpen(false);
   });
 })();
 
@@ -382,7 +382,7 @@ if (form) {
   var nav = document.querySelector('.nav');
   if (!nav) return;
 
-  // Shrink-on-scroll (CSS only reacts >1180px, so this is a no-op on mobile).
+  // Shrink-on-scroll (CSS only reacts >1300px, so this is a no-op on mobile).
   var ticking = false;
   function apply() {
     nav.classList.toggle('nav--shrink', window.scrollY > 8);

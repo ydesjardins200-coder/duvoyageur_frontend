@@ -321,10 +321,17 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .js .reveal.in{opacity:1;transform:none}
 
-/* ---- desktop nav polish (>1180px only; mobile untouched) ---- */
-@media (min-width:1181px){
+/* ---- desktop nav polish (>1300px only; mobile untouched) ---- */
+@media (min-width:1311px){
   /* 5 — scroll-aware: floats over hero, anchors once you scroll */
   .nav{
+    /* even gaps around the centered logo (flex space-between), and a capped,
+       centered content band so it never stretches edge-to-edge on wide screens.
+       Mobile keeps display:grid via the max-width:1300px block below. */
+    display:flex;align-items:center;justify-content:space-between;
+    gap:clamp(.85rem,1.6vw,2.25rem);
+    padding-block:.5rem;
+    padding-inline:max(2rem, calc((100% - 1480px) / 2));
     border-bottom-color:rgba(155,246,236,.06);background:rgba(4,18,26,.42);
     transition:padding .26s ease,background .26s ease,
                border-color .26s ease,box-shadow .26s ease;
@@ -337,6 +344,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     box-shadow:0 12px 34px -18px rgba(2,10,16,.85);
   }
   .nav--shrink .brand__logo{width:46px;height:46px}
+
+  /* tighter internal rhythm so the dense bar fits comfortably from 1301px up */
+  .nav__left{gap:1.35rem}
+  .nav__right{gap:.9rem}
 
   /* 1 — hierarchy: utility links recede, selections stay prominent */
   .nav__right .nav__link--sec:not([data-auth]){color:var(--mist);font-weight:500}
@@ -359,7 +370,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 
   /* 4 — auth cluster: hairline divider + Connexion as a ghost pill */
   .nav__right [data-auth="login"]{
-    position:relative;margin-left:.95rem;padding:.46rem 1rem;
+    position:relative;margin-left:.7rem;padding:.4rem .85rem;
     border:1px solid var(--line);border-radius:999px;color:var(--foam);font-weight:600;
     transition:border-color .2s ease,background .2s ease,color .2s ease;
   }
@@ -367,15 +378,15 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     border-color:var(--pacific);background:rgba(25,211,230,.08);color:var(--surf);
   }
   .nav__right [data-auth="login"]::before{
-    content:"";position:absolute;left:-.5rem;top:50%;transform:translateY(-50%);
+    content:"";position:absolute;left:-.42rem;top:50%;transform:translateY(-50%);
     width:1px;height:20px;background:var(--line);
   }
-  .nav__right [data-auth="signup"]{margin-left:.55rem;color:var(--foam)}
+  .nav__right [data-auth="signup"]{margin-left:.15rem;color:var(--foam)}
   .nav__right [data-auth="signup"]:hover{color:var(--surf)}
 }
 
 /* ---- responsive ---- */
-@media (max-width:1180px){
+@media (max-width:1310px){
   .nav{grid-template-columns:auto 1fr auto;padding:.45rem clamp(.8rem,4vw,1.4rem)}
   .nav__left{display:none}
   .nav__link--sec{display:none}
