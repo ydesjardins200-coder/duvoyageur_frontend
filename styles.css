@@ -923,5 +923,6 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hotel__score small{color:var(--mist);font-weight:400}
 .hotel__score sup{color:var(--gold);font-weight:700}
 .hotel__ta{font-size:.82rem;font-weight:600;color:var(--pacific);text-decoration:none;display:inline-flex;align-items:center;gap:.25rem}
+.hotel__ta--nolink{color:var(--mist);text-decoration:none;cursor:default;}
 .hotel__ta:hover{text-decoration:underline}
 .hotel__tanote{margin:.5rem 0 0;font-size:.78rem;color:var(--mist);max-width:48ch;line-height:1.45}
