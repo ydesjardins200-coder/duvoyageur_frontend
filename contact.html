@@ -4,53 +4,59 @@
 <script>document.documentElement.className="js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voyages par pays : Rép. dominicaine, Mexique, Cuba, Jamaïque… | Du Voyageur | Du Voyageur</title>
-<meta name="description" content="Magasine tes vacances dans le Sud par pays : République dominicaine, Mexique, Cuba, Jamaïque, Amérique centrale, Caraïbes premium et îles exclusives.">
-<meta property="og:title" content="Nos voyages par pays">
-<meta property="og:description" content="Choisis ta destination par pays — on t&#x27;aide à trouver la perle, avec ton rabais.">
-<meta property="og:type" content="website">
+<title>Nous joindre : contacte Du Voyageur | Agence de voyages à rabais (Québec)</title>
+<meta name="description" content="Une question sur ton voyage, ta réservation ou avant de réserver ? Écris-nous par le formulaire ou sur Messenger — on te répond rapidement, souvent la même journée. Agence titulaire du permis du Québec 700495.">
 <meta name="theme-color" content="#03121b">
+<meta property="og:title" content="Contacte Du Voyageur">
+<meta property="og:description" content="Une question ? Écris-nous par formulaire ou Messenger — réponse rapide, souvent la même journée.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
-<link rel="preload" as="image" href="assets/pexels-12858513.webp">
+<link rel="preload" as="image" href="assets/pexels-13732716.webp">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* --- Composants page destination --- */
-  .tophead--dest .tophead__bg{
-    background:
-      radial-gradient(70% 60% at 50% 0%, rgba(25,211,230,.12), transparent 70%),
-      linear-gradient(180deg, rgba(3,18,27,.50) 0%, rgba(3,17,25,.30) 34%, rgba(3,16,24,.84) 86%, var(--abyss) 100%),
-      url("assets/pexels-12858513.webp") center 42%/cover no-repeat;
-  }
-  .tophead--dest .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2.4rem,6vh,4rem) clamp(1rem,4vw,2rem)}
-  .wrap--narrow{max-width:860px}
-  .lead{font-size:1.14rem;color:var(--foam);opacity:.96;max-width:760px}
-  .brief{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:1.8rem}
-  .brief__item{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:1rem 1.1rem;backdrop-filter:blur(8px)}
-  .brief__k{font:700 .68rem/1 "Space Grotesk",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific)}
-  .brief__v{margin-top:.45rem;font-weight:600;color:var(--foam);font-size:1.02rem;line-height:1.25}
-  .brief__v small{display:block;font-weight:400;color:var(--mist);font-size:.82rem;margin-top:.2rem}
-  .why{max-width:var(--maxw);margin:0 auto;background:linear-gradient(160deg,rgba(20,62,82,.42),rgba(8,33,47,.52));
-    border:1px solid var(--line);border-radius:22px;padding:clamp(1.6rem,4vw,2.8rem);backdrop-filter:blur(8px)}
-  .why__points{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:1.5rem}
-  .why__pt b{color:var(--surf);display:block;margin-bottom:.25rem}
-  .why__pt p{color:var(--mist);margin:0;font-size:.95rem}
-  .guide__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.4rem,3.5vw,2.6rem);align-items:center}
-  .guide__img{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px -28px rgba(2,10,16,.85)}
-  .guide__img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block}
-  .guide__list{margin:.4rem 0 0;padding:0;list-style:none}
-  .guide__list li{position:relative;padding-left:1.5rem;margin:.7rem 0;color:var(--mist)}
-  .guide__list li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;
-    background:linear-gradient(120deg,var(--pacific),var(--lagoon))}
-  .guide__list b{color:var(--foam)}
-  .trust{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;justify-content:center;align-items:center;color:var(--mist);font-size:.95rem}
-  .trust span{display:inline-flex;align-items:center;gap:.5rem}
-  .trust b{color:var(--surf)}
-  @media (max-width:760px){.guide__grid{grid-template-columns:1fr}}
+  :root{ --maxw:1080px; }
+  .ghead{position:relative;isolation:isolate;padding:clamp(3.4rem,11vh,6.4rem) clamp(1rem,4vw,2rem) clamp(2.4rem,6vh,3.6rem);text-align:center;overflow:hidden}
+  .ghead__bg{position:absolute;inset:0;z-index:-1;background:
+    radial-gradient(72% 60% at 50% 0%, rgba(25,211,230,.16), transparent 70%),
+    linear-gradient(180deg, rgba(3,18,27,.52) 0%, rgba(3,17,25,.42) 38%, rgba(3,16,24,.90) 88%, var(--abyss) 100%),
+    url("assets/pexels-13732716.webp") center 54%/cover no-repeat;}
+  .ghead__em{font-size:2.6rem;line-height:1}
+  .ghead__inner{max-width:760px;margin:0 auto}
+  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
+  .ghead p{color:var(--foam);opacity:.95;font-size:clamp(1rem,2.2vw,1.16rem);max-width:600px;margin:1rem auto 0;line-height:1.5}
+  .ghead .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
+
+  .cwrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1rem,4vw,2rem) clamp(3rem,8vh,5rem)}
+  .cgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:1.4rem;align-items:start}
+  @media(max-width:820px){.cgrid{grid-template-columns:1fr}}
+
+  .form{margin:0}
+  .form h2{font:700 1.3rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:0 0 .3rem}
+  .form .lede{color:var(--mist);font-size:.96rem;margin:0 0 1.4rem}
+
+  /* sidebar */
+  .cside{display:flex;flex-direction:column;gap:1rem}
+  .ccard{background:linear-gradient(160deg,rgba(20,62,82,.42),rgba(8,33,47,.55));border:1px solid var(--line);
+    border-radius:20px;padding:1.4rem}
+  .ccard h3{font:700 1.08rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:0 0 .3rem}
+  .ccard p{color:var(--mist);font-size:.93rem;line-height:1.5;margin:0 0 1rem}
+  .ccard .btn{width:100%;justify-content:center}
+  .cways{display:flex;flex-direction:column;gap:.6rem;margin-top:.4rem}
+  .cway{display:flex;gap:.7rem;align-items:flex-start;color:var(--foam);text-decoration:none;font-size:.95rem;
+    padding:.7rem .8rem;border-radius:12px;border:1px solid var(--line);background:rgba(3,18,27,.4);transition:.16s}
+  a.cway:hover{border-color:var(--pacific);color:var(--surf)}
+  .cway .ic{font-size:1.2rem;line-height:1.2}
+  .cway b{display:block;color:var(--foam)}
+  .cway small{color:var(--mist)}
+  .cnote{display:flex;gap:.6rem;align-items:center;color:var(--mist);font-size:.88rem;margin-top:.2rem}
+  .cnote .dot{width:8px;height:8px;border-radius:50%;background:var(--lagoon);box-shadow:0 0 10px var(--lagoon);flex:none}
+
+  .done{display:none}
+  .done__cta{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.4rem}
 </style>
 </head>
 <body>
@@ -127,7 +133,7 @@
         </div>
       </div>
       <div class="nav__item">
-        <a class="nav__link nav__link--on" href="par-pays.html" aria-current="page">Par pays</a>
+        <a class="nav__link" href="par-pays.html">Par pays</a>
         <div class="megamenu megamenu--type" role="menu">
           <div class="mega__list">
           <a class="mega__row" href="pays-republique-dominicaine.html"><span class="mega__name">République dominicaine</span><span class="mega__sub">Punta Cana, Samaná, Cap Cana…</span></a>
@@ -178,7 +184,7 @@
   </div>
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
     <a class="nav__link" href="destinations.html">Destinations</a>
-    <a class="nav__link nav__link--on" href="par-pays.html" aria-current="page">Par pays</a>
+    <a class="nav__link" href="par-pays.html">Par pays</a>
     <a class="nav__link" href="par-type.html">Type</a>
       <a class="nav__link" href="guides.html">Guides</a>
     <a class="nav__link" href="index.html#processus">Comment ça marche</a>
@@ -189,112 +195,103 @@
   </nav>
 </header>
 
-<main id="top">
-
-  <section class="tophead tophead--dest">
-    <div class="tophead__bg" aria-hidden="true"></div>
-    <div class="tophead__inner">
-      <p class="eyebrow eyebrow--center">Magasine par pays</p>
-      <h1 class="tophead__title">Nos voyages par pays</h1>
-      <p class="tophead__lede">Tu sais déjà quel pays te fait rêver ? Choisis ta destination — on te déniche la perle, avec ton rabais directement dessus.</p>
-      <div class="cta-band__actions" style="justify-content:center;margin-top:1.5rem">
-        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="#pays">Choisir un pays</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="pays" class="wrap">
-    <p class="eyebrow eyebrow--center">Sept univers</p>
-    <h2 class="section__title">Quel pays te fait rêver ?</h2>
-    <p class="faq__lede">Chaque pays regroupe toutes nos destinations là-bas. Clique pour explorer.</p>
-    <div class="destgrid" style="margin-top:1.8rem">
-      <a class="destcard reveal" href="pays-republique-dominicaine.html">
-        <span class="destcard__img"><img src="assets/bahia-principe-punta-cana-isla.webp" alt="République dominicaine" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 7 destinations</span>
-          <span class="destcard__name">République dominicaine</span>
-          <span class="destcard__desc">La destination soleil nº 1 des Québécois : tout-inclus à profusion, plages de cocotiers et vols courts depuis Montréal.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-mexique.html">
-        <span class="destcard__img"><img src="assets/pexels-37939891.webp" alt="Mexique" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 8 destinations</span>
-          <span class="destcard__name">Mexique</span>
-          <span class="destcard__desc">Deux côtes, mille ambiances : la Caraïbe turquoise (Cancún, Riviera Maya) et le Pacifique spectaculaire (Vallarta, Los Cabos, Huatulco).</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-17377191.webp" alt="Cuba" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 7 destinations</span>
-          <span class="destcard__name">Cuba</span>
-          <span class="destcard__desc">Des plages de rêve des cayos au charme colonial de Trinidad : Cuba comme nulle part ailleurs.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-jamaique.html">
-        <span class="destcard__img"><img src="assets/pexels-35810990.webp" alt="Jamaïque" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 3 destinations</span>
-          <span class="destcard__name">Jamaïque</span>
-          <span class="destcard__desc">Reggae, plages de Negril, chutes d'Ocho Rios et énergie chaleureuse : l'âme des Caraïbes.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-amerique-centrale.html">
-        <span class="destcard__img"><img src="assets/pexels-29907876.webp" alt="Amérique centrale &amp;amp; du Sud" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 5 destinations</span>
-          <span class="destcard__name">Amérique centrale &amp; du Sud</span>
-          <span class="destcard__desc">Nature luxuriante, plongée d'exception et villes coloniales : une autre idée du Sud.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-caraibes-premium.html">
-        <span class="destcard__img"><img src="assets/pexels-32866444.webp" alt="Caraïbes Premium" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 5 îles</span>
-          <span class="destcard__name">Caraïbes Premium</span>
-          <span class="destcard__desc">Les plus belles îles des Antilles, hors des sentiers battus : pitons, 365 plages, île aux épices et ABC hors-ouragans.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="pays-iles-exclusives.html">
-        <span class="destcard__img"><img src="assets/pexels-18450786.webp" alt="Îles exclusives" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Par pays · 4 destinations</span>
-          <span class="destcard__name">Îles exclusives</span>
-          <span class="destcard__desc">Grace Bay, Saint-Martin et les eaux turquoise des Bahamas : le Sud version exclusive et carte postale.</span>
-          <span class="destcard__cta">Explorer <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <p class="eyebrow">Magasine autrement</p>
-    <h2 class="section__title" style="text-align:left;margin:0 0 1.1rem">Une autre façon de chercher</h2>
-    <div style="display:flex;flex-wrap:wrap;gap:.8rem"><a href="par-type.html" style="flex:1 1 220px;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--foam);text-decoration:none"><b style="display:block;font-size:1.05rem">Par type <span aria-hidden="true">→</span></b><span style="color:var(--mist);font-size:.9rem">Luxe, famille, adultes, îles…</span></a><a href="destinations.html" style="flex:1 1 220px;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--foam);text-decoration:none"><b style="display:block;font-size:1.05rem">Toutes les destinations <span aria-hidden="true">→</span></b><span style="color:var(--mist);font-size:.9rem">La liste complète, A à Z</span></a></div>
-  </section>
-
-  <div class="sunset">
-    <div class="sunset__bg" aria-hidden="true"></div>
-    <section class="cta-band">
-      <p class="eyebrow eyebrow--center">Ta prochaine évasion commence ici</p>
-      <h2 class="cta-band__title">Reçois ton prix avec rabais</h2>
-      <p class="cta-band__text">Envoie-nous l'hôtel et les dates qui t'intéressent — on te revient avec ton meilleur prix.</p>
-      <div class="cta-band__actions">
-        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écris-nous sur Messenger</a>
+  <main id="top">
+    <section class="ghead">
+      <div class="ghead__bg" aria-hidden="true"></div>
+      <div class="ghead__inner">
+        <span class="ghead__em" aria-hidden="true">✉️</span>
+        <p class="eyebrow eyebrow--center">Du Voyageur · Nous joindre</p>
+        <h1>Parle-nous</h1>
+        <p>Une question sur ton voyage, ta réservation, ou juste avant de réserver ? On est là — et on répond vite.</p>
       </div>
     </section>
-  </div>
 
-</main>
+    <div class="cwrap">
+      <div class="cgrid">
+
+        <!-- FORMULAIRE -->
+        <div id="cformwrap">
+          <form class="form" id="cform" novalidate>
+            <h2>Écris-nous</h2>
+            <p class="lede">Remplis ce formulaire et un conseiller te revient rapidement, souvent la même journée.</p>
+            <div class="grid">
+              <div class="field">
+                <label for="name">Nom complet</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Prénom Nom">
+              </div>
+              <div class="field">
+                <label for="phone">Téléphone <span style="color:var(--mist);font-weight:400">(optionnel)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="819 555-1234">
+              </div>
+              <div class="field field--full">
+                <label for="email">Courriel</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="toi@exemple.com" required>
+              </div>
+              <div class="field field--full">
+                <label for="subject">Objet de ta demande</label>
+                <select id="subject" name="subject">
+                  <option value="Question avant de réserver">Question avant de réserver</option>
+                  <option value="Ma réservation en cours">Ma réservation en cours</option>
+                  <option value="Modifier mon voyage">Modifier / annuler mon voyage</option>
+                  <option value="Facturation / paiement">Facturation / paiement</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="message">Ton message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Dis-nous comment on peut t'aider…" required></textarea>
+              </div>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--accent btn--lg" id="csend" type="submit">Envoyer mon message</button>
+              <p class="form__err" id="cerr" role="alert"></p>
+              <p class="form__reassure" style="color:var(--mist);font-size:.86rem;text-align:center;margin:0">Tes informations servent uniquement à te répondre. Aucune obligation.</p>
+            </div>
+          </form>
+
+          <!-- SUCCÈS -->
+          <div class="done" id="cdone">
+            <div class="done__mark" style="background:rgba(61,240,197,.16);display:flex;align-items:center;justify-content:center;font-size:1.8rem">✓</div>
+            <h2 style="font:800 1.6rem/1.1 'Bricolage Grotesque',sans-serif;color:var(--foam);margin:0 0 .5rem">Message envoyé&nbsp;!</h2>
+            <p style="color:var(--mist);max-width:460px;margin:0 auto;line-height:1.55">On a bien reçu ta demande. Un conseiller te revient rapidement, souvent la même journée. Crée ton compte pour suivre la réponse dans ton espace client.</p>
+            <div class="done__cta">
+              <a class="btn btn--accent" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Créer mon compte</a>
+              <a class="btn btn--ghost" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écrire sur Messenger</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="cside">
+          <div class="ccard">
+            <h3>Plus rapide&nbsp;? 💬</h3>
+            <p>Écris-nous directement sur Messenger — c'est souvent la façon la plus rapide d'avoir une réponse.</p>
+            <a class="btn btn--accent" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Ouvrir Messenger</a>
+            <div class="cnote"><span class="dot" aria-hidden="true"></span> On répond vite, souvent la même journée.</div>
+          </div>
+
+          <div class="ccard">
+            <h3>Autres façons de nous joindre</h3>
+            <div class="cways">
+              <a class="cway" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">
+                <span class="ic" aria-hidden="true">📘</span><span><b>Facebook</b><small>Notre communauté de voyageurs</small></span></a>
+              <a class="cway" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">
+                <span class="ic" aria-hidden="true">👤</span><span><b>Espace client</b><small>Déjà client&nbsp;? Suis tes demandes</small></span></a>
+              <a class="cway" href="demande.html">
+                <span class="ic" aria-hidden="true">🏖️</span><span><b>Demander un rabais</b><small>Tu as un forfait en vue&nbsp;?</small></span></a>
+            </div>
+          </div>
+
+          <div class="ccard">
+            <h3>Une vraie agence québécoise</h3>
+            <p style="margin:0">Titulaire du permis du Québec n°&nbsp;700495. Réservations via le réseau officiel Softvoyage. 100&nbsp;% en ligne, au service des voyageurs partout au Québec.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__col footer__col--brand">
@@ -355,5 +352,36 @@
 </footer>
 
 <script src="app.js"></script>
+<script>
+(function(){
+  var API="https://duvoyageurbackend-production.up.railway.app";
+  var form=document.getElementById('cform');
+  var err=document.getElementById('cerr');
+  var btn=document.getElementById('csend');
+  var done=document.getElementById('cdone');
+  function val(id){ return (document.getElementById(id).value||'').trim(); }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.textContent='';
+    var data={ name:val('name'), email:val('email'), phone:val('phone'),
+               subject:val('subject'), message:val('message') };
+    if(!data.message || !(data.email||data.phone)){
+      err.textContent="Indique au moins ton courriel (ou ton téléphone) et un message."; return;
+    }
+    btn.disabled=true; btn.textContent='Envoi…';
+    fetch(API+'/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok&&j&&j.ok}; }); })
+      .then(function(res){
+        if(!res.ok) throw new Error();
+        form.style.display='none'; done.style.display='block';
+        window.scrollTo({top:Math.max(0,done.getBoundingClientRect().top+window.scrollY-120),behavior:'smooth'});
+      })
+      .catch(function(){
+        err.textContent="Oups, l'envoi a échoué. Réessaie ou écris-nous sur Messenger.";
+        btn.disabled=false; btn.textContent='Envoyer mon message';
+      });
+  });
+})();
+</script>
 </body>
 </html>
