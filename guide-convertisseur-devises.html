@@ -4,53 +4,67 @@
 <script>document.documentElement.className="js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voyages Romance &amp; Couple (2026) : escapades en amoureux &amp; adults-only | Du Voyageur</title>
-<meta name="description" content="Nos destinations romantiques pour couples : Sainte-Lucie, Grenade, Antigua, Cap Cana, Saint-Martin, Turks &amp; Caicos, Samaná. Escapades adults-only, avec ton rabais.">
-<meta property="og:title" content="Voyages Romance &amp; Couple">
-<meta property="og:description" content="Escapades en amoureux et complexes adults-only — avec ton rabais.">
-<meta property="og:type" content="website">
+<title>Convertisseur de devises pour le Sud : CAD en USD, pesos et plus (2026) | Du Voyageur</title>
+<meta name="description" content="Convertis tes dollars canadiens en dollars américains, pesos mexicain et dominicain, dollar jamaïcain et euro. Taux indicatifs rafraîchis automatiquement — parfait pour estimer pourboires, excursions et petits achats au tout-inclus.">
 <meta name="theme-color" content="#03121b">
+<meta property="og:title" content="Convertisseur de devises pour le Sud">
+<meta property="og:description" content="CAD → USD, pesos, dollar jamaïcain, euro. Pour estimer pourboires, excursions et petits achats.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
-<link rel="preload" as="image" href="assets/pexels-32866444.webp">
 <link rel="stylesheet" href="styles.css">
 <style>
-  /* --- Composants page destination --- */
-  .tophead--dest .tophead__bg{
-    background:
-      radial-gradient(70% 60% at 50% 0%, rgba(25,211,230,.12), transparent 70%),
-      linear-gradient(180deg, rgba(3,18,27,.50) 0%, rgba(3,17,25,.30) 34%, rgba(3,16,24,.84) 86%, var(--abyss) 100%),
-      url("assets/pexels-32866444.webp") center 42%/cover no-repeat;
-  }
-  .tophead--dest .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2.4rem,6vh,4rem) clamp(1rem,4vw,2rem)}
-  .wrap--narrow{max-width:860px}
-  .lead{font-size:1.14rem;color:var(--foam);opacity:.96;max-width:760px}
-  .brief{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:1.8rem}
-  .brief__item{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:1rem 1.1rem;backdrop-filter:blur(8px)}
-  .brief__k{font:700 .68rem/1 "Space Grotesk",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific)}
-  .brief__v{margin-top:.45rem;font-weight:600;color:var(--foam);font-size:1.02rem;line-height:1.25}
-  .brief__v small{display:block;font-weight:400;color:var(--mist);font-size:.82rem;margin-top:.2rem}
-  .why{max-width:var(--maxw);margin:0 auto;background:linear-gradient(160deg,rgba(20,62,82,.42),rgba(8,33,47,.52));
-    border:1px solid var(--line);border-radius:22px;padding:clamp(1.6rem,4vw,2.8rem);backdrop-filter:blur(8px)}
-  .why__points{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:1.5rem}
-  .why__pt b{color:var(--surf);display:block;margin-bottom:.25rem}
-  .why__pt p{color:var(--mist);margin:0;font-size:.95rem}
-  .guide__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.4rem,3.5vw,2.6rem);align-items:center}
-  .guide__img{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px -28px rgba(2,10,16,.85)}
-  .guide__img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block}
-  .guide__list{margin:.4rem 0 0;padding:0;list-style:none}
-  .guide__list li{position:relative;padding-left:1.5rem;margin:.7rem 0;color:var(--mist)}
-  .guide__list li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;
-    background:linear-gradient(120deg,var(--pacific),var(--lagoon))}
-  .guide__list b{color:var(--foam)}
-  .trust{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;justify-content:center;align-items:center;color:var(--mist);font-size:.95rem}
-  .trust span{display:inline-flex;align-items:center;gap:.5rem}
-  .trust b{color:var(--surf)}
-  @media (max-width:760px){.guide__grid{grid-template-columns:1fr}}
+  :root{ --maxw:920px; }
+  .ghead{position:relative;isolation:isolate;padding:clamp(3.4rem,11vh,6.6rem) clamp(1rem,4vw,2rem) clamp(2.6rem,7vh,4rem);text-align:center;overflow:hidden}
+  .ghead__bg{position:absolute;inset:0;z-index:-1;background:
+    radial-gradient(72% 60% at 50% 0%, rgba(25,211,230,.18), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, rgba(61,240,197,.10), transparent 72%),
+    linear-gradient(180deg, rgba(6,33,47,.55) 0%, rgba(3,16,24,.92) 88%, var(--abyss) 100%);}
+  .ghead__em{font-size:2.6rem;line-height:1}
+  .ghead__inner{max-width:760px;margin:0 auto}
+  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
+  .ghead p{color:var(--foam);opacity:.95;font-size:clamp(1rem,2.2vw,1.16rem);max-width:600px;margin:1rem auto 0;line-height:1.5}
+  .ghead .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
+  .gwrap{max-width:var(--maxw);margin:0 auto;padding:clamp(1.6rem,5vh,2.8rem) clamp(1rem,4vw,2rem) clamp(2rem,6vh,3.4rem)}
+
+  .panel{background:linear-gradient(160deg,rgba(20,62,82,.5),rgba(8,33,47,.62));border:1px solid var(--line);
+    border-radius:22px;padding:clamp(1.3rem,3.5vw,2rem);box-shadow:0 18px 46px rgba(2,10,16,.35)}
+  .cv{display:grid;gap:.9rem}
+  .cv__row{display:grid;grid-template-columns:1fr auto;gap:.7rem;align-items:stretch}
+  .cv__lab{font:600 .76rem/1 "Space Grotesk",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--surf);margin-bottom:.45rem}
+  .cv__amt,.cv__res,.cv__cur{background:rgba(3,18,27,.6);border:1px solid var(--line);border-radius:13px;color:var(--foam);
+    font:700 1.5rem/1 "Bricolage Grotesque",sans-serif;padding:.85rem 1rem}
+  .cv__amt{width:100%}
+  .cv__amt:focus,.cv__cur:focus{outline:2px solid var(--pacific);outline-offset:1px}
+  .cv__cur{font-size:1rem;font-weight:600;min-width:130px;cursor:pointer}
+  .cv__res{display:flex;align-items:center;color:var(--lagoon)}
+  .cv__swapwrap{display:flex;justify-content:center;margin:.1rem 0}
+  .cv__swap{background:rgba(25,211,230,.12);border:1px solid var(--line);color:var(--surf);border-radius:50%;
+    width:42px;height:42px;font-size:1.1rem;cursor:pointer;transition:.18s}
+  .cv__swap:hover{background:rgba(25,211,230,.22);transform:rotate(180deg)}
+  .cv__rate{margin-top:1rem;text-align:center;color:var(--mist);font-size:.92rem}
+  .cv__rate b{color:var(--foam)}
+  .cv__live{display:inline-block;font:600 .68rem/1 "Space Grotesk",monospace;letter-spacing:.06em;text-transform:uppercase;
+    padding:.28rem .5rem;border-radius:7px;margin-left:.4rem;border:1px solid var(--line);color:var(--mist)}
+  .cv__live.ok{color:var(--lagoon);border-color:rgba(61,240,197,.35)}
+
+  .quick{margin-top:1.6rem}
+  .quick h3{font:700 1rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:0 0 .7rem}
+  .qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.6rem}
+  .qcell{background:rgba(3,18,27,.5);border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem;text-align:center}
+  .qcell .qk{color:var(--mist);font-size:.82rem}
+  .qcell .qv{color:var(--foam);font:700 1.05rem/1.2 "Space Grotesk",monospace;margin-top:.2rem}
+
+  .tip{background:rgba(255,210,63,.07);border:1px solid rgba(255,210,63,.28);border-radius:14px;padding:1rem 1.1rem;margin-top:1.5rem;color:var(--foam);font-size:.95rem;line-height:1.5}
+  .tip b{color:var(--gold)}
+  .disc{margin-top:1.2rem;color:var(--mist);font-size:.84rem;line-height:1.5;text-align:center}
+  .xlinks{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.8rem}
+  .xlink{display:inline-flex;align-items:center;gap:.5rem;background:rgba(20,62,82,.4);border:1px solid var(--line);
+    border-radius:99px;padding:.6rem 1rem;color:var(--foam);text-decoration:none;font-size:.92rem;transition:.18s}
+  .xlink:hover{border-color:var(--pacific);color:var(--surf)}
 </style>
 </head>
 <body>
@@ -141,7 +155,7 @@
         </div>
       </div>
       <div class="nav__item">
-        <a class="nav__link nav__link--on" href="par-type.html" aria-current="page">Type</a>
+        <a class="nav__link" href="par-type.html">Type</a>
         <div class="megamenu megamenu--type" role="menu">
           <div class="mega__list">
           <a class="mega__row" href="top-hotels-de-luxe.html"><span class="mega__name">Luxe</span><span class="mega__sub">Le grand luxe 5★</span></a>
@@ -158,7 +172,7 @@
         </div>
       </div>
       <div class="nav__item">
-        <a class="nav__link" href="guides.html">Guides</a>
+        <a class="nav__link nav__link--on" href="guides.html" aria-current="page">Guides</a>
         <div class="megamenu megamenu--guides" role="menu">
           <div class="mega__list">
           <a class="mega__row" href="guide-quoi-apporter.html"><span class="mega__name">🧳 Quoi apporter</span><span class="mega__sub">La checklist imprimable</span></a>
@@ -178,8 +192,8 @@
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
     <a class="nav__link" href="destinations.html">Destinations</a>
     <a class="nav__link" href="par-pays.html">Par pays</a>
-    <a class="nav__link nav__link--on" href="par-type.html" aria-current="page">Type</a>
-      <a class="nav__link" href="guides.html">Guides</a>
+    <a class="nav__link" href="par-type.html">Type</a>
+      <a class="nav__link nav__link--on" href="guides.html" aria-current="page">Guides</a>
     <a class="nav__link" href="index.html#processus">Comment ça marche</a>
     <a class="nav__link" href="index.html#faq">FAQ</a>
     <a class="nav__link" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">Connexion</a>
@@ -187,122 +201,73 @@
   </nav>
 </header>
 
-<main id="top">
-
-  <section class="tophead tophead--dest">
-    <div class="tophead__bg" aria-hidden="true"></div>
-    <div class="tophead__inner">
-      <p class="eyebrow eyebrow--center">Par type · Romance & Couple</p>
-      <h1 class="tophead__title">Romance & Couple</h1>
-      <p class="tophead__lede">Lune de miel, anniversaire ou juste vous deux : nos plus belles destinations romantiques et complexes adults-only.</p>
-      <div class="cta-band__actions" style="justify-content:center;margin-top:1.5rem">
-        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="#dest">Voir les destinations</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="dest" class="wrap">
-    <p class="eyebrow">Par type · Romance & Couple</p>
-    <h2 class="section__title" style="text-align:left">Nos destinations romantiques</h2>
-    <p class="lead" style="margin:.4rem 0 0;max-width:var(--maxw)">Les pitons de Sainte-Lucie, l'intimité de Grenade et d'Antigua, le luxe de Cap Cana, le charme de Saint-Martin, la perfection de Grace Bay (Turks & Caicos) et la nature de Samaná.</p>
-    <div class="destgrid" style="margin-top:1.8rem">
-      <a class="destcard reveal" href="voyage-sainte-lucie.html">
-        <span class="destcard__img"><img src="assets/pexels-31833992.webp" alt="Sainte-Lucie, Petites Antilles" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Petites Antilles</span>
-          <span class="destcard__name">Sainte-Lucie</span>
-          <span class="destcard__desc">Les Pitons et les complexes les plus romantiques des Caraïbes.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-grenade.html">
-        <span class="destcard__img"><img src="assets/pexels-32866444.webp" alt="Plage turquoise de Grenade" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Petites Antilles · Grenade</span>
-          <span class="destcard__name">Grenade</span>
-          <span class="destcard__desc">L'île aux épices : Grand Anse Beach, nature luxuriante et le charme de St George's.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-antigua.html">
-        <span class="destcard__img"><img src="assets/pexels-16968907.webp" alt="English Harbour, Antigua" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Petites Antilles · Antigua</span>
-          <span class="destcard__name">Antigua</span>
-          <span class="destcard__desc">« Une plage pour chaque jour de l'année » : 365 plages et l'histoire d'English Harbour.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-cap-cana.html">
-        <span class="destcard__img"><img src="assets/pexels-2549024.webp" alt="Plage de Cap Cana, Rép. dominicaine" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Rép. dominicaine · Cap Cana</span>
-          <span class="destcard__name">Cap Cana</span>
-          <span class="destcard__desc">La zone la plus chic de Punta Cana : marina, golf Nicklaus et la plage immaculée de Juanillo.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-saint-martin.html">
-        <span class="destcard__img"><img src="assets/pexels-11331479.webp" alt="Plage et avion de Maho Beach, Sint Maarten" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Caraïbes · Saint-Martin / Sint Maarten</span>
-          <span class="destcard__name">Saint-Martin / Sint Maarten</span>
-          <span class="destcard__desc">Une île, deux pays : plages de rêve, gastronomie et les avions de Maho Beach.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-turks-caicos.html">
-        <span class="destcard__img"><img src="assets/pexels-18450786.webp" alt="Grace Bay, Îles Turks & Caicos" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Caraïbes · Turks & Caicos</span>
-          <span class="destcard__name">Turks & Caicos</span>
-          <span class="destcard__desc">Grace Bay, régulièrement élue plus belle plage du monde : turquoise et sable poudreux.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-      <a class="destcard reveal" href="voyage-samana.html">
-        <span class="destcard__img"><img src="assets/pexels-15447034.webp" alt="Cascade et nature de Samaná, Rép. dominicaine" loading="lazy" decoding="async"></span>
-        <span class="destcard__body">
-          <span class="destcard__country">Rép. dominicaine · Samaná</span>
-          <span class="destcard__name">Samaná</span>
-          <span class="destcard__desc">Baleines à bosse, cascade El Limón et Cayo Levantado : la RD la plus verte et spectaculaire.</span>
-          <span class="destcard__cta">Voir le guide <span aria-hidden="true">→</span></span>
-        </span>
-      </a>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <p class="eyebrow">Magasine autrement</p>
-    <h2 class="section__title" style="text-align:left;margin:0 0 1.1rem">Une autre façon de chercher</h2>
-    <div style="display:flex;flex-wrap:wrap;gap:.8rem"><a href="par-pays.html" style="flex:1 1 220px;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--foam);text-decoration:none"><b style="display:block;font-size:1.05rem">Par pays <span aria-hidden="true">→</span></b><span style="color:var(--mist);font-size:.9rem">Rép. dominicaine, Mexique, Cuba…</span></a><a href="par-type.html" style="flex:1 1 220px;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--foam);text-decoration:none"><b style="display:block;font-size:1.05rem">Tous les types <span aria-hidden="true">→</span></b><span style="color:var(--mist);font-size:.9rem">Luxe, famille, adultes, îles…</span></a><a href="destinations.html" style="flex:1 1 220px;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--foam);text-decoration:none"><b style="display:block;font-size:1.05rem">Toutes les destinations <span aria-hidden="true">→</span></b><span style="color:var(--mist);font-size:.9rem">La liste complète, A à Z</span></a></div>
-  </section>
-
-  <section class="wrap" style="padding-top:.4rem">
-    <p class="eyebrow">Avant de partir</p>
-    <h2 class="section__title" style="text-align:left;margin:.2rem 0 1.1rem">Nos guides pour bien te préparer</h2>
-    <div style="display:flex;flex-wrap:wrap;gap:.7rem">
-      <a href="guide-quoi-apporter.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.78rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--foam);text-decoration:none;font-weight:600"><span aria-hidden="true">🧳</span> Quoi apporter — la checklist</a>
-      <a href="guide-meilleure-periode.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.78rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--foam);text-decoration:none;font-weight:600"><span aria-hidden="true">📅</span> Meilleure période pour partir</a>
-      <a href="guide-documents-passeport.html" style="display:inline-flex;align-items:center;gap:.5rem;padding:.78rem 1.1rem;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--foam);text-decoration:none;font-weight:600"><span aria-hidden="true">🛂</span> Documents et passeport</a>
-    </div>
-  </section>
-
-  <div class="sunset">
-    <div class="sunset__bg" aria-hidden="true"></div>
-    <section class="cta-band">
-      <p class="eyebrow eyebrow--center">Ta prochaine évasion commence ici</p>
-      <h2 class="cta-band__title">Reçois ton prix avec rabais</h2>
-      <p class="cta-band__text">Envoie-nous l'hôtel et les dates qui t'intéressent — on te revient avec ton meilleur prix.</p>
-      <div class="cta-band__actions">
-        <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écris-nous sur Messenger</a>
+  <main id="top">
+    <section class="ghead">
+      <div class="ghead__bg" aria-hidden="true"></div>
+      <div class="ghead__inner">
+        <span class="ghead__em" aria-hidden="true">💱</span>
+        <p class="eyebrow eyebrow--center">Outil gratuit · Du Voyageur</p>
+        <h1>Convertisseur de devises</h1>
+        <p>Combien ça fait en pesos ? Et ce pourboire de 5 $ US, c'est combien en argent canadien ? Convertis en un coup d'œil.</p>
       </div>
     </section>
-  </div>
 
-</main>
+    <div class="gwrap">
+      <div class="panel">
+        <div class="cv">
+          <div>
+            <div class="cv__lab">Montant à convertir</div>
+            <div class="cv__row">
+              <input class="cv__amt" id="amt" type="number" inputmode="decimal" min="0" step="any" value="100" aria-label="Montant">
+              <select class="cv__cur" id="from" aria-label="Devise de départ"></select>
+            </div>
+          </div>
+          <div class="cv__swapwrap">
+            <button class="cv__swap" id="swap" type="button" aria-label="Inverser les devises">⇅</button>
+          </div>
+          <div>
+            <div class="cv__lab">Résultat</div>
+            <div class="cv__row">
+              <div class="cv__res" id="res" aria-live="polite">—</div>
+              <select class="cv__cur" id="to" aria-label="Devise d'arrivée"></select>
+            </div>
+          </div>
+        </div>
+        <div class="cv__rate" id="rate">—<span class="cv__live" id="live">indicatif</span></div>
+
+        <div class="quick">
+          <h3 id="qtitle">Repères rapides</h3>
+          <div class="qgrid" id="qgrid"></div>
+        </div>
+      </div>
+
+      <div class="tip">
+        💵 <b>Le dollar US est roi.</b> Au tout-inclus, pourboires, excursions et taxis se paient presque toujours en dollars américains. Apporte des petites coupures (1 $ et 5 $ US) — c'est plus pratique que les pesos pour les pourboires, et tu évites les mauvais taux de change sur place.
+      </div>
+
+      <p class="disc">Taux à titre indicatif, pour estimer pourboires et petits achats. Les taux réels (guichet, carte, bureau de change) varient et incluent souvent des frais. Pour les gros montants, vérifie auprès de ta banque.</p>
+
+      <div class="xlinks">
+        <a class="xlink" href="guide-pourboires.html">💸 Calculateur de pourboires</a>
+        <a class="xlink" href="guide-limites-douane.html">🛃 Limites de douane au retour</a>
+        <a class="xlink" href="guides.html">📚 Tous les guides</a>
+      </div>
+    </div>
+
+    <div class="sunset">
+      <div class="sunset__bg" aria-hidden="true"></div>
+      <section class="cta-band">
+        <p class="eyebrow eyebrow--center">Prêt à partir ?</p>
+        <h2 class="cta-band__title">Reçois ton prix avec rabais</h2>
+        <p class="cta-band__text">Trouve ton forfait, envoie-le-nous, et on te remet une partie de notre commission directement sur ton prix.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--accent btn--lg" href="demande.html">Demander mon rabais</a>
+          <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écris-nous sur Messenger</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__col footer__col--brand">
@@ -362,5 +327,73 @@
 </footer>
 
 <script src="app.js"></script>
+<script>
+(function(){
+  // Taux INDICATIFS (unités par 1 CAD). Rafraîchis en direct si l'API répond.
+  var RATES = { CAD:1, USD:0.72, EUR:0.66, MXN:14.8, DOP:45, JMD:114 };
+  var META = {
+    CAD:{name:"Dollar canadien", flag:"🇨🇦", sym:"$"},
+    USD:{name:"Dollar américain", flag:"🇺🇸", sym:"$"},
+    EUR:{name:"Euro", flag:"🇪🇺", sym:"€"},
+    MXN:{name:"Peso mexicain", flag:"🇲🇽", sym:"$"},
+    DOP:{name:"Peso dominicain", flag:"🇩🇴", sym:"$"},
+    JMD:{name:"Dollar jamaïcain", flag:"🇯🇲", sym:"$"}
+  };
+  var ORDER = ["CAD","USD","EUR","MXN","DOP","JMD"];
+  var amt=document.getElementById('amt'), from=document.getElementById('from'),
+      to=document.getElementById('to'), res=document.getElementById('res'),
+      rate=document.getElementById('rate'), live=document.getElementById('live'),
+      swap=document.getElementById('swap'), qgrid=document.getElementById('qgrid'),
+      qtitle=document.getElementById('qtitle');
+
+  ORDER.forEach(function(c){
+    var label=META[c].flag+" "+c+" — "+META[c].name;
+    [from,to].forEach(function(sel){ var o=document.createElement('option'); o.value=c; o.textContent=label; sel.appendChild(o); });
+  });
+  from.value="CAD"; to.value="USD";
+
+  function fmt(n, cur){
+    var dec = (cur==="JMD"||cur==="MXN"||cur==="DOP") ? 0 : 2;
+    return Number(n).toLocaleString('fr-CA',{minimumFractionDigits:dec,maximumFractionDigits:dec})+" "+META[cur].sym+" "+cur;
+  }
+  function convert(a, f, t){ return a / RATES[f] * RATES[t]; }
+
+  function render(){
+    var a = parseFloat(amt.value); if(isNaN(a)) a=0;
+    var f=from.value, t=to.value;
+    res.textContent = fmt(convert(a,f,t), t);
+    var one = convert(1,f,t);
+    rate.firstChild.textContent = "1 "+f+" = ";
+    // rebuild rate line
+    rate.innerHTML = "<b>1 "+f+"</b> = <b>"+one.toLocaleString('fr-CA',{maximumFractionDigits:(t==="JMD"||t==="MXN"||t==="DOP")?1:4})+" "+t+"</b>";
+    rate.appendChild(live);
+    // quick reference: selected target across common CAD amounts
+    qtitle.textContent = "Repères rapides en "+t;
+    var amounts=[1,5,10,20,50,100];
+    qgrid.innerHTML = amounts.map(function(v){
+      return "<div class='qcell'><div class='qk'>"+v+" CAD</div><div class='qv'>"+
+        convert(v,"CAD",t).toLocaleString('fr-CA',{maximumFractionDigits:(t==="JMD"||t==="MXN"||t==="DOP")?0:2})+"</div></div>";
+    }).join("");
+  }
+
+  amt.addEventListener('input', render);
+  from.addEventListener('change', render);
+  to.addEventListener('change', render);
+  swap.addEventListener('click', function(){ var a=from.value; from.value=to.value; to.value=a; render(); });
+  render();
+
+  // Refresh live silencieux (API gratuite, sans clé). Échec -> on garde l'indicatif.
+  fetch('https://open.er-api.com/v6/latest/CAD').then(function(r){return r.json();}).then(function(d){
+    if(d && d.result==='success' && d.rates){
+      ORDER.forEach(function(c){ if(c!=="CAD" && typeof d.rates[c]==="number") RATES[c]=d.rates[c]; });
+      var when="";
+      try{ when=new Date(d.time_last_update_utc).toLocaleDateString('fr-CA'); }catch(e){}
+      live.textContent = when ? ("taux du "+when) : "taux du jour";
+      live.classList.add('ok');
+      render();
+    }
+  }).catch(function(){ /* on reste sur les taux indicatifs */ });
+})();
+</script>
 </body>
 </html>
