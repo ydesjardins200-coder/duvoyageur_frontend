@@ -193,7 +193,7 @@
       </div>
     </nav>
     <span class="nav__sep"></span>
-    <a class="btn btn--accent btn--sm" href="demande.html">Demander mon rabais</a>
+    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais</a>
   </div>
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
     <a class="nav__link" href="destinations.html">Destinations</a>
@@ -222,54 +222,20 @@
     <div class="cwrap">
       <div class="cgrid">
 
-        <!-- FORMULAIRE -->
+        <!-- CONTACT : Messenger + espace client (le formulaire alimentait l'admin, plus suivi) -->
         <div id="cformwrap">
-          <form class="form" id="cform" novalidate>
-            <h2>Écris-nous</h2>
-            <p class="lede">Remplis ce formulaire et un conseiller te revient rapidement, souvent la même journée.</p>
-            <div class="grid">
-              <div class="field">
-                <label for="name">Nom complet</label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="Prénom Nom">
-              </div>
-              <div class="field">
-                <label for="phone">Téléphone <span style="color:var(--mist);font-weight:400">(optionnel)</span></label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="819 555-1234">
-              </div>
-              <div class="field field--full">
-                <label for="email">Courriel</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="toi@exemple.com" required>
-              </div>
-              <div class="field field--full">
-                <label for="subject">Objet de ta demande</label>
-                <select id="subject" name="subject">
-                  <option value="Question avant de réserver">Question avant de réserver</option>
-                  <option value="Ma réservation en cours">Ma réservation en cours</option>
-                  <option value="Modifier mon voyage">Modifier / annuler mon voyage</option>
-                  <option value="Facturation / paiement">Facturation / paiement</option>
-                  <option value="Autre">Autre</option>
-                </select>
-              </div>
-              <div class="field field--full">
-                <label for="message">Ton message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Dis-nous comment on peut t'aider…" required></textarea>
-              </div>
+          <div class="form">
+            <h2>Écris-nous sur Messenger</h2>
+            <p class="lede">Une question sur ton voyage, ta réservation, un changement ? Écris-nous sur Messenger, un conseiller te répond.</p>
+            <div class="done__cta" style="justify-content:flex-start;margin-top:1.2rem">
+              <a class="btn btn--accent btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">💬 Écrire sur Messenger</a>
             </div>
-            <div class="form__foot">
-              <button class="btn btn--accent btn--lg" id="csend" type="submit">Envoyer mon message</button>
-              <p class="form__err" id="cerr" role="alert"></p>
-              <p class="form__reassure" style="color:var(--mist);font-size:.86rem;text-align:center;margin:0">Tes informations servent uniquement à te répondre. Aucune obligation.</p>
-            </div>
-          </form>
-
-          <!-- SUCCÈS -->
-          <div class="done" id="cdone">
-            <div class="done__mark" style="background:rgba(61,240,197,.16);display:flex;align-items:center;justify-content:center;font-size:1.8rem">✓</div>
-            <h2 style="font:800 1.6rem/1.1 'Bricolage Grotesque',sans-serif;color:var(--foam);margin:0 0 .5rem">Message envoyé&nbsp;!</h2>
-            <p style="color:var(--mist);max-width:460px;margin:0 auto;line-height:1.55">On a bien reçu ta demande. Un conseiller te revient rapidement, souvent la même journée. Crée ton compte pour suivre la réponse dans ton espace client.</p>
-            <div class="done__cta">
-              <a class="btn btn--accent" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Créer mon compte</a>
-              <a class="btn btn--ghost" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Écrire sur Messenger</a>
+            <hr style="border:0;border-top:1px solid rgba(155,246,236,.16);margin:1.8rem 0">
+            <h2>Pas encore de compte ?</h2>
+            <p class="lede">Crée ton compte gratuit : tu cherches et tu réserves ton forfait toi-même, avec ton Rabais Récompense déjà appliqué. Ton assistant voyage répond aussi à tes questions sur les destinations, la saison ou les bagages.</p>
+            <div class="done__cta" style="justify-content:flex-start;margin-top:1.2rem">
+              <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Créer mon compte</a>
+              <a class="btn btn--ghost" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">J'ai déjà un compte</a>
             </div>
           </div>
         </div>
@@ -289,9 +255,9 @@
               <a class="cway" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">
                 <span class="ic" aria-hidden="true">📘</span><span><b>Facebook</b><small>Notre communauté de voyageurs</small></span></a>
               <a class="cway" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion">
-                <span class="ic" aria-hidden="true">👤</span><span><b>Espace client</b><small>Déjà client&nbsp;? Suis tes demandes</small></span></a>
-              <a class="cway" href="demande.html">
-                <span class="ic" aria-hidden="true">🏖️</span><span><b>Demander un rabais</b><small>Tu as un forfait en vue&nbsp;?</small></span></a>
+                <span class="ic" aria-hidden="true">👤</span><span><b>Espace client</b><small>Déjà client&nbsp;? Connecte-toi</small></span></a>
+              <a class="cway" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">
+                <span class="ic" aria-hidden="true">🏖️</span><span><b>Obtenir mon rabais</b><small>Crée ton compte gratuit</small></span></a>
             </div>
           </div>
 
@@ -350,7 +316,7 @@
       <a href="guides.html">Tous les guides</a>
       <a href="index.html#processus">Comment ça marche</a>
       <a href="contact.html">Nous joindre</a>
-      <a href="demande.html">Demander mon rabais</a>
+      <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais</a>
     </nav>
   </div>
 
@@ -365,36 +331,5 @@
 </footer>
 
 <script src="app.js"></script>
-<script>
-(function(){
-  var API="https://duvoyageurbackend-production.up.railway.app";
-  var form=document.getElementById('cform');
-  var err=document.getElementById('cerr');
-  var btn=document.getElementById('csend');
-  var done=document.getElementById('cdone');
-  function val(id){ return (document.getElementById(id).value||'').trim(); }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    err.textContent='';
-    var data={ name:val('name'), email:val('email'), phone:val('phone'),
-               subject:val('subject'), message:val('message') };
-    if(!data.message || !(data.email||data.phone)){
-      err.textContent="Indique au moins ton courriel (ou ton téléphone) et un message."; return;
-    }
-    btn.disabled=true; btn.textContent='Envoi…';
-    fetch(API+'/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok&&j&&j.ok}; }); })
-      .then(function(res){
-        if(!res.ok) throw new Error();
-        form.style.display='none'; done.style.display='block';
-        window.scrollTo({top:Math.max(0,done.getBoundingClientRect().top+window.scrollY-120),behavior:'smooth'});
-      })
-      .catch(function(){
-        err.textContent="Oups, l'envoi a échoué. Réessaie ou écris-nous sur Messenger.";
-        btn.disabled=false; btn.textContent='Envoyer mon message';
-      });
-  });
-})();
-</script>
 </body>
 </html>
