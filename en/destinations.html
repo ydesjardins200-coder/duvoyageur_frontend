@@ -1,17 +1,24 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-CA" class="no-js">
 <head>
 <script>document.documentElement.className="js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>All-inclusive sun destinations down south (2026) | Du Voyageur</title>
+<!-- seo:start -->
+<link rel="canonical" href="https://duvoyageur.ca/en/destinations.html">
+<link rel="alternate" hreflang="fr-CA" href="https://duvoyageur.ca/destinations.html">
+<link rel="alternate" hreflang="en-CA" href="https://duvoyageur.ca/en/destinations.html">
+<link rel="alternate" hreflang="x-default" href="https://duvoyageur.ca/destinations.html">
+<meta property="og:locale:alternate" content="fr_CA">
+<!-- seo:end -->
 <meta name="description" content="All our all-inclusive sun destinations: Punta Cana, Cancún and Riviera Maya, Puerto Plata and Samaná. Best hotels, best time to go and tips — with your discount on the price.">
 <meta property="og:title" content="Our all-inclusive sun destinations">
 <meta property="og:description" content="Punta Cana, Cancún &amp; Riviera Maya, Puerto Plata &amp; Samaná — pick your destination, your discount is already applied to the price.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Voyageur">
 <meta property="og:locale" content="en_CA">
-<meta property="og:url" content="https://duvoyageur.netlify.app/destinations.html">
+<meta property="og:url" content="https://duvoyageur.ca/en/destinations.html">
 <meta property="og:image" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
 <meta property="og:image:secure_url" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -26,17 +33,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon-64.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/pexels-12858513.webp">
-<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="/assets/pexels-12858513.webp">
+<link rel="stylesheet" href="/styles.css">
 <style>
   /* --- Composants page destination --- */
   .tophead--dest .tophead__bg{
     background:
       radial-gradient(70% 60% at 50% 0%, rgba(244,197,67,.12), transparent 70%),
       linear-gradient(180deg, rgba(15,42,71,.50) 0%, rgba(15,42,71,.30) 34%, rgba(15,42,71,.84) 86%, var(--abyss) 100%),
-      url("assets/pexels-12858513.webp") center 42%/cover no-repeat;
+      url("/assets/pexels-12858513.webp") center 42%/cover no-repeat;
   }
   .tophead--dest .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(0,30,59,0.38)}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2.4rem,6vh,4rem) clamp(1rem,4vw,2rem)}
@@ -79,7 +86,141 @@
 </head>
 <body>
 
-<!-- @header -->
+<header class="nav">
+  <div class="nav__util">
+    <span class="nav__permit">Québec travel agency licence no. 700495 · Agency based in Québec</span>
+    <div class="nav__utillinks">
+      <a class="nav__ulink" href="index.html#processus">How it works</a>
+      <a class="nav__ulink" href="index.html#faq">FAQ</a>
+      <a class="nav__ulink" href="contact.html">Contact</a>
+      <a class="nav__ulink nav__lang" href="/destinations.html" hreflang="fr-CA" lang="fr">Français</a>
+      <span class="nav__usep"></span>
+      <a class="nav__ulink" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion?lang=en">Log in</a>
+      <a class="nav__ulink" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Sign up</a>
+    </div>
+  </div>
+  <div class="nav__main">
+    <button class="nav__burger" type="button" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Du Voyageur, home">
+      <img class="brand__logo" src="/assets/logo-capitaine-256.png" alt="" width="80" height="80">
+      <span class="brand__text">
+        <span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span>
+        <span class="brand__tag">The agency that rewards you</span>
+      </span>
+    </a>
+    <nav class="nav__dest" aria-label="Our selections">
+      <div class="nav__item">
+        <a class="nav__link nav__link--on" href="destinations.html" aria-current="page">Destinations</a>
+        <div class="megamenu megamenu--dest" role="menu">
+          <div class="mega__search"><svg class="mega__loupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" class="mega__input" placeholder="Search for a destination…" aria-label="Search for a destination" autocomplete="off"></div>
+          <div class="mega__list" id="megaDestList">
+          <a class="mega__row" href="punta-cana-all-inclusive.html" data-search="punta cana republique dominicaine rep dom"><span class="mega__name">Punta Cana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cancun-riviera-maya-all-inclusive.html" data-search="cancun riviera maya mexique mexico playa del carmen tulum cenotes"><span class="mega__name">Cancún / Riviera Maya</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="puerto-plata-samana-all-inclusive.html" data-search="puerto plata samana republique dominicaine baleines nord"><span class="mega__name">Puerto Plata / Samaná</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="negril-jamaica-all-inclusive.html" data-search="negril jamaique jamaica seven mile beach ouest"><span class="mega__name">Negril</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="ocho-rios-jamaica-all-inclusive.html" data-search="ocho rios jamaique jamaica dunns river nord"><span class="mega__name">Ocho Rios</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="nassau-bahamas-all-inclusive.html" data-search="nassau bahamas paradise island atlantis cable beach"><span class="mega__name">Nassau</span><span class="mega__sub">Bahamas</span></a>
+          <a class="mega__row" href="varadero-cuba-all-inclusive.html" data-search="varadero cuba plage"><span class="mega__name">Varadero</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-coco-cuba-all-inclusive.html" data-search="cayo coco cuba jardines del rey flamants"><span class="mega__name">Cayo Coco</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-santa-maria-cuba-all-inclusive.html" data-search="cayo santa maria cuba chaussee"><span class="mega__name">Cayo Santa María</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="holguin-cuba-all-inclusive.html" data-search="holguin guardalavaca cuba nature"><span class="mega__name">Holguín</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="montego-bay-jamaica-all-inclusive.html" data-search="montego bay mobay jamaique jamaica"><span class="mega__name">Montego Bay</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="la-romana-all-inclusive.html" data-search="la romana republique dominicaine saona golf"><span class="mega__name">La Romana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="bayahibe-all-inclusive.html" data-search="bayahibe republique dominicaine saona catalina"><span class="mega__name">Bayahibe</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="playa-del-carmen-all-inclusive.html" data-search="playa del carmen mexique riviera maya cenote 5e avenue"><span class="mega__name">Playa del Carmen</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="costa-mujeres-all-inclusive.html" data-search="costa mujeres cancun mexique playa mujeres"><span class="mega__name">Costa Mujeres</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="cozumel-all-inclusive.html" data-search="cozumel mexique plongee reef recif"><span class="mega__name">Cozumel</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="costa-rica-all-inclusive.html" data-search="costa rica guanacaste liberia pura vida volcan"><span class="mega__name">Costa Rica</span><span class="mega__sub">Guanacaste</span></a>
+          <a class="mega__row" href="aruba-all-inclusive.html" data-search="aruba abc hors ouragans palm beach"><span class="mega__name">Aruba</span><span class="mega__sub">Southern Caribbean</span></a>
+          <a class="mega__row" href="curacao-all-inclusive.html" data-search="curacao willemstad abc hors ouragans"><span class="mega__name">Curaçao</span><span class="mega__sub">Southern Caribbean</span></a>
+          <a class="mega__row" href="saint-lucia-all-inclusive.html" data-search="sainte lucie saint lucia pitons romantique"><span class="mega__name">Saint Lucia</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="puerto-vallarta-all-inclusive.html" data-search="puerto vallarta mexique pacifique malecon banderas baleines"><span class="mega__name">Puerto Vallarta</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="nuevo-vallarta-riviera-nayarit-all-inclusive.html" data-search="nuevo vallarta riviera nayarit mexique sayulita punta mita"><span class="mega__name">Nuevo Vallarta</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="los-cabos-all-inclusive.html" data-search="los cabos san lucas mexique el arco basse californie baleines"><span class="mega__name">Los Cabos</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="huatulco-all-inclusive.html" data-search="huatulco oaxaca mexique baies plages nature durable"><span class="mega__name">Huatulco</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="samana-all-inclusive.html" data-search="samana republique dominicaine baleines cascade el limon cayo levantado"><span class="mega__name">Samaná</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="juan-dolio-all-inclusive.html" data-search="juan dolio republique dominicaine santo domingo cote sud"><span class="mega__name">Juan Dolio</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cap-cana-all-inclusive.html" data-search="cap cana republique dominicaine luxe marina juanillo golf"><span class="mega__name">Cap Cana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cayo-largo-cuba-all-inclusive.html" data-search="cayo largo cuba plages desertes tortues iguanes sirena paraiso"><span class="mega__name">Cayo Largo</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-guillermo-cuba-all-inclusive.html" data-search="cayo guillermo cuba playa pilar jardines del rey"><span class="mega__name">Cayo Guillermo</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="trinidad-cuba-all-inclusive.html" data-search="trinidad cuba ville coloniale unesco culture playa ancon"><span class="mega__name">Trinidad</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="freeport-bahamas-all-inclusive.html" data-search="freeport grand bahama bahamas lucaya grottes lucayan"><span class="mega__name">Freeport</span><span class="mega__sub">Bahamas</span></a>
+          <a class="mega__row" href="st-maarten-all-inclusive.html" data-search="saint martin sint maarten maho beach avions orient bay sxm"><span class="mega__name">St. Maarten / Saint-Martin</span><span class="mega__sub">Caribbean</span></a>
+          <a class="mega__row" href="antigua-all-inclusive.html" data-search="antigua barbuda english harbour 365 plages"><span class="mega__name">Antigua</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="grenada-all-inclusive.html" data-search="grenade grenada ile aux epices grand anse st george"><span class="mega__name">Grenada</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="playa-blanca-panama-all-inclusive.html" data-search="panama playa blanca riviera pacifique decameron canal rio hato"><span class="mega__name">Playa Blanca</span><span class="mega__sub">Panama</span></a>
+          <a class="mega__row" href="cartagena-colombia-all-inclusive.html" data-search="carthagene cartagena colombie ville coloniale unesco rosaire bocagrande"><span class="mega__name">Cartagena</span><span class="mega__sub">Colombia</span></a>
+          <a class="mega__row" href="belize-all-inclusive.html" data-search="belize barriere corail cayes caye caulker ambergris plongee blue hole"><span class="mega__name">Belize</span><span class="mega__sub">Central America</span></a>
+          <a class="mega__row" href="roatan-honduras-all-inclusive.html" data-search="roatan honduras plongee west bay iles de la baie barriere mesoamericaine"><span class="mega__name">Roatán</span><span class="mega__sub">Honduras</span></a>
+          <a class="mega__row" href="turks-caicos-all-inclusive.html" data-search="turks caicos grace bay providenciales premium turquoise"><span class="mega__name">Turks & Caicos</span><span class="mega__sub">Caribbean</span></a>
+          </div>
+          <p class="mega__empty" hidden>No destination found.</p>
+          <a class="mega__all" href="destinations.html">See all destinations →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="by-country.html">By country</a>
+        <div class="megamenu megamenu--type" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="country-dominican-republic.html"><span class="mega__name">Dominican Republic</span><span class="mega__sub">Punta Cana, Samaná, Cap Cana…</span></a>
+          <a class="mega__row" href="country-mexico.html"><span class="mega__name">Mexico</span><span class="mega__sub">Cancún, Riviera Maya, Vallarta, Los Cabos…</span></a>
+          <a class="mega__row" href="country-cuba.html"><span class="mega__name">Cuba</span><span class="mega__sub">Varadero, cayos, Trinidad…</span></a>
+          <a class="mega__row" href="country-jamaica.html"><span class="mega__name">Jamaica</span><span class="mega__sub">Negril, Ocho Rios, Montego Bay</span></a>
+          <a class="mega__row" href="country-central-south-america.html"><span class="mega__name">Central &amp; South America</span><span class="mega__sub">Costa Rica, Panama, Belize, Roatán, Cartagena</span></a>
+          <a class="mega__row" href="country-premium-caribbean.html"><span class="mega__name">Premium Caribbean</span><span class="mega__sub">Saint Lucia, Antigua, Grenada, Aruba, Curaçao</span></a>
+          <a class="mega__row" href="country-exclusive-islands.html"><span class="mega__name">Exclusive islands</span><span class="mega__sub">Turks &amp; Caicos, St. Maarten, Bahamas</span></a>
+          </div>
+          <a class="mega__all" href="by-country.html">See all countries →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="by-travel-style.html">Style</a>
+        <div class="megamenu megamenu--type" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="top-luxury-resorts.html"><span class="mega__name">Luxury</span><span class="mega__sub">5★ luxury</span></a>
+          <a class="mega__row" href="top-best-value-resorts.html"><span class="mega__name">Best value</span><span class="mega__sub">The best value for money</span></a>
+          <a class="mega__row" href="top-family-resorts.html"><span class="mega__name">Family</span><span class="mega__sub">Perfect for families</span></a>
+          <a class="mega__row" href="top-adults-only-resorts.html"><span class="mega__name">Adults-only</span><span class="mega__sub">Adults only</span></a>
+          <a class="mega__row" href="caribbean-islands.html"><span class="mega__name">Discover the islands</span><span class="mega__sub">The most beautiful Caribbean islands</span></a>
+          <a class="mega__row" href="style-adventure.html"><span class="mega__name">Adventure &amp; Discovery</span><span class="mega__sub">Nature, jungle and the outdoors</span></a>
+          <a class="mega__row" href="style-culture.html"><span class="mega__name">Cultural discovery</span><span class="mega__sub">Colonial towns, ruins, heritage</span></a>
+          <a class="mega__row" href="style-diving-snorkeling.html"><span class="mega__name">Diving &amp; Snorkelling</span><span class="mega__sub">The most beautiful reefs</span></a>
+          <a class="mega__row" href="style-romance-couples.html"><span class="mega__name">Romance &amp; Couples</span><span class="mega__sub">Getaways for two, adults-only</span></a>
+          </div>
+          <a class="mega__all" href="by-travel-style.html">See all travel styles →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="travel-guides.html">Guides</a>
+        <div class="megamenu megamenu--guides" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="guide-what-to-pack.html"><span class="mega__name">🧳 What to pack</span><span class="mega__sub">The printable checklist</span></a>
+          <a class="mega__row" href="guide-best-time-to-travel.html"><span class="mega__name">📅 Best time to go</span><span class="mega__sub">When to go, month by month</span></a>
+          <a class="mega__row" href="guide-travel-documents-passport.html"><span class="mega__name">🛂 Documents &amp; passport</span><span class="mega__sub">Passport, E-Ticket, C5…</span></a>
+          <a class="mega__row" href="guide-currency-converter.html"><span class="mega__name">💱 Currency converter</span><span class="mega__sub">CAD to USD, pesos, euro</span></a>
+          <a class="mega__row" href="guide-tipping-all-inclusive.html"><span class="mega__name">💸 Tipping at all-inclusives</span><span class="mega__sub">How much to give, and to whom</span></a>
+          <a class="mega__row" href="guide-canada-customs-limits.html"><span class="mega__name">🛃 Customs limits</span><span class="mega__sub">What you can bring back</span></a>
+          </div>
+          <a class="mega__all" href="travel-guides.html">See all guides →</a>
+        </div>
+      </div>
+    </nav>
+    <span class="nav__sep"></span>
+    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount&nbsp;→</a>
+  </div>
+  <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
+    <a class="nav__link nav__link--on" href="destinations.html" aria-current="page">Destinations</a>
+    <a class="nav__link" href="by-country.html">By country</a>
+    <a class="nav__link" href="by-travel-style.html">Style</a>
+      <a class="nav__link" href="travel-guides.html">Guides</a>
+    <a class="nav__link" href="index.html#processus">How it works</a>
+    <a class="nav__link" href="index.html#faq">FAQ</a>
+    <a class="nav__link" href="contact.html">Contact</a>
+    <a class="nav__link" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion?lang=en">Log in</a>
+    <a class="nav__link" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Sign up</a>
+    <a class="nav__link nav__lang" href="/destinations.html" hreflang="fr-CA" lang="fr">🌐 Français</a>
+  </nav>
+</header>
 
 <main id="top">
 
@@ -91,7 +232,7 @@
       <h1 class="tophead__title">Our all-inclusive sun destinations</h1>
       <p class="tophead__lede">Pick your dream destination — your discount is already applied to the price. Caribbean beaches and all-inclusives for every budget.</p>
       <div class="cta-band__actions" style="justify-content:center;margin-top:1.5rem">
-        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Get my discount</a>
+        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
         <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Message us on Messenger</a>
       </div>
     </div>
@@ -103,8 +244,8 @@
     <h2 class="section__title">Where do you want to lay your towel?</h2>
     <p class="faq__lede">Each guide brings together the essentials: the best hotels, the best time to go, flights, documents and our tips.</p>
     <div class="destgrid">
-      <a class="destcard reveal" href="voyage-punta-cana.html">
-        <span class="destcard__img"><img src="assets/bahia-principe-punta-cana-isla.webp" alt="Turquoise beach in Punta Cana, Dominican Republic" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="punta-cana-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/bahia-principe-punta-cana-isla.webp" alt="Turquoise beach in Punta Cana, Dominican Republic" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Republic</span>
           <span class="destcard__name">Punta Cana</span>
@@ -112,8 +253,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cancun-riviera-maya.html">
-        <span class="destcard__img"><img src="assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Aerial view of a resort in Cancún, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cancun-riviera-maya-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Aerial view of a resort in Cancún, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico</span>
           <span class="destcard__name">Cancún &amp; Riviera Maya</span>
@@ -121,8 +262,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-puerto-plata-samana.html">
-        <span class="destcard__img"><img src="assets/gran-ventana-beach-resort-119.webp" alt="North coast and turquoise bay of Puerto Plata" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="puerto-plata-samana-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/gran-ventana-beach-resort-119.webp" alt="North coast and turquoise bay of Puerto Plata" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Republic · North</span>
           <span class="destcard__name">Puerto Plata &amp; Samaná</span>
@@ -130,8 +271,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-negril-jamaique.html">
-        <span class="destcard__img"><img src="assets/pexels-35810990.webp" alt="Turquoise beach and cliffs of Negril, Jamaica" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="negril-jamaica-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-35810990.webp" alt="Turquoise beach and cliffs of Negril, Jamaica" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Jamaica · West coast</span>
           <span class="destcard__name">Negril</span>
@@ -139,8 +280,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-ocho-rios-jamaique.html">
-        <span class="destcard__img"><img src="assets/pexels-6873614.webp" alt="Lush nature and turquoise waters of Ocho Rios, Jamaica" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="ocho-rios-jamaica-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-6873614.webp" alt="Lush nature and turquoise waters of Ocho Rios, Jamaica" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Jamaica · North coast</span>
           <span class="destcard__name">Ocho Rios</span>
@@ -148,8 +289,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-nassau-bahamas.html">
-        <span class="destcard__img"><img src="assets/pexels-4784391.webp" alt="Beach and turquoise waters of Nassau, Bahamas" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="nassau-bahamas-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-4784391.webp" alt="Beach and turquoise waters of Nassau, Bahamas" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Bahamas · Nassau</span>
           <span class="destcard__name">Nassau &amp; Paradise Island</span>
@@ -157,8 +298,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-varadero-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-36949951.webp" alt="Varadero, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="varadero-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-36949951.webp" alt="Varadero, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba</span>
           <span class="destcard__name">Varadero</span>
@@ -166,8 +307,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cayo-coco-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-17377234.webp" alt="Cayo Coco, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cayo-coco-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-17377234.webp" alt="Cayo Coco, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba</span>
           <span class="destcard__name">Cayo Coco</span>
@@ -175,8 +316,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cayo-santa-maria-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-31105917.webp" alt="Cayo Santa María, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cayo-santa-maria-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-31105917.webp" alt="Cayo Santa María, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba</span>
           <span class="destcard__name">Cayo Santa María</span>
@@ -184,8 +325,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-holguin-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-12001663.webp" alt="Holguín, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="holguin-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-12001663.webp" alt="Holguín, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba</span>
           <span class="destcard__name">Holguín</span>
@@ -193,8 +334,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-montego-bay-jamaique.html">
-        <span class="destcard__img"><img src="assets/pexels-35841080.webp" alt="Montego Bay, Jamaica" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="montego-bay-jamaica-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-35841080.webp" alt="Montego Bay, Jamaica" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Jamaica</span>
           <span class="destcard__name">Montego Bay</span>
@@ -202,8 +343,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-la-romana.html">
-        <span class="destcard__img"><img src="assets/pexels-28408402.webp" alt="La Romana, Dominican Rep." loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="la-romana-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-28408402.webp" alt="La Romana, Dominican Rep." loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Rep.</span>
           <span class="destcard__name">La Romana</span>
@@ -211,8 +352,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-bayahibe.html">
-        <span class="destcard__img"><img src="assets/pexels-2549020.webp" alt="Bayahibe, Dominican Rep." loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="bayahibe-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-2549020.webp" alt="Bayahibe, Dominican Rep." loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Rep.</span>
           <span class="destcard__name">Bayahibe</span>
@@ -220,8 +361,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-playa-del-carmen.html">
-        <span class="destcard__img"><img src="assets/pexels-2549024.webp" alt="Playa del Carmen, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="playa-del-carmen-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-2549024.webp" alt="Playa del Carmen, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico</span>
           <span class="destcard__name">Playa del Carmen</span>
@@ -229,8 +370,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-costa-mujeres.html">
-        <span class="destcard__img"><img src="assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Costa Mujeres, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="costa-mujeres-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Costa Mujeres, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico</span>
           <span class="destcard__name">Costa Mujeres</span>
@@ -238,8 +379,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cozumel.html">
-        <span class="destcard__img"><img src="assets/pexels-12316620.webp" alt="Cozumel, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cozumel-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-12316620.webp" alt="Cozumel, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico</span>
           <span class="destcard__name">Cozumel</span>
@@ -247,8 +388,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-costa-rica.html">
-        <span class="destcard__img"><img src="assets/pexels-29943338.webp" alt="Costa Rica, Guanacaste" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="costa-rica-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-29943338.webp" alt="Costa Rica, Guanacaste" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Guanacaste</span>
           <span class="destcard__name">Costa Rica</span>
@@ -256,8 +397,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-aruba.html">
-        <span class="destcard__img"><img src="assets/pexels-34870428.webp" alt="Aruba, Southern Caribbean" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="aruba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-34870428.webp" alt="Aruba, Southern Caribbean" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Southern Caribbean</span>
           <span class="destcard__name">Aruba</span>
@@ -265,8 +406,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-curacao.html">
-        <span class="destcard__img"><img src="assets/pexels-20146023.webp" alt="Curaçao, Southern Caribbean" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="curacao-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-20146023.webp" alt="Curaçao, Southern Caribbean" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Southern Caribbean</span>
           <span class="destcard__name">Curaçao</span>
@@ -274,8 +415,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-sainte-lucie.html">
-        <span class="destcard__img"><img src="assets/pexels-31833992.webp" alt="Saint Lucia, Lesser Antilles" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="saint-lucia-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-31833992.webp" alt="Saint Lucia, Lesser Antilles" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Lesser Antilles</span>
           <span class="destcard__name">Saint Lucia</span>
@@ -283,8 +424,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-puerto-vallarta.html">
-        <span class="destcard__img"><img src="assets/pexels-16487688.webp" alt="Beach in Puerto Vallarta, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="puerto-vallarta-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-16487688.webp" alt="Beach in Puerto Vallarta, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico · Puerto Vallarta</span>
           <span class="destcard__name">Puerto Vallarta</span>
@@ -292,8 +433,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-nuevo-vallarta-riviera-nayarit.html">
-        <span class="destcard__img"><img src="assets/pexels-16487689.webp" alt="Beach on the Riviera Nayarit, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="nuevo-vallarta-riviera-nayarit-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-16487689.webp" alt="Beach on the Riviera Nayarit, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico · Riviera Nayarit</span>
           <span class="destcard__name">Nuevo Vallarta / Riviera Nayarit</span>
@@ -301,8 +442,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-los-cabos.html">
-        <span class="destcard__img"><img src="assets/pexels-37939891.webp" alt="El Arco in Los Cabos, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="los-cabos-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-37939891.webp" alt="El Arco in Los Cabos, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico · Baja California</span>
           <span class="destcard__name">Los Cabos</span>
@@ -310,8 +451,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-huatulco.html">
-        <span class="destcard__img"><img src="assets/pexels-34035568.webp" alt="Huatulco bay, Mexico" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="huatulco-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-34035568.webp" alt="Huatulco bay, Mexico" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Mexico · Oaxaca</span>
           <span class="destcard__name">Huatulco</span>
@@ -319,8 +460,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-samana.html">
-        <span class="destcard__img"><img src="assets/pexels-15447034.webp" alt="Waterfall and nature in Samaná, Dominican Rep." loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="samana-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-15447034.webp" alt="Waterfall and nature in Samaná, Dominican Rep." loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Rep. · Samaná</span>
           <span class="destcard__name">Samaná</span>
@@ -328,8 +469,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-juan-dolio.html">
-        <span class="destcard__img"><img src="assets/pexels-4784435.webp" alt="Beach in Juan Dolio, Dominican Rep." loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="juan-dolio-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-4784435.webp" alt="Beach in Juan Dolio, Dominican Rep." loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Rep. · South coast</span>
           <span class="destcard__name">Juan Dolio</span>
@@ -337,8 +478,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cap-cana.html">
-        <span class="destcard__img"><img src="assets/pexels-2549024.webp" alt="Beach in Cap Cana, Dominican Rep." loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cap-cana-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-2549024.webp" alt="Beach in Cap Cana, Dominican Rep." loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Dominican Rep. · Cap Cana</span>
           <span class="destcard__name">Cap Cana</span>
@@ -346,8 +487,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cayo-largo-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-38130148.webp" alt="Beach in Cayo Largo, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cayo-largo-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-38130148.webp" alt="Beach in Cayo Largo, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba · Cayo Largo</span>
           <span class="destcard__name">Cayo Largo</span>
@@ -355,8 +496,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-cayo-guillermo-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-17377225.webp" alt="Beach in Cayo Guillermo, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cayo-guillermo-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-17377225.webp" alt="Beach in Cayo Guillermo, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba · Jardines del Rey</span>
           <span class="destcard__name">Cayo Guillermo</span>
@@ -364,8 +505,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-trinidad-cuba.html">
-        <span class="destcard__img"><img src="assets/pexels-17377191.webp" alt="Colonial town of Trinidad, Cuba" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="trinidad-cuba-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-17377191.webp" alt="Colonial town of Trinidad, Cuba" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Cuba · Trinidad</span>
           <span class="destcard__name">Trinidad</span>
@@ -373,8 +514,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-freeport-bahamas.html">
-        <span class="destcard__img"><img src="assets/pexels-33336419.webp" alt="Beach on Grand Bahama, Bahamas" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="freeport-bahamas-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-33336419.webp" alt="Beach on Grand Bahama, Bahamas" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Bahamas · Grand Bahama</span>
           <span class="destcard__name">Freeport</span>
@@ -382,8 +523,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-saint-martin.html">
-        <span class="destcard__img"><img src="assets/pexels-11331479.webp" alt="Beach and plane at Maho Beach, Sint Maarten" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="st-maarten-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-11331479.webp" alt="Beach and plane at Maho Beach, Sint Maarten" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Caribbean · Saint-Martin / Sint Maarten</span>
           <span class="destcard__name">Saint-Martin / Sint Maarten</span>
@@ -391,8 +532,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-antigua.html">
-        <span class="destcard__img"><img src="assets/pexels-16968907.webp" alt="English Harbour, Antigua" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="antigua-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-16968907.webp" alt="English Harbour, Antigua" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Lesser Antilles · Antigua</span>
           <span class="destcard__name">Antigua</span>
@@ -400,8 +541,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-grenade.html">
-        <span class="destcard__img"><img src="assets/pexels-32866444.webp" alt="Turquoise beach in Grenada" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="grenada-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-32866444.webp" alt="Turquoise beach in Grenada" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Lesser Antilles · Grenada</span>
           <span class="destcard__name">Grenada</span>
@@ -409,8 +550,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-playa-blanca-panama.html">
-        <span class="destcard__img"><img src="assets/pexels-594077.webp" alt="Resort in Playa Blanca, Panama" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="playa-blanca-panama-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-594077.webp" alt="Resort in Playa Blanca, Panama" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Panama · Pacific Riviera</span>
           <span class="destcard__name">Playa Blanca</span>
@@ -418,8 +559,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-carthagene-colombie.html">
-        <span class="destcard__img"><img src="assets/pexels-29907876.webp" alt="Colonial street in Cartagena, Colombia" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="cartagena-colombia-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-29907876.webp" alt="Colonial street in Cartagena, Colombia" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Colombia · Cartagena</span>
           <span class="destcard__name">Cartagena</span>
@@ -427,8 +568,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-belize.html">
-        <span class="destcard__img"><img src="assets/pexels-27792060.webp" alt="Turquoise waters of Belize" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="belize-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-27792060.webp" alt="Turquoise waters of Belize" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Central America · Belize</span>
           <span class="destcard__name">Belize</span>
@@ -436,8 +577,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-roatan-honduras.html">
-        <span class="destcard__img"><img src="assets/pexels-2120356.webp" alt="West Bay Beach, Roatán" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="roatan-honduras-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-2120356.webp" alt="West Bay Beach, Roatán" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Honduras · Roatán</span>
           <span class="destcard__name">Roatán</span>
@@ -445,8 +586,8 @@
           <span class="destcard__cta">See the guide <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="voyage-turks-caicos.html">
-        <span class="destcard__img"><img src="assets/pexels-18450786.webp" alt="Grace Bay, Turks & Caicos Islands" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="turks-caicos-all-inclusive.html">
+        <span class="destcard__img"><img src="/assets/pexels-18450786.webp" alt="Grace Bay, Turks & Caicos Islands" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">Caribbean · Turks & Caicos</span>
           <span class="destcard__name">Turks & Caicos</span>
@@ -455,7 +596,7 @@
         </span>
       </a>
     </div>
-    <p style="text-align:center;color:var(--mist);margin:1.7rem 0 0">More destinations are coming soon. Looking for somewhere else down south? <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Create your account and search for it</a> — your discount applies everywhere.</p>
+    <p style="text-align:center;color:var(--mist);margin:1.7rem 0 0">More destinations are coming soon. Looking for somewhere else down south? <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Create your account and search for it</a> — your discount applies everywhere.</p>
   </section>
 
   <!-- PAR STYLE (liens vers les tops) -->
@@ -465,10 +606,10 @@
       <h2 class="section__title" style="text-align:left;margin:0">Prefer to browse by travel style?</h2>
       <p class="lead" style="margin-top:.8rem">Our hotel picks sorted by budget and vibe, across all destinations.</p>
       <div class="why__points">
-        <div class="why__pt"><b><a href="top-hotels-de-luxe.html">Top luxury hotels →</a></b><p>High-end, to treat yourself.</p></div>
-        <div class="why__pt"><b><a href="top-hotels-qualite-prix.html">Top best value →</a></b><p>The best bang for your buck.</p></div>
-        <div class="why__pt"><b><a href="top-hotels-famille.html">Top family →</a></b><p>The best chains for families.</p></div>
-        <div class="why__pt"><b><a href="les-iles.html">Discover the islands →</a></b><p>Saint-Martin, Guadeloupe and more.</p></div>
+        <div class="why__pt"><b><a href="top-luxury-resorts.html">Top luxury hotels →</a></b><p>High-end, to treat yourself.</p></div>
+        <div class="why__pt"><b><a href="top-best-value-resorts.html">Top best value →</a></b><p>The best bang for your buck.</p></div>
+        <div class="why__pt"><b><a href="top-family-resorts.html">Top family →</a></b><p>The best chains for families.</p></div>
+        <div class="why__pt"><b><a href="caribbean-islands.html">Discover the islands →</a></b><p>Saint-Martin, Guadeloupe and more.</p></div>
       </div>
     </div>
   </section>
@@ -480,10 +621,10 @@
       <h2 class="section__title" style="text-align:left;margin:0">Our free tools for travellers</h2>
       <p class="lead" style="margin-top:.8rem">Convert your currency, plan your tips and know what you can bring back — so you can leave with peace of mind.</p>
       <div class="why__points">
-        <div class="why__pt"><b><a href="guide-convertisseur-devises.html">💱 Currency converter →</a></b><p>CAD to US dollars, pesos and euros.</p></div>
-        <div class="why__pt"><b><a href="guide-pourboires.html">💸 Tipping at an all-inclusive →</a></b><p>How much to give, and to whom — with a calculator.</p></div>
-        <div class="why__pt"><b><a href="guide-limites-douane.html">🛃 What you can bring back →</a></b><p>Alcohol, tobacco, purchases: the limits on your return.</p></div>
-        <div class="why__pt"><b><a href="guides.html">📚 All guides →</a></b><p>Checklist, best time to go, documents.</p></div>
+        <div class="why__pt"><b><a href="guide-currency-converter.html">💱 Currency converter →</a></b><p>CAD to US dollars, pesos and euros.</p></div>
+        <div class="why__pt"><b><a href="guide-tipping-all-inclusive.html">💸 Tipping at an all-inclusive →</a></b><p>How much to give, and to whom — with a calculator.</p></div>
+        <div class="why__pt"><b><a href="guide-canada-customs-limits.html">🛃 What you can bring back →</a></b><p>Alcohol, tobacco, purchases: the limits on your return.</p></div>
+        <div class="why__pt"><b><a href="travel-guides.html">📚 All guides →</a></b><p>Checklist, best time to go, documents.</p></div>
       </div>
     </div>
   </section>
@@ -510,7 +651,7 @@
       <h2 class="cta-band__title">Get your Reward Discount</h2>
       <p class="cta-band__text">No payment, no obligation — you only decide once you have your price in hand.</p>
       <div class="cta-band__actions">
-        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Get my discount</a>
+        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
         <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Message us on Messenger</a>
       </div>
     </section>
@@ -518,7 +659,65 @@
 
 </main>
 
-<!-- @footer -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__col footer__col--brand">
+      <div class="footer__brand"><img class="brand__logo" src="/assets/logo-capitaine-128.png" alt="" width="56" height="56"><span class="brand__text"><span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span><span class="brand__tag">The agency that rewards you</span></span></div>
+      <p class="footer__about">A 100% Québec discount travel agency. You book your all-inclusive down south in our booking engine, and we give you back part of our commission as a discount, right on your price.</p>
+      <p class="footer__meta">Holder of Québec licence no.&nbsp;700495</p>
+      <p class="footer__slogan">Travel more. Spend less. We take care of everything!</p>
+      <a class="footer__social" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg> Follow us on Facebook</a>
+    </div>
+
+    <nav class="footer__col" aria-label="Par pays">
+      <h3>By country</h3>
+      <a href="country-dominican-republic.html">Dominican Republic</a>
+      <a href="country-mexico.html">Mexico</a>
+      <a href="country-cuba.html">Cuba</a>
+      <a href="country-jamaica.html">Jamaica</a>
+      <a href="country-central-south-america.html">Central &amp; South America</a>
+      <a href="country-premium-caribbean.html">Premium Caribbean</a>
+      <a href="country-exclusive-islands.html">Exclusive islands</a>
+      <a href="destinations.html">All destinations →</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Par type">
+      <h3>By style</h3>
+      <a href="top-luxury-resorts.html">Luxury</a>
+      <a href="top-best-value-resorts.html">Best value</a>
+      <a href="top-family-resorts.html">Family</a>
+      <a href="top-adults-only-resorts.html">Adults-only</a>
+      <a href="style-adventure.html">Adventure &amp; Discovery</a>
+      <a href="style-culture.html">Cultural discovery</a>
+      <a href="style-diving-snorkeling.html">Diving &amp; Snorkelling</a>
+      <a href="style-romance-couples.html">Romance &amp; Couples</a>
+      <a href="caribbean-islands.html">Discover the islands</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Guides et aide">
+      <h3>Guides &amp; help</h3>
+      <a href="guide-what-to-pack.html">What to pack</a>
+      <a href="guide-best-time-to-travel.html">Best time to go</a>
+      <a href="guide-travel-documents-passport.html">Documents &amp; passport</a>
+      <a href="guide-currency-converter.html">Currency converter</a>
+      <a href="guide-tipping-all-inclusive.html">Tipping at all-inclusives</a>
+      <a href="guide-canada-customs-limits.html">Customs limits</a>
+      <a href="travel-guides.html">All guides</a>
+      <a href="index.html#processus">How it works</a>
+      <a href="contact.html">Contact us</a>
+      <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
+    </nav>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__copy">© <span data-year></span> Duvoyageur.ca — All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms and conditions</a>
+      <a href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox__close" aria-label="Close">&times;</button>
@@ -532,7 +731,7 @@
   <span class="msgr__label">Messenger</span>
 </a>
 
-<script src="app.js"></script>
+<script src="/app.js"></script>
 <script>
 (function(){
   var lb=document.getElementById('lightbox'); if(!lb) return;

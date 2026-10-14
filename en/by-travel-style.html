@@ -1,17 +1,24 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-CA" class="no-js">
 <head>
 <script>document.documentElement.className="js"</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trips by Travel Style: Luxury, Best Value, Family &amp; Islands | Du Voyageur</title>
+<!-- seo:start -->
+<link rel="canonical" href="https://duvoyageur.ca/en/by-travel-style.html">
+<link rel="alternate" hreflang="fr-CA" href="https://duvoyageur.ca/par-type.html">
+<link rel="alternate" hreflang="en-CA" href="https://duvoyageur.ca/en/by-travel-style.html">
+<link rel="alternate" hreflang="x-default" href="https://duvoyageur.ca/par-type.html">
+<meta property="og:locale:alternate" content="fr_CA">
+<!-- seo:end -->
 <meta name="description" content="Find your trip by travel style: luxury hotels, best-value picks, family all-inclusives and the most beautiful Caribbean islands. Get your Reward Discount.">
 <meta property="og:title" content="Trips by Travel Style — Luxury, Best Value, Family, Islands">
 <meta property="og:description" content="Pick your travel style and book with your discount already applied.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Voyageur">
 <meta property="og:locale" content="en_CA">
-<meta property="og:url" content="https://duvoyageur.netlify.app/par-type.html">
+<meta property="og:url" content="https://duvoyageur.ca/en/by-travel-style.html">
 <meta property="og:image" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
 <meta property="og:image:secure_url" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -26,17 +33,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon-64.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/pexels-12858513.webp">
-<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="/assets/pexels-12858513.webp">
+<link rel="stylesheet" href="/styles.css">
 <style>
   /* --- Composants page destination --- */
   .tophead--dest .tophead__bg{
     background:
       radial-gradient(70% 60% at 50% 0%, rgba(244,197,67,.12), transparent 70%),
       linear-gradient(180deg, rgba(15,42,71,.50) 0%, rgba(15,42,71,.30) 34%, rgba(15,42,71,.84) 86%, var(--abyss) 100%),
-      url("assets/pexels-12858513.webp") center 42%/cover no-repeat;
+      url("/assets/pexels-12858513.webp") center 42%/cover no-repeat;
   }
   .tophead--dest .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(0,30,59,0.38)}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2.4rem,6vh,4rem) clamp(1rem,4vw,2rem)}
@@ -79,7 +86,141 @@
 </head>
 <body>
 
-<!-- @header -->
+<header class="nav">
+  <div class="nav__util">
+    <span class="nav__permit">Québec travel agency licence no. 700495 · Agency based in Québec</span>
+    <div class="nav__utillinks">
+      <a class="nav__ulink" href="index.html#processus">How it works</a>
+      <a class="nav__ulink" href="index.html#faq">FAQ</a>
+      <a class="nav__ulink" href="contact.html">Contact</a>
+      <a class="nav__ulink nav__lang" href="/par-type.html" hreflang="fr-CA" lang="fr">Français</a>
+      <span class="nav__usep"></span>
+      <a class="nav__ulink" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion?lang=en">Log in</a>
+      <a class="nav__ulink" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Sign up</a>
+    </div>
+  </div>
+  <div class="nav__main">
+    <button class="nav__burger" type="button" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Du Voyageur, home">
+      <img class="brand__logo" src="/assets/logo-capitaine-256.png" alt="" width="80" height="80">
+      <span class="brand__text">
+        <span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span>
+        <span class="brand__tag">The agency that rewards you</span>
+      </span>
+    </a>
+    <nav class="nav__dest" aria-label="Our selections">
+      <div class="nav__item">
+        <a class="nav__link" href="destinations.html">Destinations</a>
+        <div class="megamenu megamenu--dest" role="menu">
+          <div class="mega__search"><svg class="mega__loupe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" class="mega__input" placeholder="Search for a destination…" aria-label="Search for a destination" autocomplete="off"></div>
+          <div class="mega__list" id="megaDestList">
+          <a class="mega__row" href="punta-cana-all-inclusive.html" data-search="punta cana republique dominicaine rep dom"><span class="mega__name">Punta Cana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cancun-riviera-maya-all-inclusive.html" data-search="cancun riviera maya mexique mexico playa del carmen tulum cenotes"><span class="mega__name">Cancún / Riviera Maya</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="puerto-plata-samana-all-inclusive.html" data-search="puerto plata samana republique dominicaine baleines nord"><span class="mega__name">Puerto Plata / Samaná</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="negril-jamaica-all-inclusive.html" data-search="negril jamaique jamaica seven mile beach ouest"><span class="mega__name">Negril</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="ocho-rios-jamaica-all-inclusive.html" data-search="ocho rios jamaique jamaica dunns river nord"><span class="mega__name">Ocho Rios</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="nassau-bahamas-all-inclusive.html" data-search="nassau bahamas paradise island atlantis cable beach"><span class="mega__name">Nassau</span><span class="mega__sub">Bahamas</span></a>
+          <a class="mega__row" href="varadero-cuba-all-inclusive.html" data-search="varadero cuba plage"><span class="mega__name">Varadero</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-coco-cuba-all-inclusive.html" data-search="cayo coco cuba jardines del rey flamants"><span class="mega__name">Cayo Coco</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-santa-maria-cuba-all-inclusive.html" data-search="cayo santa maria cuba chaussee"><span class="mega__name">Cayo Santa María</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="holguin-cuba-all-inclusive.html" data-search="holguin guardalavaca cuba nature"><span class="mega__name">Holguín</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="montego-bay-jamaica-all-inclusive.html" data-search="montego bay mobay jamaique jamaica"><span class="mega__name">Montego Bay</span><span class="mega__sub">Jamaica</span></a>
+          <a class="mega__row" href="la-romana-all-inclusive.html" data-search="la romana republique dominicaine saona golf"><span class="mega__name">La Romana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="bayahibe-all-inclusive.html" data-search="bayahibe republique dominicaine saona catalina"><span class="mega__name">Bayahibe</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="playa-del-carmen-all-inclusive.html" data-search="playa del carmen mexique riviera maya cenote 5e avenue"><span class="mega__name">Playa del Carmen</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="costa-mujeres-all-inclusive.html" data-search="costa mujeres cancun mexique playa mujeres"><span class="mega__name">Costa Mujeres</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="cozumel-all-inclusive.html" data-search="cozumel mexique plongee reef recif"><span class="mega__name">Cozumel</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="costa-rica-all-inclusive.html" data-search="costa rica guanacaste liberia pura vida volcan"><span class="mega__name">Costa Rica</span><span class="mega__sub">Guanacaste</span></a>
+          <a class="mega__row" href="aruba-all-inclusive.html" data-search="aruba abc hors ouragans palm beach"><span class="mega__name">Aruba</span><span class="mega__sub">Southern Caribbean</span></a>
+          <a class="mega__row" href="curacao-all-inclusive.html" data-search="curacao willemstad abc hors ouragans"><span class="mega__name">Curaçao</span><span class="mega__sub">Southern Caribbean</span></a>
+          <a class="mega__row" href="saint-lucia-all-inclusive.html" data-search="sainte lucie saint lucia pitons romantique"><span class="mega__name">Saint Lucia</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="puerto-vallarta-all-inclusive.html" data-search="puerto vallarta mexique pacifique malecon banderas baleines"><span class="mega__name">Puerto Vallarta</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="nuevo-vallarta-riviera-nayarit-all-inclusive.html" data-search="nuevo vallarta riviera nayarit mexique sayulita punta mita"><span class="mega__name">Nuevo Vallarta</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="los-cabos-all-inclusive.html" data-search="los cabos san lucas mexique el arco basse californie baleines"><span class="mega__name">Los Cabos</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="huatulco-all-inclusive.html" data-search="huatulco oaxaca mexique baies plages nature durable"><span class="mega__name">Huatulco</span><span class="mega__sub">Mexico</span></a>
+          <a class="mega__row" href="samana-all-inclusive.html" data-search="samana republique dominicaine baleines cascade el limon cayo levantado"><span class="mega__name">Samaná</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="juan-dolio-all-inclusive.html" data-search="juan dolio republique dominicaine santo domingo cote sud"><span class="mega__name">Juan Dolio</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cap-cana-all-inclusive.html" data-search="cap cana republique dominicaine luxe marina juanillo golf"><span class="mega__name">Cap Cana</span><span class="mega__sub">Dominican Rep.</span></a>
+          <a class="mega__row" href="cayo-largo-cuba-all-inclusive.html" data-search="cayo largo cuba plages desertes tortues iguanes sirena paraiso"><span class="mega__name">Cayo Largo</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="cayo-guillermo-cuba-all-inclusive.html" data-search="cayo guillermo cuba playa pilar jardines del rey"><span class="mega__name">Cayo Guillermo</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="trinidad-cuba-all-inclusive.html" data-search="trinidad cuba ville coloniale unesco culture playa ancon"><span class="mega__name">Trinidad</span><span class="mega__sub">Cuba</span></a>
+          <a class="mega__row" href="freeport-bahamas-all-inclusive.html" data-search="freeport grand bahama bahamas lucaya grottes lucayan"><span class="mega__name">Freeport</span><span class="mega__sub">Bahamas</span></a>
+          <a class="mega__row" href="st-maarten-all-inclusive.html" data-search="saint martin sint maarten maho beach avions orient bay sxm"><span class="mega__name">St. Maarten / Saint-Martin</span><span class="mega__sub">Caribbean</span></a>
+          <a class="mega__row" href="antigua-all-inclusive.html" data-search="antigua barbuda english harbour 365 plages"><span class="mega__name">Antigua</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="grenada-all-inclusive.html" data-search="grenade grenada ile aux epices grand anse st george"><span class="mega__name">Grenada</span><span class="mega__sub">Lesser Antilles</span></a>
+          <a class="mega__row" href="playa-blanca-panama-all-inclusive.html" data-search="panama playa blanca riviera pacifique decameron canal rio hato"><span class="mega__name">Playa Blanca</span><span class="mega__sub">Panama</span></a>
+          <a class="mega__row" href="cartagena-colombia-all-inclusive.html" data-search="carthagene cartagena colombie ville coloniale unesco rosaire bocagrande"><span class="mega__name">Cartagena</span><span class="mega__sub">Colombia</span></a>
+          <a class="mega__row" href="belize-all-inclusive.html" data-search="belize barriere corail cayes caye caulker ambergris plongee blue hole"><span class="mega__name">Belize</span><span class="mega__sub">Central America</span></a>
+          <a class="mega__row" href="roatan-honduras-all-inclusive.html" data-search="roatan honduras plongee west bay iles de la baie barriere mesoamericaine"><span class="mega__name">Roatán</span><span class="mega__sub">Honduras</span></a>
+          <a class="mega__row" href="turks-caicos-all-inclusive.html" data-search="turks caicos grace bay providenciales premium turquoise"><span class="mega__name">Turks & Caicos</span><span class="mega__sub">Caribbean</span></a>
+          </div>
+          <p class="mega__empty" hidden>No destination found.</p>
+          <a class="mega__all" href="destinations.html">See all destinations →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="by-country.html">By country</a>
+        <div class="megamenu megamenu--type" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="country-dominican-republic.html"><span class="mega__name">Dominican Republic</span><span class="mega__sub">Punta Cana, Samaná, Cap Cana…</span></a>
+          <a class="mega__row" href="country-mexico.html"><span class="mega__name">Mexico</span><span class="mega__sub">Cancún, Riviera Maya, Vallarta, Los Cabos…</span></a>
+          <a class="mega__row" href="country-cuba.html"><span class="mega__name">Cuba</span><span class="mega__sub">Varadero, cayos, Trinidad…</span></a>
+          <a class="mega__row" href="country-jamaica.html"><span class="mega__name">Jamaica</span><span class="mega__sub">Negril, Ocho Rios, Montego Bay</span></a>
+          <a class="mega__row" href="country-central-south-america.html"><span class="mega__name">Central &amp; South America</span><span class="mega__sub">Costa Rica, Panama, Belize, Roatán, Cartagena</span></a>
+          <a class="mega__row" href="country-premium-caribbean.html"><span class="mega__name">Premium Caribbean</span><span class="mega__sub">Saint Lucia, Antigua, Grenada, Aruba, Curaçao</span></a>
+          <a class="mega__row" href="country-exclusive-islands.html"><span class="mega__name">Exclusive islands</span><span class="mega__sub">Turks &amp; Caicos, St. Maarten, Bahamas</span></a>
+          </div>
+          <a class="mega__all" href="by-country.html">See all countries →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link nav__link--on" href="by-travel-style.html" aria-current="page">Style</a>
+        <div class="megamenu megamenu--type" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="top-luxury-resorts.html"><span class="mega__name">Luxury</span><span class="mega__sub">5★ luxury</span></a>
+          <a class="mega__row" href="top-best-value-resorts.html"><span class="mega__name">Best value</span><span class="mega__sub">The best value for money</span></a>
+          <a class="mega__row" href="top-family-resorts.html"><span class="mega__name">Family</span><span class="mega__sub">Perfect for families</span></a>
+          <a class="mega__row" href="top-adults-only-resorts.html"><span class="mega__name">Adults-only</span><span class="mega__sub">Adults only</span></a>
+          <a class="mega__row" href="caribbean-islands.html"><span class="mega__name">Discover the islands</span><span class="mega__sub">The most beautiful Caribbean islands</span></a>
+          <a class="mega__row" href="style-adventure.html"><span class="mega__name">Adventure &amp; Discovery</span><span class="mega__sub">Nature, jungle and the outdoors</span></a>
+          <a class="mega__row" href="style-culture.html"><span class="mega__name">Cultural discovery</span><span class="mega__sub">Colonial towns, ruins, heritage</span></a>
+          <a class="mega__row" href="style-diving-snorkeling.html"><span class="mega__name">Diving &amp; Snorkelling</span><span class="mega__sub">The most beautiful reefs</span></a>
+          <a class="mega__row" href="style-romance-couples.html"><span class="mega__name">Romance &amp; Couples</span><span class="mega__sub">Getaways for two, adults-only</span></a>
+          </div>
+          <a class="mega__all" href="by-travel-style.html">See all travel styles →</a>
+        </div>
+      </div>
+      <div class="nav__item">
+        <a class="nav__link" href="travel-guides.html">Guides</a>
+        <div class="megamenu megamenu--guides" role="menu">
+          <div class="mega__list">
+          <a class="mega__row" href="guide-what-to-pack.html"><span class="mega__name">🧳 What to pack</span><span class="mega__sub">The printable checklist</span></a>
+          <a class="mega__row" href="guide-best-time-to-travel.html"><span class="mega__name">📅 Best time to go</span><span class="mega__sub">When to go, month by month</span></a>
+          <a class="mega__row" href="guide-travel-documents-passport.html"><span class="mega__name">🛂 Documents &amp; passport</span><span class="mega__sub">Passport, E-Ticket, C5…</span></a>
+          <a class="mega__row" href="guide-currency-converter.html"><span class="mega__name">💱 Currency converter</span><span class="mega__sub">CAD to USD, pesos, euro</span></a>
+          <a class="mega__row" href="guide-tipping-all-inclusive.html"><span class="mega__name">💸 Tipping at all-inclusives</span><span class="mega__sub">How much to give, and to whom</span></a>
+          <a class="mega__row" href="guide-canada-customs-limits.html"><span class="mega__name">🛃 Customs limits</span><span class="mega__sub">What you can bring back</span></a>
+          </div>
+          <a class="mega__all" href="travel-guides.html">See all guides →</a>
+        </div>
+      </div>
+    </nav>
+    <span class="nav__sep"></span>
+    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount&nbsp;→</a>
+  </div>
+  <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
+    <a class="nav__link" href="destinations.html">Destinations</a>
+    <a class="nav__link" href="by-country.html">By country</a>
+    <a class="nav__link nav__link--on" href="by-travel-style.html" aria-current="page">Style</a>
+      <a class="nav__link" href="travel-guides.html">Guides</a>
+    <a class="nav__link" href="index.html#processus">How it works</a>
+    <a class="nav__link" href="index.html#faq">FAQ</a>
+    <a class="nav__link" href="contact.html">Contact</a>
+    <a class="nav__link" data-auth="login" href="https://duvoyageurbackend-production.up.railway.app/portail/connexion?lang=en">Log in</a>
+    <a class="nav__link" data-auth="signup" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Sign up</a>
+    <a class="nav__link nav__lang" href="/par-type.html" hreflang="fr-CA" lang="fr">🌐 Français</a>
+  </nav>
+</header>
 
 <main id="top">
 
@@ -91,7 +232,7 @@
       <h1 class="tophead__title">Our trips by travel style</h1>
       <p class="tophead__lede">Looking for pure luxury, the best price, a family all-inclusive or an island to discover? Pick your style — your discount is already applied to the price.</p>
       <div class="cta-band__actions" style="justify-content:center;margin-top:1.5rem">
-        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Get my discount</a>
+        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
         <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Message us on Messenger</a>
       </div>
     </div>
@@ -103,8 +244,8 @@
     <h2 class="section__title">What's your travel style?</h2>
     <p class="faq__lede">Four ways to choose your all-inclusive — whatever the destination.</p>
     <div class="destgrid">
-      <a class="destcard reveal" href="top-hotels-de-luxe.html">
-        <span class="destcard__img"><img src="assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Luxury resort by turquoise water" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="top-luxury-resorts.html">
+        <span class="destcard__img"><img src="/assets/atelier-estudio-playa-mujeres-aerial-view.webp" alt="Luxury resort by turquoise water" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · High-end</span>
           <span class="destcard__name">Luxury</span>
@@ -112,8 +253,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="top-hotels-qualite-prix.html">
-        <span class="destcard__img"><img src="assets/bahia-principe-punta-cana-isla.webp" alt="Beach and affordable all-inclusive resort" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="top-best-value-resorts.html">
+        <span class="destcard__img"><img src="/assets/bahia-principe-punta-cana-isla.webp" alt="Beach and affordable all-inclusive resort" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Best price</span>
           <span class="destcard__name">Best value</span>
@@ -121,8 +262,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="top-hotels-famille.html">
-        <span class="destcard__img"><img src="assets/bmayari-pool-02.webp" alt="Pool at a family resort" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="top-family-resorts.html">
+        <span class="destcard__img"><img src="/assets/bmayari-pool-02.webp" alt="Pool at a family resort" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · With family</span>
           <span class="destcard__name">Family</span>
@@ -130,8 +271,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="top-hotels-adults-only.html">
-        <span class="destcard__img"><img src="assets/pexels-23696832.webp" alt="Pool at an adults-only resort at sunset" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="top-adults-only-resorts.html">
+        <span class="destcard__img"><img src="/assets/pexels-23696832.webp" alt="Pool at an adults-only resort at sunset" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · No kids</span>
           <span class="destcard__name">Adults-only</span>
@@ -139,8 +280,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="les-iles.html">
-        <span class="destcard__img"><img src="assets/pexels-843643.webp" alt="Turquoise Caribbean island" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="caribbean-islands.html">
+        <span class="destcard__img"><img src="/assets/pexels-843643.webp" alt="Turquoise Caribbean island" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Caribbean islands</span>
           <span class="destcard__name">Discover the islands</span>
@@ -148,8 +289,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="type-aventure-decouverte.html">
-        <span class="destcard__img"><img src="assets/pexels-15447034.webp" alt="Nature and tropical jungle" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="style-adventure.html">
+        <span class="destcard__img"><img src="/assets/pexels-15447034.webp" alt="Nature and tropical jungle" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Adventure & Discovery</span>
           <span class="destcard__name">Adventure & Discovery</span>
@@ -157,8 +298,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="type-culture.html">
-        <span class="destcard__img"><img src="assets/pexels-29907876.webp" alt="Colourful colonial street" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="style-culture.html">
+        <span class="destcard__img"><img src="/assets/pexels-29907876.webp" alt="Colourful colonial street" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Cultural discovery</span>
           <span class="destcard__name">Cultural discovery</span>
@@ -166,8 +307,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="type-plongee-snorkeling.html">
-        <span class="destcard__img"><img src="assets/pexels-27792060.webp" alt="Turquoise water and reef" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="style-diving-snorkeling.html">
+        <span class="destcard__img"><img src="/assets/pexels-27792060.webp" alt="Turquoise water and reef" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Diving & Snorkelling</span>
           <span class="destcard__name">Diving & Snorkelling</span>
@@ -175,8 +316,8 @@
           <span class="destcard__cta">See the selection <span aria-hidden="true">→</span></span>
         </span>
       </a>
-      <a class="destcard reveal" href="type-romance-couple.html">
-        <span class="destcard__img"><img src="assets/pexels-32866444.webp" alt="Romantic beach at sunset" loading="lazy" decoding="async"></span>
+      <a class="destcard reveal" href="style-romance-couples.html">
+        <span class="destcard__img"><img src="/assets/pexels-32866444.webp" alt="Romantic beach at sunset" loading="lazy" decoding="async"></span>
         <span class="destcard__body">
           <span class="destcard__country">By style · Romance & Couples</span>
           <span class="destcard__name">Romance & Couples</span>
@@ -185,7 +326,7 @@
         </span>
       </a>
     </div>
-    <p style="text-align:center;color:var(--mist);margin:1.7rem 0 0">Prefer to search by place? Browse our <a href="destinations.html">destinations</a>, or <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">create your account and search for your package</a>.</p>
+    <p style="text-align:center;color:var(--mist);margin:1.7rem 0 0">Prefer to search by place? Browse our <a href="destinations.html">destinations</a>, or <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">create your account and search for your package</a>.</p>
   </section>
 
   <!-- PAR DESTINATION (cross-link) -->
@@ -195,9 +336,9 @@
       <h2 class="section__title" style="text-align:left;margin:0">Rather search by destination?</h2>
       <p class="lead" style="margin-top:.8rem">Already know where you want to go? Pick your sun destination directly.</p>
       <div class="why__points">
-        <div class="why__pt"><b><a href="voyage-punta-cana.html">Punta Cana →</a></b><p>Dream beaches and all-you-can-enjoy all-inclusives.</p></div>
-        <div class="why__pt"><b><a href="voyage-cancun-riviera-maya.html">Cancún / Riviera Maya →</a></b><p>Caribbean Mexico and its cenotes.</p></div>
-        <div class="why__pt"><b><a href="voyage-negril-jamaique.html">Jamaica →</a></b><p>Negril, Ocho Rios and the reggae spirit.</p></div>
+        <div class="why__pt"><b><a href="punta-cana-all-inclusive.html">Punta Cana →</a></b><p>Dream beaches and all-you-can-enjoy all-inclusives.</p></div>
+        <div class="why__pt"><b><a href="cancun-riviera-maya-all-inclusive.html">Cancún / Riviera Maya →</a></b><p>Caribbean Mexico and its cenotes.</p></div>
+        <div class="why__pt"><b><a href="negril-jamaica-all-inclusive.html">Jamaica →</a></b><p>Negril, Ocho Rios and the reggae spirit.</p></div>
         <div class="why__pt"><b><a href="destinations.html">All our destinations →</a></b><p>Dominican Republic, Mexico, Jamaica, Bahamas.</p></div>
       </div>
     </div>
@@ -225,7 +366,7 @@
       <h2 class="cta-band__title">Get your Reward Discount</h2>
       <p class="cta-band__text">No payment, no obligation — you only decide once you have your price in hand.</p>
       <div class="cta-band__actions">
-        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Get my discount</a>
+        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
         <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Message us on Messenger</a>
       </div>
     </section>
@@ -233,7 +374,65 @@
 
 </main>
 
-<!-- @footer -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__col footer__col--brand">
+      <div class="footer__brand"><img class="brand__logo" src="/assets/logo-capitaine-128.png" alt="" width="56" height="56"><span class="brand__text"><span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span><span class="brand__tag">The agency that rewards you</span></span></div>
+      <p class="footer__about">A 100% Québec discount travel agency. You book your all-inclusive down south in our booking engine, and we give you back part of our commission as a discount, right on your price.</p>
+      <p class="footer__meta">Holder of Québec licence no.&nbsp;700495</p>
+      <p class="footer__slogan">Travel more. Spend less. We take care of everything!</p>
+      <a class="footer__social" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg> Follow us on Facebook</a>
+    </div>
+
+    <nav class="footer__col" aria-label="Par pays">
+      <h3>By country</h3>
+      <a href="country-dominican-republic.html">Dominican Republic</a>
+      <a href="country-mexico.html">Mexico</a>
+      <a href="country-cuba.html">Cuba</a>
+      <a href="country-jamaica.html">Jamaica</a>
+      <a href="country-central-south-america.html">Central &amp; South America</a>
+      <a href="country-premium-caribbean.html">Premium Caribbean</a>
+      <a href="country-exclusive-islands.html">Exclusive islands</a>
+      <a href="destinations.html">All destinations →</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Par type">
+      <h3>By style</h3>
+      <a href="top-luxury-resorts.html">Luxury</a>
+      <a href="top-best-value-resorts.html">Best value</a>
+      <a href="top-family-resorts.html">Family</a>
+      <a href="top-adults-only-resorts.html">Adults-only</a>
+      <a href="style-adventure.html">Adventure &amp; Discovery</a>
+      <a href="style-culture.html">Cultural discovery</a>
+      <a href="style-diving-snorkeling.html">Diving &amp; Snorkelling</a>
+      <a href="style-romance-couples.html">Romance &amp; Couples</a>
+      <a href="caribbean-islands.html">Discover the islands</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Guides et aide">
+      <h3>Guides &amp; help</h3>
+      <a href="guide-what-to-pack.html">What to pack</a>
+      <a href="guide-best-time-to-travel.html">Best time to go</a>
+      <a href="guide-travel-documents-passport.html">Documents &amp; passport</a>
+      <a href="guide-currency-converter.html">Currency converter</a>
+      <a href="guide-tipping-all-inclusive.html">Tipping at all-inclusives</a>
+      <a href="guide-canada-customs-limits.html">Customs limits</a>
+      <a href="travel-guides.html">All guides</a>
+      <a href="index.html#processus">How it works</a>
+      <a href="contact.html">Contact us</a>
+      <a href="https://duvoyageurbackend-production.up.railway.app/portail/inscription?lang=en">Get my discount</a>
+    </nav>
+  </div>
+
+  <div class="footer__bottom">
+    <p class="footer__copy">© <span data-year></span> Duvoyageur.ca — All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms and conditions</a>
+      <a href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox__close" aria-label="Close">&times;</button>
@@ -247,7 +446,7 @@
   <span class="msgr__label">Messenger</span>
 </a>
 
-<script src="app.js"></script>
+<script src="/app.js"></script>
 <script>
 (function(){
   var lb=document.getElementById('lightbox'); if(!lb) return;
