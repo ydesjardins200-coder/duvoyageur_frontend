@@ -483,3 +483,77 @@ if (form) {
   // Échap vide le champ
   input.addEventListener('keydown',function(e){ if(e.key==='Escape'){input.value='';input.dispatchEvent(new Event('input'));} });
 })();
+
+/* ============================================================
+   Statistiques + consentement (Loi 25)
+   Inactif tant qu'aucun identifiant n'est configuré ci-dessous :
+   aucune bannière, aucun témoin, aucun script externe.
+   Pour activer : renseigner ga4 (ex. "G-XXXXXXX") et/ou metaPixel (ex. "1234567890").
+   Les outils ne se chargent qu'APRÈS le consentement du visiteur.
+   ============================================================ */
+const DV_ANALYTICS = { ga4: "", metaPixel: "" };
+
+(() => {
+  const cfg = DV_ANALYTICS;
+  if (!cfg.ga4 && !cfg.metaPixel) return;
+  const KEY = "dv_consent";
+  let choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+
+  const loadTools = () => {
+    if (cfg.ga4) {
+      const s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(cfg.ga4);
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", cfg.ga4, { anonymize_ip: true });
+    }
+    if (cfg.metaPixel) {
+      /* eslint-disable */
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+      /* eslint-enable */
+      window.fbq("init", cfg.metaPixel);
+      window.fbq("track", "PageView");
+    }
+  };
+
+  /* Événements utiles : clic vers l'inscription et vers Messenger */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (!a || choice !== "yes") return;
+    const href = a.getAttribute("href") || "";
+    if (href.includes("/portail/inscription")) {
+      if (window.gtag) window.gtag("event", "sign_up_click", { link_text: a.textContent.trim().slice(0, 60) });
+      if (window.fbq) window.fbq("track", "Lead");
+    } else if (href.includes("m.me/")) {
+      if (window.gtag) window.gtag("event", "contact_messenger");
+      if (window.fbq) window.fbq("track", "Contact");
+    }
+  });
+
+  if (choice === "yes") { loadTools(); return; }
+  if (choice === "no") return;
+
+  const bar = document.createElement("div");
+  bar.className = "consent";
+  bar.setAttribute("role", "dialog");
+  bar.setAttribute("aria-label", "Témoins");
+  bar.innerHTML =
+    '<p>On utilise des témoins (cookies) pour mesurer la fréquentation du site et améliorer nos publicités. ' +
+    'Tu peux accepter ou refuser. <a href="confidentialite.html">En savoir plus</a></p>' +
+    '<div class="consent__btns"><button type="button" class="btn btn--ghost btn--sm" data-c="no">Refuser</button>' +
+    '<button type="button" class="btn btn--accent btn--sm" data-c="yes">Accepter</button></div>';
+  document.body.appendChild(bar);
+  bar.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-c]");
+    if (!b) return;
+    choice = b.getAttribute("data-c");
+    try { localStorage.setItem(KEY, choice); } catch (err) {}
+    bar.remove();
+    if (choice === "yes") loadTools();
+  });
+})();
