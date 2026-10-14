@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Du Voyageur — Le même voyage, un meilleur prix</title>
 <meta name="description" content="Crée ton compte, cherche ton tout-inclus et réserve toi-même avec ton Rabais Récompense déjà appliqué. Agence de voyages québécoise, permis 700495.">
-<meta name="theme-color" content="#03121b">
+<meta name="theme-color" content="#0F2A47">
 <!-- Open Graph / partage social -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Du Voyageur">
@@ -27,17 +27,17 @@
 <meta name="twitter:image:alt" content="Du Voyageur — Le même voyage. Un meilleur prix.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/logo.png">
-<link rel="preload" as="image" href="assets/hero.webp">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/hero-plage.webp">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav__util">
-    <span class="nav__permit">Permis du Québec&nbsp;700495 · Agence de voyages</span>
+    <span class="nav__permit">Numéro de permis d'agence&nbsp;: 700495 · Agence de voyages québécoise</span>
     <div class="nav__utillinks">
       <a class="nav__ulink" href="#processus">Comment ça marche</a>
       <a class="nav__ulink" href="#faq">FAQ</a>
@@ -50,10 +50,10 @@
   <div class="nav__main">
     <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
     <a class="brand" href="#top" aria-label="Du Voyageur, accueil">
-      <img class="brand__logo" src="assets/logo.png" alt="" width="80" height="80">
+      <img class="brand__logo" src="assets/logo-capitaine-256.png" alt="" width="80" height="80">
       <span class="brand__text">
-        <span class="brand__name">Du&nbsp;Voyageur</span>
-        <span class="brand__permit">Permis&nbsp;700495</span>
+        <span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span>
+        <span class="brand__tag">L'agence qui récompense</span>
       </span>
     </a>
     <nav class="nav__dest" aria-label="Nos sélections">
@@ -154,7 +154,7 @@
       </div>
     </nav>
     <span class="nav__sep"></span>
-    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais</a>
+    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais&nbsp;→</a>
   </div>
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
     <a class="nav__link" href="destinations.html">Destinations</a>
@@ -171,70 +171,53 @@
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true">
-      <span class="hero__blur"></span>
-      <span class="hero__photo"></span>
-      <span class="hero__veil"></span>
-      <span class="hero__glow"></span>
-      <span class="hero__horizon"></span>
+  <!-- HERO (écho de la couverture Facebook) -->
+  <section class="hero2" aria-labelledby="heroTitle">
+    <div class="hero2__in">
+      <div class="hero2__copy">
+        <p class="hero2__permit">L'agence qui récompense · Permis 700495</p>
+        <h1 class="hero2__title" id="heroTitle">Trouve ton forfait<br><span class="hero2__pill">Obtiens ton rabais&nbsp;!</span></h1>
+        <p class="hero2__lede">Ton prochain voyage mérite une récompense. Cherche ton tout-inclus dans notre moteur et réserve toi-même&nbsp;: <strong>ton rabais est déjà appliqué</strong>. Même vol, même hôtel, même voyagiste.</p>
+        <div class="hero2__actions">
+          <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais récompense&nbsp;→</a>
+          <a class="btn btn--ghost btn--lg" href="#processus">Comment ça marche</a>
+        </div>
+        <p class="hero2__fine">Jusqu'à 5&nbsp;% de rabais sur le prix avant taxes. Inscription gratuite.</p>
+      </div>
+      <figure class="hero2__visual">
+        <img class="hero2__photo" src="assets/hero-plage.webp" alt="Plage des Caraïbes, eau turquoise et palmiers" width="670" height="598" fetchpriority="high">
+        <img class="hero2__logo" src="assets/logo-capitaine-256.png" alt="Logo duvoyageur.ca" width="148" height="148">
+        <div class="hero2__deal" aria-label="Exemple de rabais">
+          <span class="hero2__deal-k">Exemple · 7 nuits, 2 adultes</span>
+          <span class="hero2__deal-v"><s>2&nbsp;400&nbsp;$</s><b>2&nbsp;279&nbsp;$</b></span>
+          <span class="hero2__deal-save">Tu gardes 121&nbsp;$</span>
+          <span class="hero2__deal-note">jusqu'à 5&nbsp;% sur le prix avant taxes</span>
+        </div>
+      </figure>
     </div>
 
-    <div class="hero__inner">
-      <span class="hero__badge">
-        <span class="hero__badge-dot" aria-hidden="true"></span>
-        Agence de voyages · Québec · Permis 700495
-      </span>
-      <h1 class="hero__title">Le même voyage.<br><span class="grad">Un meilleur prix.</span></h1>
-      <p class="hero__lede">
-        Crée ton compte, cherche ton tout-inclus dans notre moteur et réserve
-        toi-même. Ton Rabais Récompense est déjà appliqué au prix — même vol,
-        même hôtel, même voyagiste.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais</a>
-        <a class="btn btn--ghost btn--lg" href="#processus">Comment ça marche</a>
-      </div>
-    </div>
-
-    <figure class="deal" aria-label="Exemple de rabais">
-      <div class="deal__compare">
-        <div class="deal__seg">
-          <span class="deal__label">Prix public</span>
-          <span class="deal__found" data-found>2&nbsp;400&nbsp;$</span>
-        </div>
-        <span class="deal__arrow" aria-hidden="true"></span>
-        <div class="deal__seg deal__seg--hero">
-          <span class="deal__label">Ton prix membre</span>
-          <span class="deal__price" data-price>2&nbsp;279&nbsp;$</span>
-        </div>
-      </div>
-      <div class="deal__result">
-        <svg class="deal__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
-        <span class="deal__result-text">Tu gardes <strong data-save>121&nbsp;$</strong></span>
-        <span class="deal__result-note">Exemple · jusqu'à 5&nbsp;% sur le prix avant taxes</span>
-      </div>
-    </figure>
-
-    <ul class="trustpills" aria-label="En bref">
-      <li class="pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <span>Permis&nbsp;<strong>700495</strong></span>
+    <ul class="pillars" aria-label="Pourquoi duvoyageur.ca">
+      <li class="pillar">
+        <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m20.5 20.5-4.8-4.8"/><path d="M11 8.2v5.6M8.6 9.6c0-.8.9-1.4 2.4-1.4s2.4.6 2.4 1.4-1 1.2-2.4 1.4-2.4.6-2.4 1.4.9 1.4 2.4 1.4 2.4-.6 2.4-1.4"/></svg></span>
+        <p>On <b>récompense tes recherches</b> avec un rabais exclusif</p>
       </li>
-      <li class="pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6.5" r="2.3"/><circle cx="18" cy="6.5" r="2.3"/><circle cx="12" cy="18" r="2.3"/><path d="M8.2 6.5h7.6M7.4 8.3l3.4 7.4M16.6 8.3l-3.4 7.4"/></svg>
-        <span>Softvoyage&nbsp;·&nbsp;Tripbook</span>
+      <li class="pillar">
+        <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0v4a2 2 0 0 1-2 2h-1v-6h3M4 12v4a2 2 0 0 0 2 2h1v-6H4"/><path d="M17 18c0 1.7-2 3-5 3"/></svg></span>
+        <p>Un conseiller s'occupe de toi <b>avant, pendant et après</b> ton voyage</p>
       </li>
-      <li class="pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5c0-3 2.4-4.8 5.5-4.8s5.5 1.8 5.5 4.8"/><path d="M16 5.6a3 3 0 0 1 0 5.6M20.5 19.5c0-2.4-1.4-3.9-3.4-4.5"/></svg>
-        <span><strong>5&nbsp;000+</strong>&nbsp;voyageurs</span>
-      </li>
-      <li class="pill">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></svg>
-        <span>Tu réserves quand tu veux</span>
+      <li class="pillar">
+        <span class="pillar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <p><b>Sécurité, support</b> et tranquillité d'esprit, on est là pour toi</p>
       </li>
     </ul>
+
+    <div class="navyband">
+      <div class="navyband__in">
+        <span class="navyband__url">www.duvoyageur<span>.ca</span></span>
+        <span class="navyband__permit">Numéro de permis d'agence&nbsp;: 700495</span>
+        <span class="navyband__tag">Voyage plus. Dépense moins. On s'occupe de tout&nbsp;!</span>
+      </div>
+    </div>
   </section>
 
   <!-- WHY / BUSINESS MODEL -->
@@ -427,9 +410,10 @@
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__col footer__col--brand">
-      <div class="footer__brand"><img class="brand__logo" src="assets/logo.png" alt="" width="34" height="34"><span class="brand__name">Du Voyageur</span></div>
+      <div class="footer__brand"><img class="brand__logo" src="assets/logo-capitaine-128.png" alt="" width="56" height="56"><span class="brand__text"><span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span><span class="brand__tag">L'agence qui récompense</span></span></div>
       <p class="footer__about">Agence de voyages à rabais, 100&nbsp;% québécoise. On te déniche le meilleur prix sur ton tout-inclus dans le Sud — et on te remet une partie de notre commission en rabais, directement sur ton prix.</p>
       <p class="footer__meta">Titulaire du permis du Québec n°&nbsp;700495</p>
+      <p class="footer__slogan">Voyage plus. Dépense moins. On s'occupe de tout&nbsp;!</p>
       <a class="footer__social" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg> Suis-nous sur Facebook</a>
     </div>
 
