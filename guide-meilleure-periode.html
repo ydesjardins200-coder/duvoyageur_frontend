@@ -22,12 +22,12 @@
 <meta name="twitter:title" content="Meilleure période pour partir dans le Sud">
 <meta name="twitter:description" content="Mois par mois : météo, ouragans, sargasses, baleines et prix. Trouve ton moment idéal.">
 <meta name="twitter:image" content="https://duvoyageur.netlify.app/assets/og-image.jpg">
-<meta name="theme-color" content="#03121b">
+<meta name="theme-color" content="#0F2A47">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/pexels-12567844.webp">
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -38,13 +38,13 @@
     linear-gradient(180deg, rgba(3,18,27,.55) 0%, rgba(3,17,25,.44) 38%, rgba(3,16,24,.90) 88%, var(--abyss) 100%),
     url("assets/pexels-12567844.webp") center 50%/cover no-repeat;}
   .ghead__inner{max-width:840px;margin:0 auto}
-  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
+  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Montserrat",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
   .ghead p{color:var(--foam);opacity:.95;font-size:clamp(1rem,2.2vw,1.16rem);max-width:700px;margin:1rem auto 0;line-height:1.5}
   .ghead .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(2,12,20,.75)}
   .gwrap{max-width:var(--maxw);margin:0 auto;padding:clamp(2rem,6vh,3.4rem) clamp(1rem,4vw,2rem)}
 
   .goalbar{text-align:center;margin-bottom:.4rem}
-  .goalbar h2{font:700 1.2rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--foam);margin:0 0 .3rem}
+  .goalbar h2{font:700 1.2rem/1.2 "Montserrat",sans-serif;color:var(--foam);margin:0 0 .3rem}
   .goalbar p{color:var(--mist);margin:0 0 1.1rem;font-size:.95rem}
   .gchips{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center}
   .gchip{font:600 .9rem/1 "Inter",sans-serif;padding:.62rem 1rem;border-radius:99px;border:1px solid var(--line);
@@ -56,7 +56,7 @@
   .cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-top:1.1rem}
   .cal__m{background:linear-gradient(160deg,rgba(20,62,82,.34),rgba(8,33,47,.46));border:1px solid var(--line);
     border-radius:15px;padding:.95rem 1rem 1.05rem;transition:.2s}
-  .cal__m .mo{font:700 .72rem/1 "Space Grotesk",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--pacific)}
+  .cal__m .mo{font:700 .72rem/1 "Montserrat",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--pacific)}
   .cal__m .bl{margin-top:.5rem;color:var(--foam);font-size:.9rem;line-height:1.38}
   .cal.has-sel .cal__m{opacity:.32;filter:saturate(.5)}
   .cal.has-sel .cal__m.is-on{opacity:1;filter:none;border-color:var(--lagoon);
@@ -64,13 +64,13 @@
 
   .dest{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin-top:2.4rem}
   .dest__c{background:linear-gradient(160deg,rgba(20,62,82,.34),rgba(8,33,47,.46));border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.3rem}
-  .dest__c h3{font:700 1.08rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--surf);margin:0 0 .55rem;display:flex;gap:.5rem;align-items:center}
+  .dest__c h3{font:700 1.08rem/1.2 "Montserrat",sans-serif;color:var(--surf);margin:0 0 .55rem;display:flex;gap:.5rem;align-items:center}
   .dest__c p{color:var(--foam);margin:.3rem 0;font-size:.95rem;line-height:1.45}
-  .dest__c .win{display:inline-block;margin-top:.5rem;font:700 .72rem/1 "Space Grotesk",monospace;letter-spacing:.06em;
+  .dest__c .win{display:inline-block;margin-top:.5rem;font:700 .72rem/1 "Montserrat",monospace;letter-spacing:.06em;
     color:var(--gold);border:1px solid rgba(255,210,63,.3);border-radius:8px;padding:.35rem .55rem}
 
   .gtips{margin-top:2.4rem;background:linear-gradient(160deg,rgba(255,210,63,.10),rgba(8,33,47,.5));border:1px solid rgba(255,210,63,.32);border-radius:18px;padding:1.3rem 1.4rem}
-  .gtips h2{font:700 1.16rem/1.2 "Bricolage Grotesque",sans-serif;color:var(--gold);margin:0 0 .7rem;display:flex;align-items:center;gap:.5rem}
+  .gtips h2{font:700 1.16rem/1.2 "Montserrat",sans-serif;color:var(--gold);margin:0 0 .7rem;display:flex;align-items:center;gap:.5rem}
   .gtips ul{margin:0;padding-left:1.1rem;color:var(--foam)} .gtips li{margin:.45rem 0;line-height:1.45} .gtips li b{color:var(--surf)}
   .glinks{margin-top:2rem;text-align:center;color:var(--mist)} .glinks a{color:var(--surf)}
 </style>
@@ -79,7 +79,7 @@
 
 <header class="nav">
   <div class="nav__util">
-    <span class="nav__permit">Permis du Québec&nbsp;700495 · Agence de voyages</span>
+    <span class="nav__permit">Numéro de permis d'agence&nbsp;: 700495 · Agence de voyages québécoise</span>
     <div class="nav__utillinks">
       <a class="nav__ulink" href="index.html#processus">Comment ça marche</a>
       <a class="nav__ulink" href="index.html#faq">FAQ</a>
@@ -92,10 +92,10 @@
   <div class="nav__main">
     <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-controls="navDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
     <a class="brand" href="index.html" aria-label="Du Voyageur, accueil">
-      <img class="brand__logo" src="assets/logo.png" alt="" width="80" height="80">
+      <img class="brand__logo" src="assets/logo-capitaine-256.png" alt="" width="80" height="80">
       <span class="brand__text">
-        <span class="brand__name">Du&nbsp;Voyageur</span>
-        <span class="brand__permit">Permis&nbsp;700495</span>
+        <span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span>
+        <span class="brand__tag">L'agence qui récompense</span>
       </span>
     </a>
     <nav class="nav__dest" aria-label="Nos sélections">
@@ -196,7 +196,7 @@
       </div>
     </nav>
     <span class="nav__sep"></span>
-    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais</a>
+    <a class="btn btn--accent btn--sm" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Obtenir mon rabais&nbsp;→</a>
   </div>
   <nav class="nav__drawer" id="navDrawer" aria-label="Menu">
     <a class="nav__link" href="destinations.html">Destinations</a>
@@ -373,9 +373,10 @@
 <footer class="footer">
   <div class="footer__top">
     <div class="footer__col footer__col--brand">
-      <div class="footer__brand"><img class="brand__logo" src="assets/logo.png" alt="" width="34" height="34"><span class="brand__name">Du Voyageur</span></div>
+      <div class="footer__brand"><img class="brand__logo" src="assets/logo-capitaine-128.png" alt="" width="56" height="56"><span class="brand__text"><span class="brand__name">duvoyageur<span class="brand__tld">.ca</span></span><span class="brand__tag">L'agence qui récompense</span></span></div>
       <p class="footer__about">Agence de voyages à rabais, 100&nbsp;% québécoise. On te déniche le meilleur prix sur ton tout-inclus dans le Sud — et on te remet une partie de notre commission en rabais, directement sur ton prix.</p>
       <p class="footer__meta">Titulaire du permis du Québec n°&nbsp;700495</p>
+      <p class="footer__slogan">Voyage plus. Dépense moins. On s'occupe de tout&nbsp;!</p>
       <a class="footer__social" href="https://www.facebook.com/duvoyageur.ca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg> Suis-nous sur Facebook</a>
     </div>
 

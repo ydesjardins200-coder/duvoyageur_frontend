@@ -5,19 +5,25 @@
    ============================================================ */
 
 :root{
-  --abyss:#03121b;        /* deepest background */
-  --abyss-2:#06212f;      /* panel depth */
-  --deep:#0a3346;         /* mid ocean */
-  --pacific:#19d3e6;      /* neon pacific blue */
-  --lagoon:#3df0c5;       /* tropical aqua-green */
-  --surf:#9bf6ec;         /* foam highlight */
-  --gold:#ffd23f;         /* logo gold */
-  --gold-deep:#f4b400;
-  --foam:#eafcff;         /* primary text */
-  --mist:#94b8c6;         /* muted text */
-  --line:rgba(155,246,236,.16);
-  --glass:linear-gradient(180deg, rgba(20,62,82,.55), rgba(8,33,47,.62));
-  --glow:rgba(25,211,230,.55);
+  /* Brand v2 — palette du brandbook (marine, jaune doré, blanc).
+     Anciens noms conservés pour que les 70 pages suivent automatiquement. */
+  --abyss:#FFFFFF;        /* fond principal (blanc) */
+  --abyss-2:#F7F6F2;      /* fond secondaire (blanc chaud) */
+  --deep:#0F2A47;         /* marine */
+  --navy:#0F2A47;
+  --navy-deep:#001E3B;
+  --pacific:#0F2A47;      /* accent texte → marine */
+  --lagoon:#F4C543;       /* accent vente → jaune doré */
+  --surf:#23466E;         /* liens */
+  --gold:#F4C543;         /* jaune doré */
+  --gold-deep:#E0AE1F;
+  --gold-ink:#8A6400;     /* « or » lisible sur blanc */
+  --foam:#0F2A47;         /* texte principal */
+  --mist:#5B6B7D;         /* texte secondaire */
+  --line:rgba(15,42,71,.12);
+  --glass:#FFFFFF;
+  --glow:rgba(244,197,67,.45);
+  --shadow:0 10px 30px -14px rgba(15,42,71,.28);
   --radius:20px;
   --maxw:1120px;
 }
@@ -29,10 +35,6 @@ body{
   font-family:"Inter",system-ui,sans-serif;
   color:var(--foam);
   background:var(--abyss);
-  background-image:
-    radial-gradient(80% 50% at 80% -5%, rgba(25,211,230,.10), transparent 60%),
-    radial-gradient(70% 50% at 0% 105%, rgba(61,240,197,.08), transparent 60%);
-  background-attachment:fixed;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -40,11 +42,11 @@ body{
 a{color:var(--surf);text-decoration:none}
 a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
-h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;letter-spacing:-.02em}
+h1,h2,h3{font-family:"Montserrat",sans-serif;line-height:1.02;margin:0;letter-spacing:-.02em}
 
 /* ---- shared bits ---- */
 .eyebrow{
-  font-family:"Space Grotesk",monospace;font-size:.74rem;font-weight:500;
+  font-family:"Montserrat",monospace;font-size:.74rem;font-weight:500;
   letter-spacing:.22em;text-transform:uppercase;color:var(--pacific);
   margin:0 0 1rem;
 }
@@ -62,7 +64,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* ---- buttons ---- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  font-weight:700;font-family:"Bricolage Grotesque",sans-serif;
+  font-weight:700;font-family:"Montserrat",sans-serif;
   padding:.72rem 1.25rem;border-radius:999px;border:1px solid transparent;
   cursor:pointer;transition:transform .15s ease,box-shadow .25s ease,
     background .2s ease,background-position .6s ease;
@@ -139,8 +141,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   filter:drop-shadow(0 0 12px rgba(25,211,230,.45));
 }
 .brand__text{display:flex;flex-direction:column;line-height:1.15}
-.brand__name{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;letter-spacing:-.01em}
-.brand__permit{font-family:"Space Grotesk",monospace;font-weight:500;font-size:.68rem;
+.brand__name{font-family:"Montserrat",sans-serif;font-size:1.15rem;letter-spacing:-.01em}
+.brand__permit{font-family:"Montserrat",monospace;font-weight:500;font-size:.68rem;
   letter-spacing:.08em;color:var(--mist);margin-top:.12rem}
 .nav__right{display:flex;align-items:center;gap:1rem;justify-self:end}
 .nav__link{color:var(--foam);font-weight:600;font-size:.92rem;white-space:nowrap}
@@ -148,7 +150,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .nav__link--on{color:var(--pacific)}
 .nav__link--on:hover{color:var(--pacific)}
 .permit{
-  font-family:"Space Grotesk",monospace;font-size:.72rem;letter-spacing:.08em;color:var(--mist);
+  font-family:"Montserrat",monospace;font-size:.72rem;letter-spacing:.08em;color:var(--mist);
 }
 
 /* ---- hero ---- */
@@ -183,7 +185,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   margin:0 0 1.15rem;padding:.44rem .95rem;border-radius:999px;
   background:rgba(6,24,33,.5);border:1px solid rgba(155,246,236,.2);
   backdrop-filter:blur(12px) saturate(120%);
-  font-family:"Space Grotesk",monospace;font-size:.74rem;font-weight:500;
+  font-family:"Montserrat",monospace;font-size:.74rem;font-weight:500;
   letter-spacing:.13em;text-transform:uppercase;color:var(--surf);
   box-shadow:0 10px 26px -16px rgba(0,0,0,.7),0 1px 0 rgba(155,246,236,.08) inset;
   text-shadow:0 1px 8px rgba(2,12,20,.6);
@@ -223,10 +225,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   display:flex;flex-direction:column;gap:.3rem;background:rgba(6,24,33,.32)}
 .deal__seg--hero{background:rgba(25,211,230,.1);box-shadow:0 0 0 1px rgba(25,211,230,.22) inset}
 .deal__label{font-size:.7rem;letter-spacing:.05em;color:var(--mist);text-transform:uppercase;
-  font-family:"Space Grotesk",monospace}
-.deal__found{font-family:"Bricolage Grotesque",sans-serif;font-size:1.45rem;font-weight:700;line-height:1;
+  font-family:"Montserrat",monospace}
+.deal__found{font-family:"Montserrat",sans-serif;font-size:1.45rem;font-weight:700;line-height:1;
   color:var(--mist);text-decoration:line-through;text-decoration-color:rgba(148,184,198,.55)}
-.deal__price{font-family:"Bricolage Grotesque",sans-serif;font-size:2.1rem;font-weight:800;line-height:1;
+.deal__price{font-family:"Montserrat",sans-serif;font-size:2.1rem;font-weight:800;line-height:1;
   color:var(--surf);text-shadow:0 0 22px rgba(25,211,230,.45)}
 .deal__arrow{align-self:center;flex:none;width:30px;height:30px;border-radius:50%;
   display:grid;place-items:center;background:rgba(6,24,33,.55);border:1px solid rgba(155,246,236,.18)}
@@ -238,9 +240,9 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:linear-gradient(120deg, rgba(255,210,63,.16), rgba(244,180,0,.05));
   box-shadow:0 0 0 1px rgba(255,210,63,.3) inset}
 .deal__check{width:19px;height:19px;color:var(--gold);flex:none}
-.deal__result-text{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem;font-weight:700;color:var(--foam)}
+.deal__result-text{font-family:"Montserrat",sans-serif;font-size:1.1rem;font-weight:700;color:var(--foam)}
 .deal__result-text strong{color:var(--gold);font-weight:800;font-size:1.4rem;margin-left:.15rem}
-.deal__result-note{font-family:"Space Grotesk",monospace;font-size:.68rem;letter-spacing:.1em;
+.deal__result-note{font-family:"Montserrat",monospace;font-size:.68rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold);opacity:.85;
   padding-left:.65rem;border-left:1px solid rgba(255,210,63,.3)}
 
@@ -255,7 +257,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   padding:.48rem .82rem;border-radius:999px;
   background:rgba(6,24,33,.5);border:1px solid rgba(155,246,236,.18);
   backdrop-filter:blur(12px) saturate(120%);
-  font-family:"Space Grotesk",monospace;font-size:.8rem;letter-spacing:.01em;
+  font-family:"Montserrat",monospace;font-size:.8rem;letter-spacing:.01em;
   color:var(--surf);white-space:nowrap;
   box-shadow:0 10px 26px -16px rgba(0,0,0,.7),0 1px 0 rgba(155,246,236,.08) inset;
   text-shadow:0 1px 8px rgba(2,12,20,.6);
@@ -282,7 +284,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:linear-gradient(90deg,var(--pacific),var(--lagoon));opacity:.7}
 .step:hover{transform:translateY(-6px);border-color:rgba(155,246,236,.34);
   box-shadow:0 34px 60px -28px rgba(0,0,0,.8),0 0 30px -12px var(--glow)}
-.step__num{font-family:"Space Grotesk",monospace;font-size:1.05rem;font-weight:700;color:var(--pacific);
+.step__num{font-family:"Montserrat",monospace;font-size:1.05rem;font-weight:700;color:var(--pacific);
   display:inline-block;margin-bottom:.7rem;letter-spacing:.05em}
 .step__title{font-size:1.25rem;font-weight:700;color:var(--foam);margin-bottom:.55rem}
 .step__text{color:var(--mist);font-size:.97rem;margin:0}
@@ -333,7 +335,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   box-shadow:0 0 30px -6px var(--glow)}
 .done__title{font-size:1.7rem;font-weight:800;color:var(--foam);margin-bottom:.5rem}
 .done__text{color:var(--mist);max-width:460px;margin:0 auto}
-.done__ref{margin-top:1rem;font-family:"Space Grotesk",monospace;color:var(--pacific)}
+.done__ref{margin-top:1rem;font-family:"Montserrat",monospace;color:var(--pacific)}
 
 /* ---- footer ---- */
 .footer{
@@ -352,7 +354,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 /* Footer en colonnes */
 .footer__top{flex-basis:100%;display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:2rem clamp(1rem,3vw,2.6rem)}
 .footer__col{display:flex;flex-direction:column;gap:.5rem;min-width:0}
-.footer__col h3{font-family:'Bricolage Grotesque',sans-serif;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific);margin:0 0 .45rem}
+.footer__col h3{font-family:"Montserrat",sans-serif;font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific);margin:0 0 .45rem}
 .footer__col a{font-weight:600;font-size:.88rem;color:var(--mist);text-decoration:none;line-height:1.3}
 .footer__col a:hover{color:var(--foam)}
 .footer__col--brand{gap:.8rem}
@@ -390,7 +392,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     color:var(--mist);font-size:.74rem;
     transition:height .26s ease,opacity .2s ease,border-color .26s ease;
   }
-  .nav__permit{font-family:"Space Grotesk",monospace;letter-spacing:.02em;white-space:nowrap}
+  .nav__permit{font-family:"Montserrat",monospace;letter-spacing:.02em;white-space:nowrap}
   .nav__utillinks{margin-left:auto;display:flex;align-items:center;gap:1.15rem}
   .nav__ulink{position:relative;color:var(--mist);font-weight:500;font-size:.76rem;white-space:nowrap;
     transition:color .18s ease}
@@ -488,7 +490,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .page-head__title{font-size:clamp(2rem,5.5vw,3rem);font-weight:800;color:var(--foam);margin:.4rem 0}
 .page-head__lede{color:var(--mist);max-width:560px;margin:.8rem auto 0}
 .haveit{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;padding:0;margin:1.5rem 0 0}
-.haveit li{font-family:"Space Grotesk",monospace;font-size:.78rem;color:var(--surf);
+.haveit li{font-family:"Montserrat",monospace;font-size:.78rem;color:var(--surf);
   background:rgba(25,211,230,.08);border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem}
 .form__reassure{color:var(--mist);font-size:.85rem;margin:.1rem 0 0;text-align:center}
 
@@ -525,7 +527,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .timeline{list-style:none;margin:0;padding:0}
 .timeline__item{position:relative;display:grid;grid-template-columns:48px 1fr;gap:1.1rem;padding-bottom:1.9rem}
 .timeline__item:last-child{padding-bottom:0}
-.timeline__num{font-family:"Space Grotesk",monospace;font-weight:700;font-size:1rem;color:#02161c;
+.timeline__num{font-family:"Montserrat",monospace;font-weight:700;font-size:1rem;color:#02161c;
   width:48px;height:48px;border-radius:50%;display:grid;place-items:center;position:relative;z-index:1;
   background:linear-gradient(120deg,var(--pacific),var(--lagoon));box-shadow:0 0 22px -8px var(--glow)}
 .timeline__item:not(:last-child)::before{content:"";position:absolute;left:23px;top:50px;bottom:0;
@@ -545,8 +547,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   transition:transform .2s,border-color .2s,box-shadow .2s}
 .site:hover{transform:translateY(-4px);border-color:rgba(155,246,236,.4);text-decoration:none;
   box-shadow:0 24px 50px -30px rgba(0,0,0,.8),0 0 26px -12px var(--glow)}
-.site__name{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.15rem;color:var(--foam)}
-.site__url{font-family:"Space Grotesk",monospace;font-size:.8rem;color:var(--pacific)}
+.site__name{font-family:"Montserrat",sans-serif;font-weight:700;font-size:1.15rem;color:var(--foam)}
+.site__url{font-family:"Montserrat",monospace;font-size:.8rem;color:var(--pacific)}
 .site__desc{color:var(--mist);font-size:.94rem;margin-top:.2rem}
 .checklist{margin-top:1.5rem;padding:1.6rem 1.7rem;border-radius:var(--radius);
   background:rgba(25,211,230,.05);border:1px solid var(--line)}
@@ -605,7 +607,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .shot__zone:hover,.shot__zone.is-over{border-color:var(--pacific);background:rgba(25,211,230,.12);transform:translateY(-2px)}
 .shot__zone[hidden]{display:none}
 .shot__ico{font-size:1.9rem}
-.shot__title{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.12rem;color:var(--foam)}
+.shot__title{font-family:"Montserrat",sans-serif;font-weight:700;font-size:1.12rem;color:var(--foam)}
 .shot__hint{color:var(--mist);font-size:.9rem;max-width:430px}
 .shot__preview{display:flex;align-items:center;gap:1rem;padding:.8rem;border-radius:16px;
   border:1px solid var(--line);background:rgba(25,211,230,.06)}
@@ -617,7 +619,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   border-radius:999px;padding:.28rem .85rem;font-size:.82rem;cursor:pointer;font-family:inherit;transition:.15s}
 .shot__remove:hover{border-color:var(--pacific);color:var(--pacific)}
 .or{display:flex;align-items:center;gap:1rem;margin:1.3rem 0;color:var(--mist);
-  font-family:"Space Grotesk",monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase}
+  font-family:"Montserrat",monospace;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase}
 .or::before,.or::after{content:"";height:1px;flex:1;background:var(--line)}
 
 .shot__status{margin:.7rem .2rem 0;font-size:.88rem;color:var(--mist)}
@@ -684,18 +686,18 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
     radial-gradient(70% 60% at 50% 0%, rgba(25,211,230,.10), transparent 70%),
     linear-gradient(180deg, rgba(3,18,27,.58) 0%, rgba(3,17,25,.40) 38%, rgba(3,16,24,.80) 85%, var(--abyss) 100%),
     url("assets/hotels-hero.webp") center 42%/cover no-repeat}
-.tophead__title{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+.tophead__title{font-family:"Montserrat",sans-serif;font-weight:800;
   font-size:clamp(2.4rem,6vw,4rem);line-height:1.02;color:var(--foam);margin:.2rem 0 0;letter-spacing:-.02em;
   text-shadow:0 2px 24px rgba(2,12,20,.55)}
 .tophead__lede{color:var(--foam);max-width:660px;margin:1rem auto 0;font-size:1.05rem;
   text-shadow:0 1px 14px rgba(2,12,20,.6)}
-.toplegend{margin:.9rem auto 0;font-family:"Space Grotesk",monospace;font-size:.82rem;
+.toplegend{margin:.9rem auto 0;font-family:"Montserrat",monospace;font-size:.82rem;
   color:var(--mist);letter-spacing:.01em;text-shadow:0 1px 10px rgba(2,12,20,.6)}
 .toplegend b{color:var(--gold,#e9c46a)}
 .topcats{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.7rem}
 .topcat{display:inline-flex;align-items:center;padding:.5rem 1.05rem;border-radius:999px;
   background:rgba(6,24,33,.5);border:1px solid var(--line);color:var(--surf);
-  font-family:"Space Grotesk",monospace;font-size:.82rem;letter-spacing:.02em;text-decoration:none;
+  font-family:"Montserrat",monospace;font-size:.82rem;letter-spacing:.02em;text-decoration:none;
   transition:border-color .18s,color .18s,transform .18s}
 .topcat:hover{border-color:rgba(155,246,236,.4);transform:translateY(-2px);text-decoration:none}
 .topcat--on{background:linear-gradient(120deg,var(--pacific),var(--lagoon));color:#02161c;
@@ -703,12 +705,12 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 
 .hotels{max-width:1340px;margin:0 auto;padding:clamp(1.5rem,4vh,2.5rem) clamp(1rem,4vw,2rem);
   display:flex;flex-direction:column;gap:clamp(1.5rem,4vh,2.5rem)}
-.dest{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(1.5rem,3.2vw,2.1rem);
+.dest{font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(1.5rem,3.2vw,2.1rem);
   color:var(--foam);letter-spacing:-.01em;margin:.6rem 0 -.4rem;padding-bottom:.7rem;
   display:flex;align-items:center;gap:.9rem}
 .dest:not(:first-child){margin-top:clamp(1.2rem,3vh,2.2rem)}
 .dest::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
-.hotel__tier{display:inline-flex;align-items:center;font-family:"Space Grotesk",monospace;font-weight:700;
+.hotel__tier{display:inline-flex;align-items:center;font-family:"Montserrat",monospace;font-weight:700;
   font-size:.82rem;letter-spacing:.04em;color:var(--gold,#e9c46a);
   background:rgba(233,196,106,.12);border:1px solid rgba(233,196,106,.32);
   border-radius:999px;padding:.05rem .5rem;margin-right:.1rem}
@@ -721,11 +723,11 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   flex-wrap:wrap;margin-bottom:1rem}
 .hotel__badge{display:inline-block;margin-bottom:.5rem;padding:.28rem .7rem;border-radius:999px;
   background:rgba(255,210,63,.14);border:1px solid rgba(255,210,63,.34);color:var(--gold);
-  font-family:"Space Grotesk",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  font-family:"Montserrat",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
 .hotel__loc{display:flex;align-items:center;gap:.35rem;color:var(--mist);
-  font-family:"Space Grotesk",monospace;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase}
+  font-family:"Montserrat",monospace;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase}
 .hotel__loc svg{width:14px;height:14px;color:var(--pacific);flex:none}
-.hotel__name{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+.hotel__name{font-family:"Montserrat",sans-serif;font-weight:700;
   font-size:clamp(1.4rem,3vw,1.9rem);color:var(--foam);margin:.35rem 0 0;line-height:1.1}
 .hotel__desc{color:var(--surf);margin:.5rem 0 0;max-width:580px;font-size:.98rem;line-height:1.5}
 .hotel__actions{display:flex;align-items:center;gap:.6rem .9rem;flex-wrap:wrap}
@@ -774,7 +776,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   display:flex;flex-direction:column;gap:clamp(1.4rem,3.5vh,2.2rem)}
 .tips{background:var(--glass);border:1px solid var(--line);border-radius:20px;
   padding:clamp(1.3rem,3vw,1.9rem);backdrop-filter:blur(10px)}
-.tips__title{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;
+.tips__title{font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.25rem;
   color:var(--foam);margin:0 0 .9rem}
 .tips__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.6rem}
 .tip{position:relative;padding-left:1.6rem;color:var(--mist);font-size:.97rem;line-height:1.45}
@@ -788,13 +790,13 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   background:linear-gradient(180deg,var(--pacific),var(--lagoon))}
 .chain:hover{border-color:rgba(155,246,236,.32);transform:translateY(-2px)}
 .chain__body{padding:clamp(1.3rem,3vw,2rem) clamp(1.4rem,3.2vw,2.2rem)}
-.chain__tag{color:var(--pacific);font-family:"Space Grotesk",monospace;font-size:.86rem;
+.chain__tag{color:var(--pacific);font-family:"Montserrat",monospace;font-size:.86rem;
   letter-spacing:.02em;margin:0 0 .15rem}
-.chain__name{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+.chain__name{font-family:"Montserrat",sans-serif;font-weight:800;
   font-size:clamp(1.7rem,4vw,2.4rem);color:var(--foam);letter-spacing:-.01em;margin:0}
 .chain__desc{color:var(--mist);margin:.6rem 0 0;max-width:760px;line-height:1.55;font-size:1rem}
 .chain__faves{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1rem}
-.chain__faveslabel{font-family:"Space Grotesk",monospace;font-size:.74rem;letter-spacing:.06em;
+.chain__faveslabel{font-family:"Montserrat",monospace;font-size:.74rem;letter-spacing:.06em;
   text-transform:uppercase;color:var(--surf);margin-right:.15rem}
 .chain__favelist{display:flex;flex-wrap:wrap;gap:.45rem}
 .fave{display:inline-flex;align-items:center;padding:.32rem .8rem;border-radius:999px;
@@ -808,24 +810,24 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .legal{max-width:var(--maxw);margin:0 auto;
   padding:clamp(5.5rem,12vh,7.5rem) clamp(1rem,4vw,2rem) clamp(3rem,6vh,4.5rem)}
 .legal__head{max-width:780px;margin:0 auto 2.4rem}
-.legal__eyebrow{font-family:"Space Grotesk",monospace;font-size:.72rem;font-weight:500;
+.legal__eyebrow{font-family:"Montserrat",monospace;font-size:.72rem;font-weight:500;
   letter-spacing:.22em;text-transform:uppercase;color:var(--pacific);margin:0 0 .7rem}
-.legal__title{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+.legal__title{font-family:"Montserrat",sans-serif;font-weight:800;
   font-size:clamp(2rem,5vw,3rem);line-height:1.04;margin:0 0 .7rem;color:var(--foam)}
-.legal__updated{font-family:"Space Grotesk",monospace;font-size:.78rem;letter-spacing:.04em;color:var(--mist)}
+.legal__updated{font-family:"Montserrat",monospace;font-size:.78rem;letter-spacing:.04em;color:var(--mist)}
 .legal__lede{color:var(--foam);font-size:1.05rem;margin:1.1rem 0 0;max-width:65ch}
 .legal__grid{display:grid;grid-template-columns:1fr;gap:2.2rem;align-items:start}
 @media (min-width:920px){
   .legal__grid{grid-template-columns:230px minmax(0,1fr);gap:3rem;max-width:1000px;margin:0 auto}
 }
 /* table of contents */
-.legal__toc-title{font-family:"Space Grotesk",monospace;text-transform:uppercase;letter-spacing:.16em;
+.legal__toc-title{font-family:"Montserrat",monospace;text-transform:uppercase;letter-spacing:.16em;
   font-size:.7rem;color:var(--pacific);margin:0 0 .85rem}
 .legal__toc ol{list-style:none;margin:0;padding:0;counter-reset:toc;font-size:.9rem}
 .legal__toc li{counter-increment:toc;margin:0 0 .5rem;line-height:1.3}
 .legal__toc a{color:var(--mist);display:flex;gap:.55rem;align-items:baseline}
 .legal__toc a::before{content:counter(toc,decimal-leading-zero);
-  font-family:"Space Grotesk",monospace;color:var(--pacific);opacity:.65;font-size:.74rem;flex:none}
+  font-family:"Montserrat",monospace;color:var(--pacific);opacity:.65;font-size:.74rem;flex:none}
 .legal__toc a:hover{color:var(--foam);text-decoration:none}
 @media (min-width:920px){ .legal__toc{position:sticky;top:5.5rem} }
 @media (max-width:919px){
@@ -838,10 +840,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .legal__note strong{color:var(--gold)}
 .legal__section{scroll-margin-top:5.5rem;padding:1.7rem 0;border-top:1px solid var(--line)}
 .legal__section:first-of-type{border-top:0;padding-top:.2rem}
-.legal__body h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.38rem;
+.legal__body h2{font-family:"Montserrat",sans-serif;font-weight:700;font-size:1.38rem;
   color:var(--foam);margin:0 0 .85rem;display:flex;gap:.55rem;align-items:baseline}
-.legal__num{font-family:"Space Grotesk",monospace;font-size:.85rem;color:var(--pacific);font-weight:500;flex:none}
-.legal__body h3{font-size:1.04rem;color:var(--foam);margin:1.3rem 0 .4rem;font-family:"Bricolage Grotesque",sans-serif}
+.legal__num{font-family:"Montserrat",monospace;font-size:.85rem;color:var(--pacific);font-weight:500;flex:none}
+.legal__body h3{font-size:1.04rem;color:var(--foam);margin:1.3rem 0 .4rem;font-family:"Montserrat",sans-serif}
 .legal__body p{margin:0 0 .9rem;color:var(--mist)}
 .legal__body ul{margin:0 0 .9rem;padding-left:1.15rem;color:var(--mist)}
 .legal__body li{margin:.32rem 0}
@@ -851,7 +853,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
   padding:1.15rem 1.3rem;margin-top:.4rem}
 .legal__card p{margin:.25rem 0}
 .legal__back{display:inline-flex;align-items:center;gap:.4rem;margin-top:2.2rem;
-  font-family:"Space Grotesk",monospace;font-size:.82rem;color:var(--mist)}
+  font-family:"Montserrat",monospace;font-size:.82rem;color:var(--mist)}
 .legal__back:hover{color:var(--foam);text-decoration:none}
 
 /* ===== Méga-menus (desktop ≥1024px ; mobile garde le drawer) ===== */
@@ -893,8 +895,8 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .destcard__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
 .destcard:hover .destcard__img img{transform:scale(1.05)}
 .destcard__body{display:flex;flex-direction:column;gap:.4rem;padding:1.2rem 1.3rem 1.4rem}
-.destcard__country{font:700 .68rem/1 "Space Grotesk",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific)}
-.destcard__name{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.45rem;color:var(--foam);line-height:1.1}
+.destcard__country{font:700 .68rem/1 "Montserrat",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--pacific)}
+.destcard__name{font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.45rem;color:var(--foam);line-height:1.1}
 .destcard__desc{color:var(--mist);font-size:.95rem;flex:1}
 .destcard__cta{color:var(--surf);font-weight:600;margin-top:.3rem}
 
@@ -902,11 +904,11 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .mustsee{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.6rem}
 .mustsee__item{display:flex;gap:.75rem;background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
 .mustsee__ico{font-size:1.45rem;line-height:1.1;flex:none}
-.mustsee__item b{display:block;color:var(--foam);font-size:1.02rem;margin-bottom:.18rem;font-family:"Bricolage Grotesque",sans-serif}
+.mustsee__item b{display:block;color:var(--foam);font-size:1.02rem;margin-bottom:.18rem;font-family:"Montserrat",sans-serif}
 .mustsee__item p{margin:0;color:var(--mist);font-size:.9rem;line-height:1.4}
 .factgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin-top:1.6rem}
 .factcard{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
-.factcard__k{font:700 .66rem/1 "Space Grotesk",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pacific);margin:0 0 .4rem}
+.factcard__k{font:700 .66rem/1 "Montserrat",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--pacific);margin:0 0 .4rem}
 .factcard__v{color:var(--foam);font-weight:600;font-size:.98rem;margin:0;line-height:1.35}
 .factcard__v small{display:block;color:var(--mist);font-weight:400;font-size:.84rem;margin-top:.25rem;line-height:1.4}
 
@@ -926,3 +928,217 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;margin:0;
 .hotel__ta--nolink{color:var(--mist);text-decoration:none;cursor:default;}
 .hotel__ta:hover{text-decoration:underline}
 .hotel__tanote{margin:.5rem 0 0;font-size:.78rem;color:var(--mist);max-width:48ch;line-height:1.45}
+
+/* ============================================================
+   BRAND V2 — brandbook du CEO (marine · jaune doré · blanc)
+   Site majoritairement blanc, header/titres marine, le jaune vend.
+   Règles de contraste : marine sur jaune OK ; jamais blanc sur jaune,
+   jamais texte jaune sur blanc (→ --gold-ink).
+   ============================================================ */
+h1,h2,h3{font-family:"Montserrat",sans-serif;letter-spacing:-.01em;color:var(--navy)}
+.section__title,.cta-band__title,.page-head__title{font-weight:900;color:var(--navy)}
+.eyebrow{font-family:"Montserrat",sans-serif;font-weight:800;letter-spacing:.16em;color:var(--gold-ink)}
+.grad{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--navy);text-shadow:none;
+  box-shadow:inset 0 -.32em 0 var(--gold)}
+.script{font-family:"Kaushan Script",cursive;font-weight:400;letter-spacing:0}
+a{color:var(--surf)}
+
+/* Zones marine : on inverse les jetons, tout le texte suit */
+.nav,.footer,.on-navy,.tophead,.ghead,.sunset,.process{
+  --foam:#FFFFFF;--mist:rgba(255,255,255,.76);--surf:#F4C543;--pacific:#F4C543;
+  --line:rgba(255,255,255,.16);--glass:rgba(255,255,255,.06);--gold-ink:#F4C543;
+}
+.nav h1,.nav h2,.nav h3,.footer h3,.on-navy h2,.on-navy h3,.tophead h1,.tophead h2,.ghead h1,
+.sunset h2,.sunset h3,.process h2,.process h3{color:#fff}
+.sunset .section__title,.sunset .cta-band__title,.process .section__title{color:#fff}
+
+/* ---- boutons ---- */
+.btn{font-family:"Montserrat",sans-serif;font-weight:800;letter-spacing:.01em}
+.btn--accent{color:var(--navy);background:var(--gold);background-image:none;text-transform:uppercase;font-size:.92em;
+  box-shadow:0 4px 0 #C99A17,0 12px 22px -12px rgba(15,42,71,.45)}
+.btn--accent::after{box-shadow:0 0 18px 2px var(--glow)}
+.btn--accent:hover{background:#FFD45E;background-image:none;
+  box-shadow:0 6px 0 #C99A17,0 18px 28px -12px rgba(15,42,71,.5)}
+.btn--accent:active{box-shadow:0 1px 0 #C99A17,0 6px 12px -8px rgba(15,42,71,.45)}
+.btn--ghost{color:var(--navy);background:#fff;border:2px solid var(--navy);backdrop-filter:none}
+.btn--ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.nav .btn--ghost,.footer .btn--ghost,.on-navy .btn--ghost,.sunset .btn--ghost,.process .btn--ghost,.tophead .btn--ghost,.ghead .btn--ghost{
+  color:#fff;background:transparent;border-color:rgba(255,255,255,.7)}
+.nav .btn--ghost:hover,.on-navy .btn--ghost:hover,.sunset .btn--ghost:hover,.process .btn--ghost:hover,.tophead .btn--ghost:hover,.ghead .btn--ghost:hover{
+  background:#fff;color:var(--navy)}
+.btn:focus-visible{outline-color:var(--gold-deep)}
+
+/* ---- header marine ---- */
+.nav{background:var(--navy);backdrop-filter:none;border-bottom:3px solid var(--gold)}
+.nav__util{background:var(--navy-deep)}
+.brand__logo{filter:none;box-shadow:0 0 0 2px rgba(244,197,67,.9)}
+.brand__name{font-family:"Montserrat",sans-serif;font-weight:900;font-size:1.25rem;letter-spacing:-.01em;color:#fff;text-transform:lowercase}
+.brand__tld{color:var(--gold)}
+.brand__tag{font-family:"Kaushan Script",cursive;font-size:.95rem;color:var(--gold);line-height:1.1;margin-top:.1rem}
+.nav__dest .nav__link::after{background:var(--gold)}
+@media (min-width:1024px){
+  .nav__main .brand__tag{display:block}
+  .nav--shrink{background:var(--navy);box-shadow:0 10px 26px -16px rgba(0,0,0,.55)}
+  .megamenu{background:var(--navy-deep);box-shadow:0 24px 50px rgba(0,30,59,.45)}
+}
+@media (max-width:1023px){
+  .nav__burger{background:rgba(255,255,255,.08)}
+  .nav__drawer{background:var(--navy-deep);box-shadow:0 18px 40px rgba(0,30,59,.45)}
+  .nav__drawer a{border-bottom-color:rgba(255,255,255,.1)}
+}
+
+/* ---- footer marine pleine largeur ---- */
+.footer{max-width:none;margin:0;background:var(--navy);border-top:4px solid var(--gold);
+  padding-left:max(clamp(1rem,4vw,2rem),calc((100% - var(--maxw))/2));
+  padding-right:max(clamp(1rem,4vw,2rem),calc((100% - var(--maxw))/2))}
+.footer__brand{gap:.75rem}
+.footer__brand .brand__logo{width:56px;height:56px}
+.footer__brand .brand__text{display:flex;flex-direction:column}
+.footer__slogan{margin:0;font-family:"Kaushan Script",cursive;font-size:1.15rem;color:var(--gold)}
+.footer__col h3{color:var(--gold)}
+
+/* ---- cartes : blanc, bordure fine, ombre douce ---- */
+.step,.flow__step,.form,.done,.site,.qa,.hotel,.tips,.chain,.destcard,.mustsee__item,.factcard,
+.legal__note,.legal__card,.msgr-bubble,.deal{background:#fff;backdrop-filter:none;box-shadow:var(--shadow)}
+.step:hover,.flow__step:hover,.site:hover,.destcard:hover{border-color:rgba(244,197,67,.8);
+  box-shadow:0 18px 40px -18px rgba(15,42,71,.35)}
+.chain:hover{border-color:rgba(244,197,67,.8)}
+.step::before,.chain::before{background:var(--gold);opacity:1}
+.flow__ico,.done__mark,.timeline__num{background:var(--gold);color:var(--navy);box-shadow:none}
+.timeline__item:not(:last-child)::before{background:linear-gradient(var(--gold),rgba(244,197,67,.2))}
+.tip::before{background:var(--gold);box-shadow:none}
+.why__note,.checklist{background:var(--abyss-2)}
+.checklist__list li{color:var(--foam)}
+.checklist__list li::before{color:var(--gold-ink)}
+.haveit li{background:var(--abyss-2)}
+.fave,.hotel__specs li{background:var(--abyss-2)}
+.hotel--featured{border-color:var(--gold)}
+.hotel__badge,.hotel__tier{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.hotel__gallery>button{background:var(--abyss-2)}
+.stars::before{background:linear-gradient(90deg,#E0AE1F calc(var(--rate)/5*100%),rgba(15,42,71,.18) calc(var(--rate)/5*100%));-webkit-background-clip:text;background-clip:text}
+.hotel__score sup,.legal__note strong,.toplegend b{color:var(--gold-ink)}
+.legal__note{border-left-color:var(--gold)}
+.topcat{background:rgba(255,255,255,.1)}
+.topcat--on{background:var(--gold);color:var(--navy)}
+.qa summary::after{color:var(--gold-ink)}
+.lightbox{background:rgba(0,30,59,.94)}
+.lightbox__close{color:#fff}
+.lightbox__nav{background:rgba(255,255,255,.12);color:#fff}
+
+/* ---- formulaires ---- */
+.field label{color:var(--navy)}
+.field input,.field select,.field textarea{background:#fff;border:1.5px solid rgba(15,42,71,.2);color:var(--navy)}
+.field input::placeholder,.field textarea::placeholder{color:#8a97a6}
+.field input:focus,.field select:focus,.field textarea:focus{background:#fff;border-color:var(--navy);
+  box-shadow:0 0 0 3px rgba(244,197,67,.45)}
+.field input[type="date"]{color-scheme:light}
+.form__err{color:#B3261E}
+.shot__zone{border-color:rgba(15,42,71,.25);background:var(--abyss-2)}
+.shot__zone:hover,.shot__zone.is-over{background:#fff;border-color:var(--navy)}
+.shot__prog{background:var(--abyss-2)}
+.shot__bar{background:var(--gold)}
+.shot__status.is-ok{color:#1E7A46}
+.shot__status.is-warn{color:var(--gold-ink)}
+
+/* ---- Messenger ---- */
+.msgr{background:var(--navy);color:#fff;box-shadow:0 14px 30px -12px rgba(15,42,71,.6);border:2px solid var(--gold)}
+.msgr:hover{box-shadow:0 18px 36px -12px rgba(15,42,71,.7)}
+.msgr-bubble::after{background:#fff}
+
+/* ---- bandes photo (en-têtes de pages, FAQ, processus) : voile marine ---- */
+.process__bg{background:linear-gradient(180deg,rgba(15,42,71,.90),rgba(0,30,59,.88)),url("assets/process.jpg") center/cover no-repeat}
+.sunset__bg{background:linear-gradient(180deg,rgba(15,42,71,.88),rgba(0,30,59,.86)),url("assets/sunset.jpg") center 32%/cover no-repeat}
+.qa{background:#fff}
+.sunset .qa{--foam:#0F2A47;--mist:#5B6B7D;--line:rgba(15,42,71,.12)}
+.tophead__title,.tophead__lede,.toplegend{text-shadow:0 2px 18px rgba(0,30,59,.6)}
+
+/* ============================================================
+   HERO V2 — écho de la couverture Facebook
+   ============================================================ */
+.hero2{position:relative;background:#fff;overflow:hidden}
+.hero2::before{content:"";position:absolute;inset:0 0 auto auto;width:46%;height:100%;
+  background:var(--abyss-2);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);z-index:0}
+.hero2__in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;
+  padding:clamp(2.6rem,7vh,4.6rem) clamp(1rem,4vw,2rem) clamp(2.4rem,6vh,3.6rem);
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+.hero2__permit{display:inline-flex;align-items:center;gap:.5rem;margin:0 0 1.1rem;
+  font:800 .72rem/1 "Montserrat",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+.hero2__permit::before{content:"";width:28px;height:3px;background:var(--gold);border-radius:2px}
+.hero2__title{margin:0;font-family:"Montserrat",sans-serif;font-weight:900;font-style:italic;
+  font-size:clamp(2.4rem,5.6vw,4.1rem);line-height:.95;letter-spacing:-.02em;color:var(--navy);text-transform:uppercase}
+.hero2__pill{display:inline-block;margin:.7rem 0 0;padding:.28em .7em .3em;border-radius:14px;transform:rotate(-1.5deg);
+  background:var(--gold);color:var(--navy);font-family:"Montserrat",sans-serif;font-weight:900;font-style:italic;
+  font-size:clamp(1.45rem,3.6vw,2.55rem);line-height:1;text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap;
+  box-shadow:0 6px 0 #C99A17}
+.hero2__lede{margin:1.5rem 0 0;max-width:34rem;font-size:clamp(1.02rem,2vw,1.14rem);color:var(--mist)}
+.hero2__lede strong{color:var(--navy)}
+.hero2__actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+.hero2__fine{margin:.9rem 0 0;font-size:.8rem;color:var(--mist)}
+.hero2__visual{position:relative;margin:0}
+.hero2__photo{display:block;width:100%;height:auto;aspect-ratio:670/598;object-fit:cover;border-radius:26px;
+  border:6px solid #fff;box-shadow:0 30px 60px -28px rgba(15,42,71,.55)}
+.hero2__logo{position:absolute;left:-26px;bottom:-26px;width:clamp(96px,13vw,148px);height:auto;border-radius:50%;
+  box-shadow:0 0 0 5px #fff,0 16px 30px -12px rgba(15,42,71,.55)}
+.hero2__deal{position:absolute;right:-12px;top:20px;background:#fff;border-radius:16px;padding:.75rem 1rem;
+  box-shadow:0 18px 34px -16px rgba(15,42,71,.5);border:2px solid var(--gold);min-width:190px}
+.hero2__deal-k{display:block;font:800 .64rem/1 "Montserrat",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.hero2__deal-v{display:flex;align-items:baseline;gap:.5rem;margin-top:.35rem;font-family:"Montserrat",sans-serif}
+.hero2__deal-v s{color:var(--mist);font-weight:700;font-size:.95rem}
+.hero2__deal-v b{color:var(--navy);font-weight:900;font-size:1.5rem}
+.hero2__deal-save{display:inline-block;margin-top:.4rem;padding:.18rem .55rem;border-radius:999px;background:var(--gold);
+  color:var(--navy);font:800 .78rem/1.3 "Montserrat",sans-serif}
+.hero2__deal-note{display:block;margin-top:.35rem;font-size:.66rem;color:var(--mist)}
+
+/* 3 piliers */
+.pillars{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1rem,4vw,2rem) clamp(2.4rem,6vh,3.4rem);
+  list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pillar{display:flex;gap:.9rem;align-items:flex-start;padding:1.15rem 1.2rem;border-radius:18px;background:#fff;
+  border:1px solid var(--line);box-shadow:var(--shadow)}
+.pillar__ico{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold)}
+.pillar__ico svg{width:24px;height:24px}
+.pillar p{margin:0;font-family:"Montserrat",sans-serif;font-weight:700;font-size:.98rem;line-height:1.35;color:var(--navy)}
+.pillar p b{font-weight:900}
+
+/* Bande marine (comme la couverture FB) */
+.navyband{background:var(--navy);color:#fff;border-top:4px solid var(--gold)}
+.navyband__in{max-width:var(--maxw);margin:0 auto;padding:1rem clamp(1rem,4vw,2rem);
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.6rem}
+.navyband__url{font:900 1.05rem/1 "Montserrat",sans-serif;letter-spacing:.02em;color:#fff;text-transform:lowercase}
+.navyband__url span{color:var(--gold)}
+.navyband__permit{font:800 .74rem/1.2 "Montserrat",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.navyband__tag{font-family:"Kaushan Script",cursive;font-size:clamp(1.15rem,2.4vw,1.45rem);color:var(--gold)}
+
+@media (max-width:900px){
+  .hero2::before{display:none}
+  .hero2__in{grid-template-columns:1fr;text-align:left}
+  .hero2__visual{max-width:560px;width:100%;margin:0 auto}
+  .hero2__logo{left:12px;bottom:-22px}
+  .hero2__deal{right:10px;top:12px;min-width:0}
+  .pillars{grid-template-columns:1fr;padding-top:1.4rem}
+  .navyband__in{justify-content:center;text-align:center}
+}
+@media (max-width:520px){
+  .hero2__actions .btn{width:100%}
+  .hero2__deal{transform:scale(.88);transform-origin:top right}
+}
+@media (max-width:1023px){.brand__logo{width:58px;height:58px}}
+.navyband{position:relative;z-index:1}
+
+/* Hero V2 — fond plein écran : plage des Caraïbes (Pexels #5041929, licence Pexels) */
+.hero2{background:#0F2A47 url("assets/hero-bg-caraibes.webp") center 62%/cover no-repeat;
+  min-height:calc(100svh - 106px);display:flex;flex-direction:column}
+.hero2::before{inset:0;width:auto;height:auto;clip-path:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.86) 38%,rgba(255,255,255,.35) 62%,rgba(255,255,255,0) 82%)}
+.hero2__in{flex:1;width:100%}
+.hero2__lede{color:#3c4c5e}
+.hero2__fine{color:#3c4c5e}
+.hero2__permit{color:#3c4c5e}
+.pillars{width:100%}
+.pillar{background:rgba(255,255,255,.96)}
+.navyband{margin-top:auto}
+@media (max-width:1100px){.hero2{background-image:url("assets/hero-bg-caraibes-1280.webp")}}
+@media (max-width:900px){
+  .hero2{min-height:0;background-position:70% 30%}
+  .hero2::before{display:block;
+    background:linear-gradient(180deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.72) 50%,rgba(255,255,255,.25) 75%,rgba(255,255,255,.1) 100%)}
+}
