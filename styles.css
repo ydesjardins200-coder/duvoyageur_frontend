@@ -1212,3 +1212,6 @@ a{color:var(--surf)}
   text-transform:uppercase;color:var(--gold-ink)}
 .team__more:hover{color:var(--navy);text-decoration:none}
 @media (max-width:640px){.team__list{grid-template-columns:1fr;gap:1.8rem}}
+.member__badge{width:min(100%,260px);height:auto;border-radius:50%;
+  filter:drop-shadow(0 16px 26px rgba(15,42,71,.22));transition:transform .25s ease}
+.member__badge:hover{transform:translateY(-4px) scale(1.02)}
