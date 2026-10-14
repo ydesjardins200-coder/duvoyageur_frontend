@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /partials/
+Disallow: /i18n/
 
-Sitemap: https://duvoyageur.netlify.app/sitemap.xml
+Sitemap: https://duvoyageur.ca/sitemap.xml
