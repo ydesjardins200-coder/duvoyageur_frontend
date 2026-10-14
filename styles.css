@@ -1123,3 +1123,22 @@ a{color:var(--surf)}
 }
 @media (max-width:1023px){.brand__logo{width:58px;height:58px}}
 .navyband{position:relative;z-index:1}
+
+/* Hero V2 — fond plein écran : plage des Caraïbes (Pexels #12858513, licence Pexels) */
+.hero2{background:#0F2A47 url("assets/hero-bg-caraibes.webp") center 40%/cover no-repeat;
+  min-height:calc(100svh - 106px);display:flex;flex-direction:column}
+.hero2::before{inset:0;width:auto;height:auto;clip-path:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.86) 38%,rgba(255,255,255,.35) 62%,rgba(255,255,255,0) 82%)}
+.hero2__in{flex:1;width:100%}
+.hero2__lede{color:#3c4c5e}
+.hero2__fine{color:#3c4c5e}
+.hero2__permit{color:#3c4c5e}
+.pillars{width:100%}
+.pillar{background:rgba(255,255,255,.96)}
+.navyband{margin-top:auto}
+@media (max-width:1100px){.hero2{background-image:url("assets/hero-bg-caraibes-1280.webp")}}
+@media (max-width:900px){
+  .hero2{min-height:0;background-position:70% 30%}
+  .hero2::before{display:block;
+    background:linear-gradient(180deg,rgba(255,255,255,.86) 0%,rgba(255,255,255,.72) 50%,rgba(255,255,255,.25) 75%,rgba(255,255,255,.1) 100%)}
+}
