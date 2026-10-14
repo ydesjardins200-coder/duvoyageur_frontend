@@ -1078,3 +1078,4 @@ a{color:var(--surf)}
 .consent p{margin:0;flex:1 1 320px;font-size:.92rem;color:var(--navy)}
 .consent a{color:var(--surf);text-decoration:underline}
 .consent__btns{display:flex;gap:.6rem;flex:none}
+.nav__lang{font-weight:700}

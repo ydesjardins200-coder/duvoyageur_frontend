@@ -6,6 +6,9 @@
    ============================================================ */
 
 const API_BASE = "https://duvoyageurbackend-production.up.railway.app";
+/* Langue de la page (fr à la racine, en sous /en/) */
+const DV_EN = (document.documentElement.lang || "").toLowerCase().startsWith("en");
+const T = (fr, en) => (DV_EN ? en : fr);
 
 /* Footer year (present on all pages). */
 (() => {
@@ -417,10 +420,10 @@ if (form) {
   const bubble = document.createElement('div');
   bubble.className = 'msgr-bubble';
   bubble.innerHTML =
-    '<button class="msgr-bubble__close" type="button" aria-label="Fermer">&times;</button>' +
+    '<button class="msgr-bubble__close" type="button" aria-label="' + T("Fermer", "Close") + '">&times;</button>' +
     '<a class="msgr-bubble__link" href="' + href + '" target="_blank" rel="noopener">' +
-      '<span class="msgr-bubble__title">Une question sur ton forfait&nbsp;?</span>' +
-      '<span class="msgr-bubble__text">Écris-nous, on répond en quelques minutes&nbsp;👋</span>' +
+      '<span class="msgr-bubble__title">' + T("Une question sur ton forfait&nbsp;?", "A question about your package?") + '</span>' +
+      '<span class="msgr-bubble__text">' + T("Écris-nous, on répond en quelques minutes&nbsp;👋", "Message us, we reply within minutes 👋") + '</span>' +
     '</a>';
 
   const close = () => {
@@ -541,12 +544,16 @@ const DV_ANALYTICS = { ga4: "", metaPixel: "" };
   const bar = document.createElement("div");
   bar.className = "consent";
   bar.setAttribute("role", "dialog");
-  bar.setAttribute("aria-label", "Témoins");
-  bar.innerHTML =
+  bar.setAttribute("aria-label", T("Témoins", "Cookies"));
+  bar.innerHTML = T(
     '<p>On utilise des témoins (cookies) pour mesurer la fréquentation du site et améliorer nos publicités. ' +
-    'Tu peux accepter ou refuser. <a href="confidentialite.html">En savoir plus</a></p>' +
+    'Tu peux accepter ou refuser. <a href="/confidentialite.html">En savoir plus</a></p>' +
     '<div class="consent__btns"><button type="button" class="btn btn--ghost btn--sm" data-c="no">Refuser</button>' +
-    '<button type="button" class="btn btn--accent btn--sm" data-c="yes">Accepter</button></div>';
+    '<button type="button" class="btn btn--accent btn--sm" data-c="yes">Accepter</button></div>',
+    '<p>We use cookies to measure site traffic and improve our ads. ' +
+    'You can accept or decline. <a href="/en/privacy.html">Learn more</a></p>' +
+    '<div class="consent__btns"><button type="button" class="btn btn--ghost btn--sm" data-c="no">Decline</button>' +
+    '<button type="button" class="btn btn--accent btn--sm" data-c="yes">Accept</button></div>');
   document.body.appendChild(bar);
   bar.addEventListener("click", (e) => {
     const b = e.target.closest("[data-c]");
