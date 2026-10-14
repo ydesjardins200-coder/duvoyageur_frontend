@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<script>document.documentElement.className="js"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency Converter for Sun Destinations: CAD to USD, Pesos &amp; More (2026) | Du Voyageur</title>
+<meta name="description" content="Convert your Canadian dollars to US dollars, Mexican and Dominican pesos, Jamaican dollars and euros. Indicative rates refreshed automatically — perfect for estimating tips and excursions.">
+<meta name="theme-color" content="#0F2A47">
+<meta property="og:title" content="Currency Converter for Sun Destinations">
+<meta property="og:description" content="CAD → USD, pesos, Jamaican dollar, euro. To estimate tips, excursions and small purchases.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Du Voyageur">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://duvoyageur.netlify.app/guide-convertisseur-devises.html">
+<meta property="og:image" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
+<meta property="og:image:secure_url" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="duvoyageur.ca — The agency that rewards you. Find your package, get your Reward Discount.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Currency Converter for Sun Destinations">
+<meta name="twitter:description" content="CAD → USD, pesos, Jamaican dollar, euro. To estimate tips, excursions and small purchases.">
+<meta name="twitter:image" content="https://duvoyageur.netlify.app/assets/og-image-2026.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Kaushan+Script&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/pexels-30793026.webp">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{ --maxw:920px; }
+  .ghead{position:relative;isolation:isolate;padding:clamp(3.4rem,11vh,6.6rem) clamp(1rem,4vw,2rem) clamp(2.6rem,7vh,4rem);text-align:center;overflow:hidden}
+  .ghead__bg{position:absolute;inset:0;z-index:-1;background:
+    radial-gradient(72% 60% at 50% 0%, rgba(244,197,67,.16), transparent 70%),
+    linear-gradient(180deg, rgba(15,42,71,.52) 0%, rgba(15,42,71,.42) 38%, rgba(15,42,71,.90) 88%, var(--abyss) 100%),
+    url("assets/pexels-30793026.webp") center 50%/cover no-repeat;}
+  .ghead__em{font-size:2.6rem;line-height:1}
+  .ghead__inner{max-width:760px;margin:0 auto}
+  .ghead h1{font:800 clamp(2rem,5vw,3.1rem)/1.06 "Montserrat",sans-serif;color:var(--foam);margin:.5rem 0 0;letter-spacing:-.02em}
+  .ghead p{color:var(--foam);opacity:.95;font-size:clamp(1rem,2.2vw,1.16rem);max-width:600px;margin:1rem auto 0;line-height:1.5}
+  .ghead .eyebrow{color:var(--surf);text-shadow:0 2px 14px rgba(0,30,59,0.38)}
+  .gwrap{max-width:var(--maxw);margin:0 auto;padding:clamp(1.6rem,5vh,2.8rem) clamp(1rem,4vw,2rem) clamp(2rem,6vh,3.4rem)}
+
+  .panel{background:#fff;border:1px solid var(--line);
+    border-radius:22px;padding:clamp(1.3rem,3.5vw,2rem);box-shadow:0 18px 46px rgba(0,30,59,0.17)}
+  .cv{display:grid;gap:.9rem}
+  .cv__row{display:grid;grid-template-columns:1fr auto;gap:.7rem;align-items:stretch}
+  .cv__lab{font:600 .76rem/1 "Montserrat",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--surf);margin-bottom:.45rem}
+  .cv__amt,.cv__res,.cv__cur{background:var(--abyss-2);border:1px solid var(--line);border-radius:13px;color:var(--foam);
+    font:700 1.5rem/1 "Montserrat",sans-serif;padding:.85rem 1rem}
+  .cv__amt{width:100%}
+  .cv__amt:focus,.cv__cur:focus{outline:2px solid var(--pacific);outline-offset:1px}
+  .cv__cur{font-size:1rem;font-weight:600;min-width:130px;cursor:pointer}
+  .cv__res{display:flex;align-items:center;color:var(--gold-ink)}
+  .cv__swapwrap{display:flex;justify-content:center;margin:.1rem 0}
+  .cv__swap{background:rgba(244,197,67,.12);border:1px solid var(--line);color:var(--surf);border-radius:50%;
+    width:42px;height:42px;font-size:1.1rem;cursor:pointer;transition:.18s}
+  .cv__swap:hover{background:rgba(244,197,67,.22);transform:rotate(180deg)}
+  .cv__rate{margin-top:1rem;text-align:center;color:var(--mist);font-size:.92rem}
+  .cv__rate b{color:var(--foam)}
+  .cv__live{display:inline-block;font:600 .68rem/1 "Montserrat",monospace;letter-spacing:.06em;text-transform:uppercase;
+    padding:.28rem .5rem;border-radius:7px;margin-left:.4rem;border:1px solid var(--line);color:var(--mist)}
+  .cv__live.ok{color:var(--gold-ink);border-color:rgba(244,197,67,.35)}
+
+  .quick{margin-top:1.6rem}
+  .quick h3{font:700 1rem/1.2 "Montserrat",sans-serif;color:var(--foam);margin:0 0 .7rem}
+  .qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.6rem}
+  .qcell{background:var(--abyss-2);border:1px solid var(--line);border-radius:12px;padding:.7rem .8rem;text-align:center}
+  .qcell .qk{color:var(--mist);font-size:.82rem}
+  .qcell .qv{color:var(--foam);font:700 1.05rem/1.2 "Montserrat",monospace;margin-top:.2rem}
+
+  .tip{background:rgba(255,210,63,.07);border:1px solid rgba(255,210,63,.28);border-radius:14px;padding:1rem 1.1rem;margin-top:1.5rem;color:var(--foam);font-size:.95rem;line-height:1.5}
+  .tip b{color:var(--gold-ink)}
+  .disc{margin-top:1.2rem;color:var(--mist);font-size:.84rem;line-height:1.5;text-align:center}
+  .xlinks{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.8rem}
+  .xlink{display:inline-flex;align-items:center;gap:.5rem;background:var(--abyss-2);border:1px solid var(--line);
+    border-radius:99px;padding:.6rem 1rem;color:var(--foam);text-decoration:none;font-size:.92rem;transition:.18s}
+  .xlink:hover{border-color:var(--pacific);color:var(--surf)}
+</style>
+</head>
+<body>
+
+<!-- @header -->
+
+  <main id="top">
+    <section class="ghead">
+      <div class="ghead__bg" aria-hidden="true"></div>
+      <div class="ghead__inner">
+        <span class="ghead__em" aria-hidden="true">💱</span>
+        <p class="eyebrow eyebrow--center">Free tool · Du Voyageur</p>
+        <h1>Currency Converter</h1>
+        <p>How much is that in pesos? And that US$5 tip — how much is it in Canadian money? Convert at a glance.</p>
+      </div>
+    </section>
+
+    <div class="gwrap">
+      <div class="panel">
+        <div class="cv">
+          <div>
+            <div class="cv__lab">Amount to convert</div>
+            <div class="cv__row">
+              <input class="cv__amt" id="amt" type="number" inputmode="decimal" min="0" step="any" value="100" aria-label="Amount">
+              <select class="cv__cur" id="from" aria-label="From currency"></select>
+            </div>
+          </div>
+          <div class="cv__swapwrap">
+            <button class="cv__swap" id="swap" type="button" aria-label="Swap currencies">⇅</button>
+          </div>
+          <div>
+            <div class="cv__lab">Result</div>
+            <div class="cv__row">
+              <div class="cv__res" id="res" aria-live="polite">—</div>
+              <select class="cv__cur" id="to" aria-label="To currency"></select>
+            </div>
+          </div>
+        </div>
+        <div class="cv__rate" id="rate">—<span class="cv__live" id="live">indicative</span></div>
+
+        <div class="quick">
+          <h3 id="qtitle">Quick reference</h3>
+          <div class="qgrid" id="qgrid"></div>
+        </div>
+      </div>
+
+      <div class="tip">
+        💵 <b>The US dollar is king.</b> At all-inclusives, tips, excursions and taxis are almost always paid in US dollars. Bring small bills (US$1 and US$5) — they're handier than pesos for tipping, and you'll avoid bad exchange rates on site.
+      </div>
+
+      <p class="disc">Rates are indicative, for estimating tips and small purchases. Actual rates (ATM, card, exchange office) vary and often include fees. For large amounts, check with your bank.</p>
+
+      <div class="xlinks">
+        <a class="xlink" href="guide-pourboires.html">💸 Tip calculator</a>
+        <a class="xlink" href="guide-limites-douane.html">🛃 Customs limits when you return</a>
+        <a class="xlink" href="destinations.html">🌴 Our destinations</a>
+        <a class="xlink" href="guides.html">📚 All guides</a>
+      </div>
+    </div>
+
+    <div class="sunset">
+      <div class="sunset__bg" aria-hidden="true"></div>
+      <section class="cta-band">
+        <p class="eyebrow eyebrow--center">Ready to go?</p>
+        <h2 class="cta-band__title">Get your Reward Discount</h2>
+        <p class="cta-band__text">Find your package in our booking engine: we give you back part of our commission, already applied to your price.</p>
+        <div class="cta-band__actions">
+          <a class="btn btn--accent btn--lg" href="https://duvoyageurbackend-production.up.railway.app/portail/inscription">Get my discount</a>
+          <a class="btn btn--ghost btn--lg" href="https://m.me/duvoyageur.ca" target="_blank" rel="noopener">Message us on Messenger</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+<!-- @footer -->
+
+<script src="app.js"></script>
+<script>
+(function(){
+  // Taux INDICATIFS (unités par 1 CAD). Rafraîchis en direct si l'API répond.
+  var RATES = { CAD:1, USD:0.72, EUR:0.66, MXN:14.8, DOP:45, JMD:114 };
+  var META = {
+    CAD:{name:"Canadian dollar", flag:"🇨🇦", sym:"$"},
+    USD:{name:"US dollar", flag:"🇺🇸", sym:"$"},
+    EUR:{name:"Euro", flag:"🇪🇺", sym:"€"},
+    MXN:{name:"Mexican peso", flag:"🇲🇽", sym:"$"},
+    DOP:{name:"Dominican peso", flag:"🇩🇴", sym:"$"},
+    JMD:{name:"Jamaican dollar", flag:"🇯🇲", sym:"$"}
+  };
+  var ORDER = ["CAD","USD","EUR","MXN","DOP","JMD"];
+  var amt=document.getElementById('amt'), from=document.getElementById('from'),
+      to=document.getElementById('to'), res=document.getElementById('res'),
+      rate=document.getElementById('rate'), live=document.getElementById('live'),
+      swap=document.getElementById('swap'), qgrid=document.getElementById('qgrid'),
+      qtitle=document.getElementById('qtitle');
+
+  ORDER.forEach(function(c){
+    var label=META[c].flag+" "+c+" — "+META[c].name;
+    [from,to].forEach(function(sel){ var o=document.createElement('option'); o.value=c; o.textContent=label; sel.appendChild(o); });
+  });
+  from.value="CAD"; to.value="USD";
+
+  function fmt(n, cur){
+    var dec = (cur==="JMD"||cur==="MXN"||cur==="DOP") ? 0 : 2;
+    return Number(n).toLocaleString('en-CA',{minimumFractionDigits:dec,maximumFractionDigits:dec})+" "+META[cur].sym+" "+cur;
+  }
+  function convert(a, f, t){ return a / RATES[f] * RATES[t]; }
+
+  function render(){
+    var a = parseFloat(amt.value); if(isNaN(a)) a=0;
+    var f=from.value, t=to.value;
+    res.textContent = fmt(convert(a,f,t), t);
+    var one = convert(1,f,t);
+    rate.firstChild.textContent = "1 "+f+" = ";
+    // rebuild rate line
+    rate.innerHTML = "<b>1 "+f+"</b> = <b>"+one.toLocaleString('en-CA',{maximumFractionDigits:(t==="JMD"||t==="MXN"||t==="DOP")?1:4})+" "+t+"</b>";
+    rate.appendChild(live);
+    // quick reference: selected target across common CAD amounts
+    qtitle.textContent = "Quick reference in "+t;
+    var amounts=[1,5,10,20,50,100];
+    qgrid.innerHTML = amounts.map(function(v){
+      return "<div class='qcell'><div class='qk'>"+v+" CAD</div><div class='qv'>"+
+        convert(v,"CAD",t).toLocaleString('en-CA',{maximumFractionDigits:(t==="JMD"||t==="MXN"||t==="DOP")?0:2})+"</div></div>";
+    }).join("");
+  }
+
+  amt.addEventListener('input', render);
+  from.addEventListener('change', render);
+  to.addEventListener('change', render);
+  swap.addEventListener('click', function(){ var a=from.value; from.value=to.value; to.value=a; render(); });
+  render();
+
+  // Refresh live silencieux (API gratuite, sans clé). Échec -> on garde l'indicatif.
+  fetch('https://open.er-api.com/v6/latest/CAD').then(function(r){return r.json();}).then(function(d){
+    if(d && d.result==='success' && d.rates){
+      ORDER.forEach(function(c){ if(c!=="CAD" && typeof d.rates[c]==="number") RATES[c]=d.rates[c]; });
+      var when="";
+      try{ when=new Date(d.time_last_update_utc).toLocaleDateString('en-CA'); }catch(e){}
+      live.textContent = when ? ("rate as of "+when) : "today's rate";
+      live.classList.add('ok');
+      render();
+    }
+  }).catch(function(){ /* on reste sur les taux indicatifs */ });
+})();
+</script>
+</body>
+</html>
