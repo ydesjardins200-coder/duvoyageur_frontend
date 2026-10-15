@@ -163,24 +163,6 @@ h1,h2,h3{font-family:"Montserrat",sans-serif;line-height:1.02;margin:0;letter-sp
 
 /* signature: floating glass deal panel */
 
-/* ---- trust pills (in hero, under the deal panel) ---- */
-
-.pill{
-  display:inline-flex;align-items:center;gap:.45rem;
-  padding:.48rem .82rem;border-radius:999px;
-  background:rgba(6,24,33,.5);border:1px solid rgba(155,246,236,.18);
-  backdrop-filter:blur(12px) saturate(120%);
-  font-family:"Montserrat",monospace;font-size:.8rem;letter-spacing:.01em;
-  color:var(--surf);white-space:nowrap;
-  box-shadow:0 10px 26px -16px rgba(0,0,0,.7),0 1px 0 rgba(155,246,236,.08) inset;
-  text-shadow:0 1px 8px rgba(2,12,20,.6);
-  transition:transform .18s,border-color .18s,box-shadow .18s;
-}
-.pill:hover{transform:translateY(-2px);border-color:rgba(155,246,236,.42);
-  box-shadow:0 16px 30px -16px rgba(0,0,0,.8),0 0 22px -10px var(--glow)}
-.pill svg{width:16px;height:16px;flex:none;color:var(--lagoon)}
-.pill strong{color:var(--foam);font-weight:700}
-
 /* ---- steps ---- */
 .steps{max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1rem,4vw,2rem)}
 .steps .section__title{margin-bottom:2.6rem}
@@ -692,8 +674,8 @@ h1,h2,h3{font-family:"Montserrat",sans-serif;line-height:1.02;margin:0;letter-sp
 .tips__title{font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.25rem;
   color:var(--foam);margin:0 0 .9rem}
 .tips__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.6rem}
-.tip{position:relative;padding-left:1.6rem;color:var(--mist);font-size:.97rem;line-height:1.45}
-.tip::before{content:"";position:absolute;left:0;top:.45em;width:.7rem;height:.7rem;border-radius:50%;
+.tips .tip{position:relative;padding-left:1.6rem;color:var(--mist);font-size:.97rem;line-height:1.45}
+.tips .tip::before{content:"";position:absolute;left:0;top:.45em;width:.7rem;height:.7rem;border-radius:50%;
   background:linear-gradient(120deg,var(--pacific),var(--lagoon));box-shadow:0 0 10px rgba(25,211,230,.5)}
 @media (max-width:680px){.tips__list{grid-template-columns:1fr}}
 
@@ -919,7 +901,7 @@ a{color:var(--surf)}
 .step::before,.chain::before{background:var(--gold);opacity:1}
 .flow__ico,.done__mark,.timeline__num{background:var(--gold);color:var(--navy);box-shadow:none}
 .timeline__item:not(:last-child)::before{background:linear-gradient(var(--gold),rgba(244,197,67,.2))}
-.tip::before{background:var(--gold);box-shadow:none}
+.tips .tip::before{background:var(--gold);box-shadow:none}
 .why__note,.checklist{background:var(--abyss-2)}
 .checklist__list li{color:var(--foam)}
 .checklist__list li::before{color:var(--gold-ink)}
