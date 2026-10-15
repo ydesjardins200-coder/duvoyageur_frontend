@@ -57,7 +57,7 @@
   .gchip{font:600 .9rem/1 "Inter",sans-serif;padding:.62rem 1rem;border-radius:99px;border:1px solid var(--line);
     background:rgba(255,255,255,.04);color:var(--foam);cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:.4rem}
   .gchip:hover{border-color:var(--pacific);background:rgba(255,255,255,.09)}
-  .gchip.is-active{background:linear-gradient(90deg,var(--pacific),var(--lagoon));color:var(--abyss);border-color:transparent;font-weight:700}
+  .gchip.is-active{background:#0F2A47;color:#fff;border-color:#0F2A47;font-weight:700}
   .calnote{text-align:center;color:var(--surf);font-size:.95rem;min-height:1.4em;margin:1rem 0 .2rem;transition:.15s}
 
   .cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-top:1.1rem}
@@ -67,16 +67,16 @@
   .cal__m .bl{margin-top:.5rem;color:var(--foam);font-size:.9rem;line-height:1.38}
   .cal.has-sel .cal__m{opacity:.32;filter:saturate(.5)}
   .cal.has-sel .cal__m.is-on{opacity:1;filter:none;border-color:var(--lagoon);
-    box-shadow:0 0 0 1px var(--lagoon),0 10px 26px rgba(244,197,67,.14);background:linear-gradient(160deg,rgba(244,197,67,.16),rgba(15,42,71,.5))}
+    box-shadow:0 0 0 1px var(--lagoon),0 10px 26px rgba(244,197,67,.14);background:linear-gradient(160deg,rgba(244,197,67,.13),rgba(244,197,67,.04))}
 
-  .dest{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin-top:2.4rem}
-  .dest__c{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.3rem}
-  .dest__c h3{font:700 1.08rem/1.2 "Montserrat",sans-serif;color:var(--surf);margin:0 0 .55rem;display:flex;gap:.5rem;align-items:center}
-  .dest__c p{color:var(--foam);margin:.3rem 0;font-size:.95rem;line-height:1.45}
-  .dest__c .win{display:inline-block;margin-top:.5rem;font:700 .72rem/1 "Montserrat",monospace;letter-spacing:.06em;
+  .dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1rem;margin-top:2.4rem}
+  .dgrid__c{background:#fff;border:1px solid var(--line);border-radius:18px;padding:1.2rem 1.3rem}
+  .dgrid__c h3{font:700 1.08rem/1.2 "Montserrat",sans-serif;color:var(--surf);margin:0 0 .55rem;display:flex;gap:.5rem;align-items:center}
+  .dgrid__c p{color:var(--mist);margin:.3rem 0;font-size:.95rem;line-height:1.45}
+  .dgrid__c .win{display:inline-block;margin-top:.5rem;font:700 .72rem/1 "Montserrat",monospace;letter-spacing:.06em;
     color:var(--gold-ink);border:1px solid rgba(255,210,63,.3);border-radius:8px;padding:.35rem .55rem}
 
-  .gtips{margin-top:2.4rem;background:linear-gradient(160deg,rgba(255,210,63,.10),rgba(15,42,71,.5));border:1px solid rgba(255,210,63,.32);border-radius:18px;padding:1.3rem 1.4rem}
+  .gtips{margin-top:2.4rem;background:linear-gradient(160deg,rgba(244,197,67,.13),rgba(244,197,67,.04));border:1px solid rgba(255,210,63,.32);border-radius:18px;padding:1.3rem 1.4rem}
   .gtips h2{font:700 1.16rem/1.2 "Montserrat",sans-serif;color:var(--gold-ink);margin:0 0 .7rem;display:flex;align-items:center;gap:.5rem}
   .gtips ul{margin:0;padding-left:1.1rem;color:var(--foam)} .gtips li{margin:.45rem 0;line-height:1.45} .gtips li b{color:var(--surf)}
   .glinks{margin-top:2rem;text-align:center;color:var(--mist)} .glinks a{color:var(--surf)}
@@ -259,93 +259,93 @@
       <div class="cal__m" data-tags="weather,nohur,cheap"><span class="mo">December</span><p class="bl">Dry season returns. Early in the month = deals; holiday season = pricey.</p></div>
     </div>
 
-    <div class="dest">
-      <div class="dest__c">
+    <div class="dgrid">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇲🇽</span> Mexico — Cancún / Riviera Maya</h3>
         <p>Sunny and dry from December to April: prime time. Sargassum (seaweed) mostly affects the Caribbean coast from spring to summer, and varies from day to day.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🐋</span> Mexico — Pacific Coast (Vallarta, Los Cabos, Huatulco)</h3>
         <p>Dry season from November to April, with the best weather. No sargassum here: it's the Pacific. And from December to March, humpback whales visit Banderas Bay and Los Cabos.</p>
         <span class="win">Ideal: Nov → April · whales Dec → March</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇩🇴</span> Dominican Republic — Punta Cana</h3>
         <p>Warm year-round; December to April is still the most pleasant. The east coast can get sargassum in spring and summer depending on the currents.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🐋</span> Dominican Rep. — Puerto Plata / Samaná</h3>
         <p>The north: same lovely dry season, generally less affected by sargassum. And from mid-January to late March, humpback whales parade through Samaná Bay.</p>
         <span class="win">Whales: mid-Jan → late March</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇯🇲</span> Jamaica — Negril &amp; Ocho Rios</h3>
         <p>December to April: dry season and the best weather. The west coast (Negril) sees little sargassum; the north coast (Ocho Rios) stays lush and green. Hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇧🇸</span> Bahamas — Nassau</h3>
         <p>December to April: dry, sunny season. Since it's farther north, winter is a bit cooler and windier than further south, but still pleasant. Little sargassum; hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇨🇺</span> Cuba — Varadero / Cayos</h3>
         <p>December to April: dry season and the best weather. The northern cayos (Cayo Coco, Santa María) are generally spared from sargassum. Hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇨🇷</span> Costa Rica — Guanacaste</h3>
         <p>On the Pacific side, the dry season runs from December to April: the best weather. The green season (May to November) is rainier, but lush and cheaper.</p>
         <span class="win">Dry (Pacific): Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇦🇼</span> Aruba &amp; Curaçao (ABC Islands)</h3>
         <p>The big advantage: these islands are OUTSIDE the hurricane belt, dry and sunny all year long. A steady breeze keeps things cool even in summer. You can go anytime.</p>
         <span class="win">Ideal: year-round</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇱🇨</span> Saint Lucia</h3>
         <p>December to April: dry season and the best weather. The rainy season (June to November) brings short showers. The island stays green and spectacular all year long.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇸🇽</span> Saint-Martin / Sint Maarten</h3>
         <p>Dry, sunny season from December to April. One island, two vibes (fine dining on the French side, nightlife on the Dutch side). Hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇦🇬</span> Antigua</h3>
         <p>Lovely dry season from December to April, with a steady wind that makes it a sailing paradise. 365 beaches to choose from. Hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇬🇩</span> Grenada</h3>
         <p>The Spice Isle lies south of the hurricane belt, so it's less exposed. Dry season from December to April, lush nature year-round.</p>
         <span class="win">Ideal: Dec → April · outside hurricane belt</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇵🇦</span> Panama — Pacific Riviera (Playa Blanca)</h3>
         <p>Dry season from December to April: the best weather. The rainy season (May to November) stays warm, with showers mostly in the afternoon.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇨🇴</span> Colombia — Cartagena</h3>
         <p>Cartagena is hot all year; December to April is the driest and most pleasant time. Above all, a destination for cultural discovery.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇧🇿</span> Belize</h3>
         <p>Dry season from December to April, ideal for combining beaches, cayes and jungle. Superb diving and snorkelling on the barrier reef year-round.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇭🇳</span> Roatán (Honduras)</h3>
         <p>Dry season from December to April, with the best weather. Diving on the Mesoamerican Barrier Reef is superb almost all year long.</p>
         <span class="win">Ideal: Dec → April</span>
       </div>
-      <div class="dest__c">
+      <div class="dgrid__c">
         <h3><span aria-hidden="true">🇹🇨</span> Turks & Caicos Islands</h3>
         <p>Sunny and dry for much of the year; December to April is still the most pleasant. Grace Bay is a must. Hurricanes mostly from August to October.</p>
         <span class="win">Ideal: Dec → April</span>
